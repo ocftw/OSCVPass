@@ -1,0 +1,44 @@
+version: '3'
+services:
+  pretalx:
+    image: pretalx/standalone:v2.3.2
+    container_name: pretalx
+    restart: unless-stopped
+    depends_on:
+      - redis
+      - db
+    ports:
+      - "80:80"
+    volumes:
+      - ./conf/pretalx.cfg:/etc/pretalx/pretalx.cfg:ro
+      - pretalx-data:/data
+      - pretalx-etc:/etc/pretalx
+    labels:
+       traefik.docker.network: "pretalxdocker"
+       traefik.enable: "true"
+
+  db:
+    image: postgres:15.3-alpine3.18
+    container_name: pretalx-db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    volumes:
+      - pretalx-db:/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: pretalx
+      POSTGRES_PASSWORD: fortesting
+      POSTGRES_DB: pretalx
+
+  redis:
+    image: redis:7.0.11-alpine3.18
+    container_name: pretalx-redis
+    restart: unless-stopped
+    volumes:
+      - pretalx-redis:/data
+
+volumes:
+  pretalx-db:
+  pretalx-data:
+  pretalx-redis:
+  pretalx-etc:
