@@ -10,7 +10,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./conf/pretalx.cfg:/etc/pretalx/pretalx.cfg:ro
+      - ./conf/pretalx_prod.cfg:/etc/pretalx/pretalx.cfg:ro
       - pretalx-data:/data
       - pretalx-etc:/etc/pretalx
     labels:
