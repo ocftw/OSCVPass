@@ -28,12 +28,12 @@ jobs:
           # Just add a `cd` here if you need to change to another directory.
           cd ./src/docs
           mdbook build
-          git worktree add work-docs
+          git worktree add sites
           git config user.name "Deploy from CI"
-          git config user.email ""
-          cd work-docs
+          git config user.email "oscvpass@ocf.tw"
+          cd sites
           # Delete the ref to avoid keeping history.
-          git update-ref -d refs/heads/work-docs
+          git update-ref -d refs/heads/sites
           rm -rf *
           mkdir ./docs
           mv ../book/* ./docs/
