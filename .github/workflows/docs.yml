@@ -2,8 +2,8 @@ name: Sites-Docs
 on:
   push:
     branches:
-      - actions
       - main
+      - docs
 
 jobs:
   deploy:
