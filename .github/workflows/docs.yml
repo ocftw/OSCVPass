@@ -38,5 +38,5 @@ jobs:
           mkdir ./docs
           mv ../book/* ./docs/
           git add ./docs
-          git commit -m "Deploy $GITHUB_SHA to docs"
+          git commit -m "Deploy $GITHUB_SHA to sites"
           git push --force --set-upstream origin sites
