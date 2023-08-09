@@ -16,7 +16,7 @@
 
 例如在 `git-commit` 所使用 `github@example.com` 提交，而申請人使用 `gmail@example.com` 提出申請，建議使用由 `github@example.com` 發出的郵件並提及 `gmail@example.com` 來建立關聯聲明。
 
-或使用在 Github 上 [sign-off commits](signoff_github) 的 PGP Key 直接簽署證明提交關聯聲明。
+或使用在 Github 上 [sign-off commits][signoff_github] 的 PGP Key 直接簽署證明提交關聯聲明。
 
 #### 聲明範本
 

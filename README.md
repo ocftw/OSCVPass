@@ -12,7 +12,7 @@ OSCVPass (Open Source Contributor VIP Pass) 開源貢獻者快速通關計畫，
 
 目前 OSCVPass 專案在招募實習夥伴，請參考 OCF 的[實習佈告](https://blog.ocf.tw/2023/06/intern-oscvpass.html)。
 
-如果您對此專案有想法，也想參與貢獻成為志工，歡迎直接寄信到 [hi@ocf.tw](mailto:hi@ocf.tw) 標題開頭註明 **[OSCVPass]** 內文包含簡單的自我介紹與你的想法，我們會儘快回覆，感謝！
+如果您對此專案有想法，也想參與貢獻成為志工，歡迎直接寄信到 [hi@ocf.tw](mailto:hi@ocf.tw) 標題開頭註明 **[OSCVPass]** 內文包含簡單的自我介紹與您的想法，我們會儘快回覆，感謝！
 
 ## 工作流程
 
