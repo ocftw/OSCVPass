@@ -6,7 +6,7 @@
 
 ## 申請流程
 
-![OSCVPass process flow](https://oscvpass.ocf.tw/img/oscvpass.svg)
+[![OSCVPass process flow](https://oscvpass.ocf.tw/img/oscvpass.svg)](https://oscvpass.ocf.tw/img/oscvpass.svg)
 
 - ➊ 申請 OSCVPass：透過[申請表單](https://forms.gle/j62bUmTy1hKKGm7n6)提交證明文件送出。
 - ➋ 審核委員：由志工組成的審核委員，每月排班協助審核申請案件。

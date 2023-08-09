@@ -31,7 +31,7 @@
 2. 近期有大量申請案件需要處理，也請耐心等候。
 3. 申請時所填寫的郵件信箱錯誤。
 
-如果等待時間超過申請時間約 20 天或以上，建議直接寄信到 [oscvpass@ocf.tw](mailto:oscvpass@ocf.tw) 詢問！
+如果等待時間超過申請時間約 14 天或以上，建議直接寄信到 [oscvpass@ocf.tw](mailto:oscvpass@ocf.tw) 詢問！
 
 ### 申請表單 Google Forms
 
