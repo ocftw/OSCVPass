@@ -2,7 +2,7 @@
 name = "oscvpass"
 version = "0.1.0"
 description = ""
-authors = ["Toomore Chiang <toomore0929@gmail.com>"]
+authors = ["OSCVPass <oscvpass@ocf.tw>"]
 license = "MIT"
 readme = "README.md"
 
