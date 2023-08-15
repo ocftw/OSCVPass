@@ -11,7 +11,6 @@ python = "^3.11"
 arrow = "^1.2.3"
 boto3 = "^1.28.26"
 Jinja2 = "^3.1.2"
-requests = {extras = ["security"], version = "^2.31.0"}
 
 [tool.poetry.group.dev.dependencies]
 autopep8 = "^2.0.2"
