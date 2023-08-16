@@ -12,5 +12,5 @@
 - [社群](community.md)
   - [如何參與](community-contribute.md)
   - [計畫藍圖](roadmap.md)
-- [開發](development.md)
+  - [參與開發](development.md)
 - [推薦專案]()
