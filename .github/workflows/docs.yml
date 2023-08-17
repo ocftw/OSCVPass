@@ -2,8 +2,8 @@ name: Sites-Docs
 on:
   push:
     branches:
-      - actions
       - main
+      - docs
 
 jobs:
   deploy:
@@ -22,6 +22,9 @@ jobs:
           mkdir mdbook
           curl -sSL $url | tar -xz --directory=./mdbook
           echo `pwd`/mdbook >> $GITHUB_PATH
+      - name: Install Preprocessors
+        run: |
+          cargo install mdbook-toc
       - name: Deploy GitHub Pages
         run: |
           # This assumes your book is in the root of your repository.
