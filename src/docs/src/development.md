@@ -94,7 +94,7 @@ cd pretalx/
 
 > 本章節主要說明如何在本地端的 docker 上運行 OSCVPass。
 
-詳細執行流程可以參照[ pretalx-docker 官方說明][official_docker]
+詳細執行流程可以參照 [pretalx-docker 官方說明][official_docker]
 
 ### 複製原始碼
 
