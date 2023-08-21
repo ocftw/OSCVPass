@@ -1,12 +1,12 @@
 # 開發流程
 
-若要直接在docker上啟動環境，可以直接參見[在Docker上執行OSCVPass](#在Docker上執行OSCVPass)。
+若要直接在docker上啟動環境，可以直接參見[在 Docker 上執行 OSCVPass](#在-docker-上執行-oscvpass)。
 
 <!-- toc -->
 
-## Pretalx建置 (用於Pretalx核心開發)
+## Pretalx 建置 (用於 Pretalx 核心開發)
 
-> 本章節主要說明如何建置官方Pretalx的程式碼。
+> 本章節主要說明如何建置官方 Pretalx 的程式碼。
 
 完整建置流程可以參照[官方說明][official_build]
 
@@ -14,7 +14,7 @@
 
 需要先安裝以下工具：
 
-|工具|Debian套件名稱|
+|工具|Debian 套件名稱|
 |-|-|
 |python 3.6+||
 |pip 3|`python3-pip`|
@@ -24,9 +24,9 @@
 |gettext|`gettext`|
 |git|`git`|
 
-- 部分套件需要編譯器建置，若安裝失敗可先確認套件`build-essential`是否安裝。
+- 部分套件需要編譯器建置，若安裝失敗可先確認套件 `build-essential` 是否安裝。
 
-### 開啟虛擬Python環境
+### 開啟虛擬 Python 環境
 
 ```bash
 python3 -m venv env
@@ -57,7 +57,7 @@ cd pretalx/
 (env)$ pip3 install --upgrade-strategy eager -Ue ".[dev]"
 ```
 
-接著，複製靜態檔案至`STATIC_ROOTS`資料夾中，並初始化本地資料庫：
+接著，複製靜態檔案至 `STATIC_ROOTS` 資料夾中，並初始化本地資料庫：
 
 ```bash
 (env)$ python manage.py collectstatic --noinput
@@ -78,7 +78,7 @@ cd pretalx/
 
 ### 語言檔案 (可選)
 
-由於Pretalx預設僅有英文語文檔案已經事前編譯完成，若您需要使用其他語言，您需要執行以下指令：
+由於 Pretalx 預設僅有英文語文檔案已經事前編譯完成，若您需要使用其他語言，您需要執行以下指令：
 
 ```bash
 (env)$ python manage.py compilemessages
@@ -90,11 +90,11 @@ cd pretalx/
 (env)$ python manage.py runserver
 ```
 
-## 在Docker上執行OSCVPass
+## 在 Docker 上執行 OSCVPass
 
-> 本章節主要說明如何在本地端的docker上運行OSCVPass。
+> 本章節主要說明如何在本地端的 docker 上運行 OSCVPass。
 
-詳細執行流程可以參照[pretalx-docker官方說明][official_docker]
+詳細執行流程可以參照 [pretalx-docker 官方說明][official_docker]
 
 ### 複製原始碼
 
@@ -121,10 +121,10 @@ $ docker compose -f ./docker-compose_prod.yml up
 
 ## 雜項
 
-- 關於GitHub上的分支
-  - main - 用於Github Pages上託管說明文檔
+- 關於 GitHub 上的分支
+  - main - 用於 Github Pages 上託管說明文檔
   - docs - 用於暫存新版的說明文檔。
-  - pretalx - 用於儲存OSCVPass所使用的pretalx docker設定檔
+  - pretalx - 用於儲存 OSCVPass 所使用的 pretalx docker 設定檔
 
 [official_build]: https://docs.pretalx.org/developer/setup.html
 [official_docker]: https://github.com/pretalx/pretalx-docker/README.md
