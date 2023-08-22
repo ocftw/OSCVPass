@@ -119,6 +119,26 @@ $ cd pretalx/
 $ docker compose -f ./docker-compose_prod.yml up
 ```
 
+## 文件開發
+
+> 本章節主要說明如何貢獻 OSCVPass 的說明文件。
+
+OSCVPass 採用 [mdbook](https://github.com/rust-lang/mdBook) 和 html 撰寫：
+mdbook 主要負責用來撰寫說明文檔，用於技術說明； html 則用於撰寫宣傳 OSCVPass
+的參考範例。
+
+文檔皆位於 `src/docs` 資料夾底下：
+- `roadmap.md` ：主要紀錄本專案的工程進度以及未來展望。
+- `README.md` ：為說明文件的入口文件。
+- `SUMMARY.md` ：用於渲染說明文件上左側的文章樹。
+
+### 建議工作流
+
+- 若要新增頁面，請先參考 `SUMMARY.md` 中現有的文章大分類，若無再自行新增，並將
+新增之頁面放入該大分類中。
+
+- 中英文單字間請一律添加空格（不論連接之字詞是否為全形字），以維護文檔的流暢度。
+
 ## 雜項
 
 - 關於 GitHub 上的分支
