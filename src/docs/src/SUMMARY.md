@@ -13,4 +13,5 @@
   - [如何參與](community-contribute.md)
   - [計畫藍圖](roadmap.md)
   - [參與開發](development.md)
+  - [實習紀錄](intern.md)
 - [推薦專案]()
