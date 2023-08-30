@@ -1,6 +1,6 @@
 # OSCVPass 開源貢獻者快速通關
 
-[專案頁說明](https://ocf.tw/p/oscvpass/) | [申請表單](https://forms.gle/j62bUmTy1hKKGm7n6) | [已申請者專案列表](https://oscvpass.ocf.tw/)
+[專案頁說明](https://ocf.tw/p/oscvpass/) | [文件說明與參與](https://oscvpass.ocf.tw/docs/) | [申請表單](https://forms.gle/j62bUmTy1hKKGm7n6) | [已申請者專案列表](https://oscvpass.ocf.tw/)
 
 OSCVPass (Open Source Contributor VIP Pass) 開源貢獻者快速通關計畫，是讓貢獻者提出近一年在開源領域貢獻的證明申請，申請核准後取得一年的 OSCVPass 資格後，可在合作的研討會活動參與取得回饋。
 
@@ -40,4 +40,4 @@ OSCVPass (Open Source Contributor VIP Pass) 開源貢獻者快速通關計畫，
 - ➑ 專案貢獻頁面：與資料庫或表合併思考如何建立與呈現申請者的貢獻項目。
 - ➒ 研討會宣傳：參與籌劃未來一年如何讓更多人知道計畫與申請。
 
-> 計畫各項目已使用 [Project](https://github.com/orgs/ocftw/projects/3) 來進行，可參考目前我們的進度與規劃。
+> 計畫各項目已使用 [Project](https://github.com/orgs/ocftw/projects/3) 來進行，可參考目前我們的進度與[規劃](https://oscvpass.ocf.tw/docs/)。
