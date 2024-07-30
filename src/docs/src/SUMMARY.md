@@ -14,4 +14,6 @@
   - [計畫藍圖](roadmap.md)
   - [參與開發](development.md)
   - [實習紀錄](intern.md)
+    - [2023 intern](intern_ChAoS-UnItY.md)
+    - [2024 intern](intern_Ayu_kevin.md)
 - [推薦專案]()
