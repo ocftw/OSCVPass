@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hant-TW" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>參與開發 - OSCVPass 開源貢獻者專案</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">OSCVPass 計畫簡介</a></li><li class="chapter-item expanded "><a href="apply-for.html"><strong aria-hidden="true">1.</strong> 申請</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="apply-for-oscvpass.html"><strong aria-hidden="true">1.1.</strong> 如何提出申請</a></li><li class="chapter-item expanded "><a href="apply-for-qa.html"><strong aria-hidden="true">1.2.</strong> 申請時常見問題</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.</strong> 教學</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.1.</strong> 如何使用授權條款</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.2.</strong> 如何貢獻開源專案</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.3.</strong> 如何推廣開源</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="community.html"><strong aria-hidden="true">2.</strong> 社群</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="community-contribute.html"><strong aria-hidden="true">2.1.</strong> 如何參與</a></li><li class="chapter-item expanded "><a href="roadmap.html"><strong aria-hidden="true">2.2.</strong> 計畫藍圖</a></li><li class="chapter-item expanded "><a href="development.html" class="active"><strong aria-hidden="true">2.3.</strong> 參與開發</a></li><li class="chapter-item expanded "><a href="intern.html"><strong aria-hidden="true">2.4.</strong> 實習紀錄</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intern_ChAoS-UnItY.html"><strong aria-hidden="true">2.4.1.</strong> 2023 intern</a></li><li class="chapter-item expanded "><a href="intern_Ayu_kevin.html"><strong aria-hidden="true">2.4.2.</strong> 2024 intern</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 推薦專案</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OSCVPass 開源貢獻者專案</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="開發流程"><a class="header" href="#開發流程">開發流程</a></h1>
+<p>若要直接在docker上啟動環境，可以直接參見<a href="#%E5%9C%A8-docker-%E4%B8%8A%E5%9F%B7%E8%A1%8C-oscvpass">在 Docker 上執行 OSCVPass</a>。</p>
+<ul>
+<li><a href="#pretalx-%E5%BB%BA%E7%BD%AE-%E7%94%A8%E6%96%BC-pretalx-%E6%A0%B8%E5%BF%83%E9%96%8B%E7%99%BC">Pretalx 建置 (用於 Pretalx 核心開發)</a>
+<ul>
+<li><a href="#%E5%89%8D%E7%BD%AE%E4%BD%9C%E6%A5%AD">前置作業</a></li>
+<li><a href="#%E9%96%8B%E5%95%9F%E8%99%9B%E6%93%AC-python-%E7%92%B0%E5%A2%83">開啟虛擬 Python 環境</a></li>
+<li><a href="#%E8%A4%87%E8%A3%BD%E5%8E%9F%E5%A7%8B%E7%A2%BC">複製原始碼</a></li>
+<li><a href="#%E5%88%9D%E5%A7%8B%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE">初始環境建置</a></li>
+<li><a href="#%E8%AA%9E%E8%A8%80%E6%AA%94%E6%A1%88-%E5%8F%AF%E9%81%B8">語言檔案 (可選)</a></li>
+<li><a href="#%E5%95%9F%E5%8B%95%E7%92%B0%E5%A2%83">啟動環境</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9C%A8-docker-%E4%B8%8A%E5%9F%B7%E8%A1%8C-oscvpass">在 Docker 上執行 OSCVPass</a>
+<ul>
+<li><a href="#%E8%A4%87%E8%A3%BD%E5%8E%9F%E5%A7%8B%E7%A2%BC-1">複製原始碼</a></li>
+<li><a href="#%E7%9B%B4%E6%8E%A5%E5%9F%B7%E8%A1%8C">直接執行</a></li>
+</ul>
+</li>
+<li><a href="#%E6%96%87%E4%BB%B6%E9%96%8B%E7%99%BC">文件開發</a>
+<ul>
+<li><a href="#%E5%BB%BA%E8%AD%B0%E5%B7%A5%E4%BD%9C%E6%B5%81">建議工作流</a></li>
+</ul>
+</li>
+<li><a href="#%E9%9B%9C%E9%A0%85">雜項</a></li>
+</ul>
+<h2 id="pretalx-建置-用於-pretalx-核心開發"><a class="header" href="#pretalx-建置-用於-pretalx-核心開發">Pretalx 建置 (用於 Pretalx 核心開發)</a></h2>
+<blockquote>
+<p>本章節主要說明如何建置官方 Pretalx 的程式碼。</p>
+</blockquote>
+<p>完整建置流程可以參照<a href="https://docs.pretalx.org/developer/setup.html">官方說明</a></p>
+<h3 id="前置作業"><a class="header" href="#前置作業">前置作業</a></h3>
+<p>需要先安裝以下工具：</p>
+<div class="table-wrapper"><table><thead><tr><th>工具</th><th>Debian 套件名稱</th></tr></thead><tbody>
+<tr><td>python 3.6+</td><td></td></tr>
+<tr><td>pip 3</td><td><code>python3-pip</code></td></tr>
+<tr><td>python-dev 3</td><td><code>python3-dev</code></td></tr>
+<tr><td>python-venv 3</td><td><code>python3-venv</code></td></tr>
+<tr><td>libffi</td><td><code>libffi-dev</code></td></tr>
+<tr><td>gettext</td><td><code>gettext</code></td></tr>
+<tr><td>git</td><td><code>git</code></td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>部分套件需要編譯器建置，若安裝失敗可先確認套件 <code>build-essential</code> 是否安裝。</li>
+</ul>
+<h3 id="開啟虛擬-python-環境"><a class="header" href="#開啟虛擬-python-環境">開啟虛擬 Python 環境</a></h3>
+<pre><code class="language-bash">python3 -m venv env
+source env/bin/activate
+</code></pre>
+<ul>
+<li>Ubuntu/Debian</li>
+</ul>
+<p>由於部分套件版本較舊，建議可先執行以下指令更新必要套件：</p>
+<pre><code class="language-bash">sudo pip3 install -U pip setuptools wheel
+</code></pre>
+<h3 id="複製原始碼"><a class="header" href="#複製原始碼">複製原始碼</a></h3>
+<pre><code class="language-bash">git clone https://github.com/pretalx/pretalx.git
+cd pretalx/
+</code></pre>
+<h3 id="初始環境建置"><a class="header" href="#初始環境建置">初始環境建置</a></h3>
+<p>首先安裝主程式所需要的相依函式庫：</p>
+<pre><code class="language-bash">(env)$ cd src
+(env)$ pip3 install --upgrade-strategy eager -Ue ".[dev]"
+</code></pre>
+<p>接著，複製靜態檔案至 <code>STATIC_ROOTS</code> 資料夾中，並初始化本地資料庫：</p>
+<pre><code class="language-bash">(env)$ python manage.py collectstatic --noinput
+(env)$ python manage.py migrate
+</code></pre>
+<p>為了能夠登入並操作，您需要創建至少一位具有管理員權限的帳號：</p>
+<pre><code class="language-bash">(env)$ python manage.py init
+</code></pre>
+<p>此外，若您開發上即刻需要一個用於測試的活動，您可以執行以下指令來創建：</p>
+<pre><code class="language-bash">(env)$ python manage.py create_test_event
+</code></pre>
+<h3 id="語言檔案-可選"><a class="header" href="#語言檔案-可選">語言檔案 (可選)</a></h3>
+<p>由於 Pretalx 預設僅有英文語文檔案已經事前編譯完成，若您需要使用其他語言，您需要執行以下指令：</p>
+<pre><code class="language-bash">(env)$ python manage.py compilemessages
+</code></pre>
+<h3 id="啟動環境"><a class="header" href="#啟動環境">啟動環境</a></h3>
+<pre><code class="language-bash">(env)$ python manage.py runserver
+</code></pre>
+<h2 id="在-docker-上執行-oscvpass"><a class="header" href="#在-docker-上執行-oscvpass">在 Docker 上執行 OSCVPass</a></h2>
+<blockquote>
+<p>本章節主要說明如何在本地端的 docker 上運行 OSCVPass。</p>
+</blockquote>
+<p>詳細執行流程可以參照 <a href="https://github.com/pretalx/pretalx-docker/README.md">pretalx-docker 官方說明</a></p>
+<h3 id="複製原始碼-1"><a class="header" href="#複製原始碼-1">複製原始碼</a></h3>
+<pre><code class="language-bash">$ git clone -b pretalx https://github.com/ocftw/OSCVPass.git
+$ cd OSCVPass/
+</code></pre>
+<h3 id="直接執行"><a class="header" href="#直接執行">直接執行</a></h3>
+<ul>
+<li>運行測試環境</li>
+</ul>
+<pre><code class="language-bash">$ cd pretalx/
+$ docker compose -f ./docker-compose.yml up
+</code></pre>
+<ul>
+<li>運行生產環境</li>
+</ul>
+<pre><code class="language-bash">$ cd pretalx/
+$ docker compose -f ./docker-compose_prod.yml up
+</code></pre>
+<h2 id="文件開發"><a class="header" href="#文件開發">文件開發</a></h2>
+<blockquote>
+<p>本章節主要說明如何貢獻 OSCVPass 的說明文件。</p>
+</blockquote>
+<p>OSCVPass 採用 <a href="https://github.com/rust-lang/mdBook">mdbook</a> 和 html 撰寫：
+mdbook 主要負責用來撰寫說明文檔，用於技術說明； html 則用於撰寫宣傳 OSCVPass
+的參考範例。</p>
+<p>文檔皆位於 <code>src/docs</code> 資料夾底下：</p>
+<ul>
+<li><code>roadmap.md</code> ：主要紀錄本專案的工程進度以及未來展望。</li>
+<li><code>README.md</code> ：為說明文件的入口文件。</li>
+<li><code>SUMMARY.md</code> ：用於渲染說明文件上左側的文章樹。</li>
+</ul>
+<h3 id="建議工作流"><a class="header" href="#建議工作流">建議工作流</a></h3>
+<ul>
+<li>
+<p>若要新增頁面，請先參考 <code>SUMMARY.md</code> 中現有的文章大分類，若無再自行新增，並將
+新增之頁面放入該大分類中。</p>
+</li>
+<li>
+<p>中英文單字間請一律添加空格（不論連接之字詞是否為全形字），以維護文檔的流暢度。</p>
+</li>
+</ul>
+<h2 id="雜項"><a class="header" href="#雜項">雜項</a></h2>
+<ul>
+<li>關於 GitHub 上的分支
+<ul>
+<li>main - 用於 Github Pages 上託管說明文檔</li>
+<li>docs - 用於暫存新版的說明文檔。</li>
+<li>pretalx - 用於儲存 OSCVPass 所使用的 pretalx docker 設定檔</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="roadmap.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="intern.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="roadmap.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="intern.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+[book]
+authors = ["OCF OSCVPass"]
+language = "zh-Hant-TW"
+multilingual = false
+src = "src"
+title = "OSCVPass 開源貢獻者專案"
+
+[output.html]
+site-url = "/docs/"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]

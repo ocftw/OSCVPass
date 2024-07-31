@@ -1,0 +1,622 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hant-TW" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>OSCVPass 開源貢獻者專案</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">OSCVPass 計畫簡介</a></li><li class="chapter-item expanded "><a href="apply-for.html"><strong aria-hidden="true">1.</strong> 申請</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="apply-for-oscvpass.html"><strong aria-hidden="true">1.1.</strong> 如何提出申請</a></li><li class="chapter-item expanded "><a href="apply-for-qa.html"><strong aria-hidden="true">1.2.</strong> 申請時常見問題</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.</strong> 教學</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.1.</strong> 如何使用授權條款</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.2.</strong> 如何貢獻開源專案</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.3.</strong> 如何推廣開源</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="community.html"><strong aria-hidden="true">2.</strong> 社群</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="community-contribute.html"><strong aria-hidden="true">2.1.</strong> 如何參與</a></li><li class="chapter-item expanded "><a href="roadmap.html"><strong aria-hidden="true">2.2.</strong> 計畫藍圖</a></li><li class="chapter-item expanded "><a href="development.html"><strong aria-hidden="true">2.3.</strong> 參與開發</a></li><li class="chapter-item expanded "><a href="intern.html"><strong aria-hidden="true">2.4.</strong> 實習紀錄</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intern_ChAoS-UnItY.html"><strong aria-hidden="true">2.4.1.</strong> 2023 intern</a></li><li class="chapter-item expanded "><a href="intern_Ayu_kevin.html"><strong aria-hidden="true">2.4.2.</strong> 2024 intern</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 推薦專案</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OSCVPass 開源貢獻者專案</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="oscvpass-開源貢獻者"><a class="header" href="#oscvpass-開源貢獻者">OSCVPass 開源貢獻者</a></h1>
+<p>OSCVPass (Open Source Contributor VIP Pass) 開源貢獻者快速通關計畫，是讓貢獻者提出近一年在開源領域貢獻的證明申請，申請核准後取得一年的 OSCVPass 資格，可在合作的研討會活動參與取得回饋。</p>
+<p>每年約有 150 - 230 位有效資格，其貢獻類型不僅止於程式碼的貢獻，也有來自開源推廣的努力。</p>
+<h2 id="申請資格"><a class="header" href="#申請資格">申請資格</a></h2>
+<p>請提供實際針對開源專案提供開發、推廣、或其他有助專案進展之貢獻相關證明，開源專案與您的參與須符合下列幾種情況：</p>
+<ol>
+<li>申請者請提出近一年內（月份區間）開源貢獻。（例如此時為 2023/08/15，則可以為 2022/08/01 之後的貢獻申請）</li>
+<li>開源專案意指專案成果以 <a href="https://www.fsf.org/licensing/">FSF</a> 或 <a href="https://opensource.org/licenses/">OSI</a> 認同之公眾授權條款釋出者。</li>
+<li>您的開源專案的貢獻可以包含但不限是：寫/修 Code 的、寫/修文件的、發 ISSUE 的、籌劃推廣活動的、釋出 non-code 作品的。</li>
+<li>所提出之貢獻，必須可以經由公開途徑查證（例如提供 GitHub、GitLab、Bitbucket 等公開專案平台上的討論紀錄、網址、commit log、信件文本、公開釋出之演講投影片紀錄等。）</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> 如何申請請<a href="apply-for-oscvpass.html">參考說明</a>。</p>
+</blockquote>
+<h2 id="社群"><a class="header" href="#社群">社群</a></h2>
+<p>目前 OSCVPass 持續招募社群志工協助申請流程、審核平台、後台管理等基礎建設的建製，歡迎參與！</p>
+<ul>
+<li>OCF.tw 的 <a href="https://ocftw.slack.com">slack</a> <strong>#oscvpass</strong> 頻道。</li>
+</ul>
+<h2 id="其他連結"><a class="header" href="#其他連結">其他連結</a></h2>
+<ul>
+<li>專案說明頁面：<a href="https://ocf.tw/p/oscvpass/">https://ocf.tw/p/oscvpass/</a></li>
+<li>申請表單：<a href="https://forms.gle/j62bUmTy1hKKGm7n6">https://forms.gle/j62bUmTy1hKKGm7n6</a></li>
+<li>已申請者專案列表：<a href="https://oscvpass.ocf.tw/">https://oscvpass.ocf.tw/</a></li>
+</ul>
+<h2 id="授權條款"><a class="header" href="#授權條款">授權條款</a></h2>
+<p>本文件內容以 Creative Commons <a href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">姓名標示 4.0 國際 (CC BY 4.0)</a> 釋出。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="如何申請-oscvpass"><a class="header" href="#如何申請-oscvpass">如何申請 OSCVPass</a></h1>
+<ol>
+<li><a href="apply-for-oscvpass.html">如何提出申請</a>：申請簡介說明。</li>
+<li><a href="apply-for-qa.html">常見問題</a>：申請、退件、補件時常見的問題狀況。</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="如何申請-oscvpass-1"><a class="header" href="#如何申請-oscvpass-1">如何申請 OSCVPass</a></h1>
+<p>申請 OSCVPass 的資格與申請前的確認。</p>
+<ul>
+<li><a href="apply-for-oscvpass.html#%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B">申請流程</a></li>
+<li><a href="apply-for-oscvpass.html#%E7%94%B3%E8%AB%8B%E8%B3%87%E6%A0%BC">申請資格</a></li>
+<li><a href="apply-for-oscvpass.html#%E7%94%B3%E8%AB%8B%E5%89%8D%E7%A2%BA%E8%AA%8D%E4%BA%8B%E9%A0%85">申請前確認事項</a></li>
+</ul>
+<h2 id="申請流程"><a class="header" href="#申請流程">申請流程</a></h2>
+<p><a href="https://oscvpass.ocf.tw/img/oscvpass.svg"><img src="https://oscvpass.ocf.tw/img/oscvpass.svg" alt="OSCVPass process flow" /></a></p>
+<ul>
+<li>➊ 申請 OSCVPass：透過<a href="https://forms.gle/j62bUmTy1hKKGm7n6">申請表單</a>提交證明文件送出。</li>
+<li>➋ 審核委員：由志工組成的審核委員，每月排班協助審核申請案件。</li>
+<li>➌ 審核方式（通過）：恭喜，將寄送認證合格通知信。</li>
+<li>➍ 審核方式（補件、不通過）：審核委員會依基本審核標準與建議其補件方式，可參考<a href="apply-for-qa.html">常見問題</a>。</li>
+<li>➎ 寄送審核結果通知信：將寄送通知信告知審核結果。</li>
+<li>➏ 收錄開源貢獻者資料庫：收錄審核通過名單，以利後續回饋方案的寄送。</li>
+<li>➐ 合作研討會：每年與 OSCVPass 合作的年會與研討會。</li>
+<li>➑ 專案貢獻頁面：將申請通過的貢獻成果呈現在<a href="https://oscvpass.ocf.tw/">計畫首頁</a>。</li>
+<li>➒ 研討會宣傳：持續宣傳讓更多人知道計畫與申請。</li>
+</ul>
+<h2 id="申請資格-1"><a class="header" href="#申請資格-1">申請資格</a></h2>
+<p>請提供實際針對開源專案提供開發、推廣、或其他有助專案進展之貢獻相關證明，開源專案與您的參與須符合下列幾種情況：</p>
+<ol>
+<li>申請者請提出近一年內（月份區間）開源貢獻。（例如此時為 2023/08/15，則可以為 2022/08/01 之後的貢獻申請）</li>
+<li>開源專案意指專案成果以 <a href="https://www.fsf.org/licensing/">FSF</a> 或 <a href="https://opensource.org/licenses/">OSI</a> 認同之公眾授權條款釋出者。</li>
+<li>您的開源專案的貢獻可以包含但不限是：寫/修 Code 的、寫/修文件的、發 ISSUE 的、籌劃推廣活動的、釋出 non-code 作品的。</li>
+<li>所提出之貢獻，必須可以經由公開途徑查證（例如提供 GitHub、GitLab、Bitbucket 等公開專案平台上的討論紀錄、網址、commit log、信件文本、公開釋出之演講投影片紀錄等。）</li>
+</ol>
+<h2 id="申請前確認事項"><a class="header" href="#申請前確認事項">申請前確認事項</a></h2>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+是否在一年內的貢獻？</li>
+<li><input disabled="" type="checkbox" checked=""/>
+是否有在專案內宣告授權條款？</li>
+<li><input disabled="" type="checkbox" checked=""/>
+是否與開源領域相關的貢獻？</li>
+<li><input disabled="" type="checkbox" checked=""/>
+是否有在 <a href="https://www.fsf.org/licensing/">FSF</a>、<a href="https://opensource.org/licenses/">OSI</a> 認可的授權類型？</li>
+<li><input disabled="" type="checkbox" checked=""/>
+所提交的申請證明與申請人關聯是否為本人？</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="常見問題"><a class="header" href="#常見問題">常見問題</a></h1>
+<p>申請、補件、退件時常遇到的問題集合，預先閱讀可避免往返申請時程。</p>
+<ul>
+<li><a href="apply-for-qa.html#%E7%94%B3%E8%AB%8B">申請</a>
+<ul>
+<li><a href="apply-for-qa.html#%E4%B8%8D%E6%98%AF%E7%A8%8B%E5%BC%8F%E8%B2%A2%E7%8D%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%94%B3%E8%AB%8B">不是程式貢獻是否可以申請</a></li>
+<li><a href="apply-for-qa.html#%E7%94%B3%E8%AB%8B%E4%BA%BA%E8%88%87%E8%AD%89%E6%98%8E%E6%96%87%E4%BB%B6%E4%B8%8D%E7%9B%B8%E7%AC%A6%E5%90%88">申請人與證明文件不相符合</a>
+<ul>
+<li><a href="apply-for-qa.html#%E8%81%B2%E6%98%8E%E7%AF%84%E6%9C%AC">聲明範本</a></li>
+</ul>
+</li>
+<li><a href="apply-for-qa.html#%E7%94%B3%E8%AB%8B%E5%BE%8C%E6%9C%AA%E6%94%B6%E5%88%B0%E7%B5%90%E6%9E%9C%E9%80%9A%E7%9F%A5">申請後未收到結果通知</a></li>
+<li><a href="apply-for-qa.html#%E7%94%B3%E8%AB%8B%E8%A1%A8%E5%96%AE-google-forms">申請表單 Google Forms</a></li>
+</ul>
+</li>
+<li><a href="apply-for-qa.html#%E9%80%80%E4%BB%B6%E8%A3%9C%E4%BB%B6">退件、補件</a>
+<ul>
+<li><a href="apply-for-qa.html#%E5%B8%B8%E8%A6%8B%E7%9A%84%E9%80%80%E4%BB%B6%E6%88%96%E8%A3%9C%E4%BB%B6%E6%83%85%E6%B3%81">常見的退件或補件情況</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="申請"><a class="header" href="#申請">申請</a></h2>
+<h3 id="不是程式貢獻是否可以申請"><a class="header" href="#不是程式貢獻是否可以申請">不是程式貢獻是否可以申請</a></h3>
+<p>可以，只要是開源領域相關的貢獻、不論方式為何，都歡迎提出申請！</p>
+<h3 id="申請人與證明文件不相符合"><a class="header" href="#申請人與證明文件不相符合">申請人與證明文件不相符合</a></h3>
+<p>可先透過證明文件上的信箱發送到 <a href="mailto:oscvpass@ocf.tw">oscvpass@ocf.tw</a> 並提及申請人的信箱來建立關聯。</p>
+<p>例如在 <code>git-commit</code> 所使用 <code>github@example.com</code> 提交，而申請人使用 <code>gmail@example.com</code> 提出申請，建議使用由 <code>github@example.com</code> 發出的郵件並提及 <code>gmail@example.com</code> 來建立關聯聲明。</p>
+<p>或使用在 Github 上 <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits">sign-off commits</a> 的 PGP Key 直接簽署證明提交關聯聲明。</p>
+<h4 id="聲明範本"><a class="header" href="#聲明範本">聲明範本</a></h4>
+<pre><code>證明文件上所使用的郵件信箱：github@example.com
+申請時所用的郵件信箱：gmail@example.com
+</code></pre>
+<h3 id="申請後未收到結果通知"><a class="header" href="#申請後未收到結果通知">申請後未收到結果通知</a></h3>
+<p>可能有幾種狀況：</p>
+<ol>
+<li>由於審核委員皆為志工協助，目前並無固定的審核時間，請耐心等候。</li>
+<li>近期有大量申請案件需要處理，也請耐心等候。</li>
+<li>申請時所填寫的郵件信箱錯誤。</li>
+</ol>
+<p>如果等待時間超過申請時間約 14 天或以上，建議直接寄信到 <a href="mailto:oscvpass@ocf.tw">oscvpass@ocf.tw</a> 詢問！</p>
+<h3 id="申請表單-google-forms"><a class="header" href="#申請表單-google-forms">申請表單 Google Forms</a></h3>
+<p>目前我們已有<a href="https://github.com/orgs/ocftw/projects/3">計畫</a>重構基礎建設，如果有興趣參與加入志工，歡迎喊聲、寄信或直接<a href="https://github.com/ocftw/OSCVPass/issues/2">開票</a>給我們也行！</p>
+<h2 id="退件補件"><a class="header" href="#退件補件">退件、補件</a></h2>
+<h3 id="常見的退件或補件情況"><a class="header" href="#常見的退件或補件情況">常見的退件或補件情況</a></h3>
+<ol>
+<li>所建立或所貢獻的專案沒有授權條款宣告，專案不是設定公開就代表 Open！</li>
+<li>提交的證明文件與申請人找不到關聯，郵件信箱不同或是無法模糊比對為同一人！</li>
+<li>重複申請或是自我專案重複貢獻（鼓勵多多踏出舒適圈或努力曝光專案的推廣）！</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="社群-1"><a class="header" href="#社群-1">社群</a></h1>
+<ol>
+<li><a href="community-contribute.html">如何參與</a>：成為審核委員或是此計畫的籌備志工。</li>
+<li><a href="roadmap.html">計畫藍圖</a>：基礎工程重構計畫。</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="如何貢獻"><a class="header" href="#如何貢獻">如何貢獻</a></h1>
+<p>目前 OSCVPass 計畫是由一群志工協助日常的申請、審核、通知與研討會接洽合作。</p>
+<ul>
+<li><a href="community-contribute.html#%E6%B5%81%E7%A8%8B%E7%8F%BE%E6%B3%81">流程現況</a></li>
+<li><a href="community-contribute.html#%E6%8B%9B%E5%8B%9F%E5%BF%97%E5%B7%A5">招募志工</a>
+<ul>
+<li><a href="community-contribute.html#%E5%AF%A9%E6%A0%B8%E5%A7%94%E5%93%A1">審核委員</a></li>
+<li><a href="community-contribute.html#%E5%B0%88%E6%A1%88%E5%BF%97%E5%B7%A5">專案志工</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="流程現況"><a class="header" href="#流程現況">流程現況</a></h2>
+<p><a href="https://oscvpass.ocf.tw/img/oscvpass.svg"><img src="https://oscvpass.ocf.tw/img/oscvpass.svg" alt="OSCVPass process flow" /></a></p>
+<ul>
+<li>➊ 申請表單：目前是使用 Google Forms 作為申請表使用，但申請項目越來越多元，無法涵蓋表單的欄位定義與申請類型的情況。</li>
+<li>➋ 審核委員：目前審核委員由社群夥伴參與，一個月一名委員負責審核，但會因為當月其他因素無法在原定時間內審核完畢。</li>
+<li>➌➍ 審核方式（通過、補件、不通過）：目前審核的方式採取比較寬送的標準，無標準量化的機制。</li>
+<li>➎ 寄送審核結果通知信：通知信透過 AWS SES 大量寄送樣板信件。</li>
+<li>➏ 收錄開源貢獻者資料庫：目前是使用 Google Forms 表單標記已通過。</li>
+<li>➐ 合作研討會：每年參與的研討會。</li>
+<li>➑ 專案貢獻頁面：目前是使用靜態網頁呈現，問題在於整理與分類方式為人工手動方式進行。</li>
+<li>➒ 研討會宣傳：在各研討會宣傳申請計畫。</li>
+</ul>
+<h2 id="招募志工"><a class="header" href="#招募志工">招募志工</a></h2>
+<p>計畫目前有兩種類型的志工需要協助，審核委員與專案志工。如有意願參與此計畫，歡迎直接來信到 <a href="mailto:oscvpass.ocf.tw">oscvpass@ocf.tw</a>，我們將協助建立相關設定。</p>
+<h3 id="審核委員"><a class="header" href="#審核委員">審核委員</a></h3>
+<p>主要協助審核申請案件是否有達到基本的審核標準，簡單的審定標文件可以參考。目前每月會有一位值日生負責該月的申請案件，如該月份申請數量眾多，也可提出救援請求讓大家一起幫忙消化申請案件。</p>
+<h3 id="專案志工"><a class="header" href="#專案志工">專案志工</a></h3>
+<p>主要負責改善審核流程、平台基礎工程、規劃宣傳或是其他概念的發想。參與的範圍不侷限流程圖上的項目，也可開拓新的領域來嘗試！</p>
+<blockquote>
+<p><strong>Note:</strong> 目前 OSCVPass 專案也在招募實習夥伴，請參考 OCF 的<a href="https://blog.ocf.tw/2023/06/intern-oscvpass.html">實習佈告</a>。</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="規劃藍圖"><a class="header" href="#規劃藍圖">規劃藍圖</a></h1>
+<ul>
+<li><a href="roadmap.html#%E8%A8%88%E7%95%AB%E7%B7%A3%E8%B5%B7">計畫緣起</a></li>
+<li><a href="roadmap.html#%E6%B5%81%E7%A8%8B%E8%AA%AA%E6%98%8E">流程說明</a></li>
+<li><a href="roadmap.html#%E5%9F%BA%E7%A4%8E%E5%B7%A5%E7%A8%8B">基礎工程</a>
+<ul>
+<li><a href="roadmap.html#%E5%B7%A5%E7%A8%8B%E9%80%B2%E5%BA%A6">工程進度</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="計畫緣起"><a class="header" href="#計畫緣起">計畫緣起</a></h2>
+<p>OSCVPass 原來自 <a href="https://blog.coscup.org/2020/07/oscvpass.html">COSCUP 開源貢獻方案</a>，但因為 COSCUP 不再需要報名入場，因此將此方案貢獻給開放文化基金會 OCF 繼續規劃與執行。</p>
+<p>不論是在 COSCUP 期間所執行的計畫或是移交給 OCF 的規劃，都是希望可以多多鼓勵大家參與開源文化的貢獻，不論是在程式碼的貢獻或是以開源精神、開放文化的方式產出的作品都會是 OSCVPass 所希望能回饋的貢獻者！</p>
+<h2 id="流程說明"><a class="header" href="#流程說明">流程說明</a></h2>
+<p>計畫流程大致上整理如下表，依運作流程項目解說，目前計畫面臨的問題與希望可以改善的下一步。</p>
+<p><a href="https://oscvpass.ocf.tw/img/oscvpass.svg"><img src="https://oscvpass.ocf.tw/img/oscvpass.svg" alt="OSCVPass process flow" /></a></p>
+<ul>
+<li>➊ 申請表單：目前是使用 Google Forms 作為申請表使用，但申請項目越來越多元，無法涵蓋表單的欄位定義與申請類型的情況。</li>
+<li>➋ 審核委員：目前審核委員由社群夥伴參與，一個月一名委員負責審核，但會因為當月其他因素無法在原定時間內審核完畢。</li>
+<li>➌➍ 審核方式（通過、補件、不通過）：目前審核的方式採取比較寬送的標準，無標準量化的機制。</li>
+<li>➎ 寄送審核結果通知信：通知信透過 AWS SES 大量寄送樣板信件。</li>
+<li>➏ 收錄開源貢獻者資料庫：目前是使用 Google Forms 表單標記已通過。</li>
+<li>➐ 合作研討會：每年參與的研討會。</li>
+<li>➑ 專案貢獻頁面：目前是使用靜態網頁呈現，問題在於整理與分類方式為人工手動方式進行。</li>
+<li>➒ 研討會宣傳：在各研討會宣傳申請計畫。</li>
+</ul>
+<h2 id="基礎工程"><a class="header" href="#基礎工程">基礎工程</a></h2>
+<p>由於專案申請流程目前存在大量的手工操作程序，而累積的申請案件越來越多、也漸漸影響到每一次通知前的準備。因此在 2023 下半年度開始計畫重構目前計畫的基礎建設，優化其流程！</p>
+<p>近期進度：</p>
+<ul>
+<li>2023/08/01 目前 ➊ 已開始測試使用 Pretalx 來解決 ➋➌➍ 的流程優化問題。</li>
+</ul>
+<h3 id="工程進度"><a class="header" href="#工程進度">工程進度</a></h3>
+<p>秉持著開放的精神，我們將目前重構的工程進度都回報在 <a href="https://github.com/orgs/ocftw/projects/3">Project</a> 上，歡迎持續追蹤並給予我們建議，感謝！</p>
+<blockquote>
+<p><strong>Note:</strong> 可參考<a href="community-contribute.html">如何參與</a>加入我們一起改善！</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="開發流程"><a class="header" href="#開發流程">開發流程</a></h1>
+<p>若要直接在docker上啟動環境，可以直接參見<a href="development.html#%E5%9C%A8-docker-%E4%B8%8A%E5%9F%B7%E8%A1%8C-oscvpass">在 Docker 上執行 OSCVPass</a>。</p>
+<ul>
+<li><a href="development.html#pretalx-%E5%BB%BA%E7%BD%AE-%E7%94%A8%E6%96%BC-pretalx-%E6%A0%B8%E5%BF%83%E9%96%8B%E7%99%BC">Pretalx 建置 (用於 Pretalx 核心開發)</a>
+<ul>
+<li><a href="development.html#%E5%89%8D%E7%BD%AE%E4%BD%9C%E6%A5%AD">前置作業</a></li>
+<li><a href="development.html#%E9%96%8B%E5%95%9F%E8%99%9B%E6%93%AC-python-%E7%92%B0%E5%A2%83">開啟虛擬 Python 環境</a></li>
+<li><a href="development.html#%E8%A4%87%E8%A3%BD%E5%8E%9F%E5%A7%8B%E7%A2%BC">複製原始碼</a></li>
+<li><a href="development.html#%E5%88%9D%E5%A7%8B%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE">初始環境建置</a></li>
+<li><a href="development.html#%E8%AA%9E%E8%A8%80%E6%AA%94%E6%A1%88-%E5%8F%AF%E9%81%B8">語言檔案 (可選)</a></li>
+<li><a href="development.html#%E5%95%9F%E5%8B%95%E7%92%B0%E5%A2%83">啟動環境</a></li>
+</ul>
+</li>
+<li><a href="development.html#%E5%9C%A8-docker-%E4%B8%8A%E5%9F%B7%E8%A1%8C-oscvpass">在 Docker 上執行 OSCVPass</a>
+<ul>
+<li><a href="development.html#%E8%A4%87%E8%A3%BD%E5%8E%9F%E5%A7%8B%E7%A2%BC-1">複製原始碼</a></li>
+<li><a href="development.html#%E7%9B%B4%E6%8E%A5%E5%9F%B7%E8%A1%8C">直接執行</a></li>
+</ul>
+</li>
+<li><a href="development.html#%E6%96%87%E4%BB%B6%E9%96%8B%E7%99%BC">文件開發</a>
+<ul>
+<li><a href="development.html#%E5%BB%BA%E8%AD%B0%E5%B7%A5%E4%BD%9C%E6%B5%81">建議工作流</a></li>
+</ul>
+</li>
+<li><a href="development.html#%E9%9B%9C%E9%A0%85">雜項</a></li>
+</ul>
+<h2 id="pretalx-建置-用於-pretalx-核心開發"><a class="header" href="#pretalx-建置-用於-pretalx-核心開發">Pretalx 建置 (用於 Pretalx 核心開發)</a></h2>
+<blockquote>
+<p>本章節主要說明如何建置官方 Pretalx 的程式碼。</p>
+</blockquote>
+<p>完整建置流程可以參照<a href="https://docs.pretalx.org/developer/setup.html">官方說明</a></p>
+<h3 id="前置作業"><a class="header" href="#前置作業">前置作業</a></h3>
+<p>需要先安裝以下工具：</p>
+<div class="table-wrapper"><table><thead><tr><th>工具</th><th>Debian 套件名稱</th></tr></thead><tbody>
+<tr><td>python 3.6+</td><td></td></tr>
+<tr><td>pip 3</td><td><code>python3-pip</code></td></tr>
+<tr><td>python-dev 3</td><td><code>python3-dev</code></td></tr>
+<tr><td>python-venv 3</td><td><code>python3-venv</code></td></tr>
+<tr><td>libffi</td><td><code>libffi-dev</code></td></tr>
+<tr><td>gettext</td><td><code>gettext</code></td></tr>
+<tr><td>git</td><td><code>git</code></td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>部分套件需要編譯器建置，若安裝失敗可先確認套件 <code>build-essential</code> 是否安裝。</li>
+</ul>
+<h3 id="開啟虛擬-python-環境"><a class="header" href="#開啟虛擬-python-環境">開啟虛擬 Python 環境</a></h3>
+<pre><code class="language-bash">python3 -m venv env
+source env/bin/activate
+</code></pre>
+<ul>
+<li>Ubuntu/Debian</li>
+</ul>
+<p>由於部分套件版本較舊，建議可先執行以下指令更新必要套件：</p>
+<pre><code class="language-bash">sudo pip3 install -U pip setuptools wheel
+</code></pre>
+<h3 id="複製原始碼"><a class="header" href="#複製原始碼">複製原始碼</a></h3>
+<pre><code class="language-bash">git clone https://github.com/pretalx/pretalx.git
+cd pretalx/
+</code></pre>
+<h3 id="初始環境建置"><a class="header" href="#初始環境建置">初始環境建置</a></h3>
+<p>首先安裝主程式所需要的相依函式庫：</p>
+<pre><code class="language-bash">(env)$ cd src
+(env)$ pip3 install --upgrade-strategy eager -Ue ".[dev]"
+</code></pre>
+<p>接著，複製靜態檔案至 <code>STATIC_ROOTS</code> 資料夾中，並初始化本地資料庫：</p>
+<pre><code class="language-bash">(env)$ python manage.py collectstatic --noinput
+(env)$ python manage.py migrate
+</code></pre>
+<p>為了能夠登入並操作，您需要創建至少一位具有管理員權限的帳號：</p>
+<pre><code class="language-bash">(env)$ python manage.py init
+</code></pre>
+<p>此外，若您開發上即刻需要一個用於測試的活動，您可以執行以下指令來創建：</p>
+<pre><code class="language-bash">(env)$ python manage.py create_test_event
+</code></pre>
+<h3 id="語言檔案-可選"><a class="header" href="#語言檔案-可選">語言檔案 (可選)</a></h3>
+<p>由於 Pretalx 預設僅有英文語文檔案已經事前編譯完成，若您需要使用其他語言，您需要執行以下指令：</p>
+<pre><code class="language-bash">(env)$ python manage.py compilemessages
+</code></pre>
+<h3 id="啟動環境"><a class="header" href="#啟動環境">啟動環境</a></h3>
+<pre><code class="language-bash">(env)$ python manage.py runserver
+</code></pre>
+<h2 id="在-docker-上執行-oscvpass"><a class="header" href="#在-docker-上執行-oscvpass">在 Docker 上執行 OSCVPass</a></h2>
+<blockquote>
+<p>本章節主要說明如何在本地端的 docker 上運行 OSCVPass。</p>
+</blockquote>
+<p>詳細執行流程可以參照 <a href="https://github.com/pretalx/pretalx-docker/README.md">pretalx-docker 官方說明</a></p>
+<h3 id="複製原始碼-1"><a class="header" href="#複製原始碼-1">複製原始碼</a></h3>
+<pre><code class="language-bash">$ git clone -b pretalx https://github.com/ocftw/OSCVPass.git
+$ cd OSCVPass/
+</code></pre>
+<h3 id="直接執行"><a class="header" href="#直接執行">直接執行</a></h3>
+<ul>
+<li>運行測試環境</li>
+</ul>
+<pre><code class="language-bash">$ cd pretalx/
+$ docker compose -f ./docker-compose.yml up
+</code></pre>
+<ul>
+<li>運行生產環境</li>
+</ul>
+<pre><code class="language-bash">$ cd pretalx/
+$ docker compose -f ./docker-compose_prod.yml up
+</code></pre>
+<h2 id="文件開發"><a class="header" href="#文件開發">文件開發</a></h2>
+<blockquote>
+<p>本章節主要說明如何貢獻 OSCVPass 的說明文件。</p>
+</blockquote>
+<p>OSCVPass 採用 <a href="https://github.com/rust-lang/mdBook">mdbook</a> 和 html 撰寫：
+mdbook 主要負責用來撰寫說明文檔，用於技術說明； html 則用於撰寫宣傳 OSCVPass
+的參考範例。</p>
+<p>文檔皆位於 <code>src/docs</code> 資料夾底下：</p>
+<ul>
+<li><code>roadmap.md</code> ：主要紀錄本專案的工程進度以及未來展望。</li>
+<li><code>README.md</code> ：為說明文件的入口文件。</li>
+<li><code>SUMMARY.md</code> ：用於渲染說明文件上左側的文章樹。</li>
+</ul>
+<h3 id="建議工作流"><a class="header" href="#建議工作流">建議工作流</a></h3>
+<ul>
+<li>
+<p>若要新增頁面，請先參考 <code>SUMMARY.md</code> 中現有的文章大分類，若無再自行新增，並將
+新增之頁面放入該大分類中。</p>
+</li>
+<li>
+<p>中英文單字間請一律添加空格（不論連接之字詞是否為全形字），以維護文檔的流暢度。</p>
+</li>
+</ul>
+<h2 id="雜項"><a class="header" href="#雜項">雜項</a></h2>
+<ul>
+<li>關於 GitHub 上的分支
+<ul>
+<li>main - 用於 Github Pages 上託管說明文檔</li>
+<li>docs - 用於暫存新版的說明文檔。</li>
+<li>pretalx - 用於儲存 OSCVPass 所使用的 pretalx docker 設定檔</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="2023-intern"><a class="header" href="#2023-intern">2023 intern</a></h1>
+<p>-<a href="intern_ChAoS-UnItY.html">ChAoS-UnItY 實習紀錄</a></p>
+<h1 id="2024-intern"><a class="header" href="#2024-intern">2024 intern</a></h1>
+<p>-<a href="intern_Ayu_kevin.html">Ayu_kevin 實習紀錄</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="實習紀錄"><a class="header" href="#實習紀錄">實習紀錄</a></h1>
+<h2 id="chaos-unity"><a class="header" href="#chaos-unity">ChAoS-UnItY</a></h2>
+<ul>
+<li><a href="https://github.com/ChAoSUnItY">GitHub</a></li>
+<li><a href="https://hackmd.io/@chaos-unity/B1lVrbia2">OSCVPass 實習後記</a></li>
+<li>實習時間：2023/07 ~ 2023/08</li>
+</ul>
+<h2 id="關於我"><a class="header" href="#關於我">關於我</a></h2>
+<p>我是 <a href="https://github.com/ChAoSUnItY">ChAoS</a> ，於 2023 的暑期中在 OCF 實習，很榮幸地能夠被分配到 OSCVPass 的專案整治，也很感謝 <a href="https://github.com/toomore">Toomore</a> 在實習期間指導。</p>
+<h2 id="目前進度"><a class="header" href="#目前進度">目前進度</a></h2>
+<p>目前 OSCVPass 移植到 Pretalx 。已正式上線於<a href="https://apply-for-oscvpass.ocf.tw/">該網站</a>。</p>
+<h3 id="github"><a class="header" href="#github"><a href="https://github.com/ocftw/OSCVPass">GitHub</a></a></h3>
+<p>GitHub 的部分已經大致上整治完成：</p>
+<p>且新增了 project 和 tracking issue 的機制： project 用於追蹤各 issue / pull request 的進度及影響範圍，讓團隊成員及社群可以更方便的檢閱感興趣的 issue / pull request 的進度 ； tracking issue 則用於整合各 issue 到一個大項目 (issue) 中，方便檢閱該大項目中的進度是否有其他問題。</p>
+<p>每個分支都有不同的作用：</p>
+<ul>
+<li>main 主要用於主持 OSCVPass 的靜態網頁並固定同步至 GitHub Pages ， 包括<a href="https://oscvpass.ocf.tw/">介紹頁</a>以及<a href="https://oscvpass.ocf.tw/docs/">文檔</a>。</li>
+<li>docs 要用來擺放暫存的靜態網頁和文檔，完善後透過 pull request 的機制合併至 main 分支中。
+（需要注意的是如果其他成員有暫存的進度在 docs 分支上，請另外開一個分支防止進度衝突，並在 pull request 被合併後自行刪除，<a href="intern_ChAoS-UnItY.html#Pull-request">當然我會更建議這樣做</a>。）</li>
+<li>pretalx 用於存放pretalx docker設定檔。</li>
+</ul>
+<p>關於 issue 和 pull requests 工作流程的機制，詳見<a href="intern_ChAoS-UnItY.html#%E9%97%9C%E6%96%BC%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B">關於工作流程</a>。</p>
+<h3 id="pretalx"><a class="header" href="#pretalx"><a href="https://apply-for-oscvpass.ocf.tw/">Pretalx</a></a></h3>
+<p>已完成問卷和email寄送的部分，詳細的 remote control 可以參考<a href="https://github.com/ocftw/OSCVPass/issues/19">這裡</a>。</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+問卷</li>
+<li><input disabled="" type="checkbox"/>
+Email寄送
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+手動</li>
+<li><input disabled="" type="checkbox"/>
+自動 (參考 <a href="https://github.com/ocftw/OSCVPass/issues/31">Issue 9</a>)</li>
+</ul>
+</li>
+</ul>
+<h2 id="給後續完善-oscvpass-的成員"><a class="header" href="#給後續完善-oscvpass-的成員">給後續完善 OSCVPass 的成員</a></h2>
+<p>截至 8/29/23 ， Pretalx 尚未發布 2.3.2 後的正式版本，目前該版本存在以下幾個問題：</p>
+<ul>
+<li>無法將 Additional Speaker 選項隱藏
+Additional Speaker 在 OSCVPass 的申請表單是無效的資訊/欄位。</li>
+<li>Api 尚未研究完全
+串接的部分目前是規劃使用 COSCUP SecretaryKit 裡面的 python 腳本，但由於 COSCUP 端的說明文檔尚未完善，且實習也接近尾聲，故目前暫緩轉移腳本。</li>
+<li>自動化流程缺失
+目前尚未實作自動化流程，無法自動定期將年會資訊寄送給合格的 OSCVPass 會員。</li>
+<li>權限不明
+根據 Pretalx 官方的文檔，雖然可以創建 superuser 作為初始管理員，但針對新創用戶的權限提拔目前尚未找到正確的流程，可能需要詢問官方或是對 COSCUP pretalx 有經驗之人員。</li>
+</ul>
+<h2 id="關於工作流程"><a class="header" href="#關於工作流程">關於工作流程</a></h2>
+<blockquote>
+<p>若您是社群貢獻者，可以直接創建 issue / pull request ，後續團隊會自動幫你處理 issue / pull request 的分類以及 issue tracking 和 pull request review。</p>
+</blockquote>
+<h3 id="issue"><a class="header" href="#issue">Issue</a></h3>
+<p>Issue 創建後，若 issue 具有一定大小，需要後續追蹤，請在 OSCVPass 的 project 中的 tracking 類別裡面找最相似的類別，於該 tracking issue 中編輯新增你的 issue ；也請順道將創建的 issue 分類在 project 的對應狀態分類中。</p>
+<p>若沒有編輯 tracking issue 的權限的話，請通知 <a href="https://github.com/toomore">Toomore</a> 協助處理權限。</p>
+<h3 id="pull-request"><a class="header" href="#pull-request">Pull request</a></h3>
+<blockquote>
+<p>至後續完善 OSCVPass 的團隊成員，我建議本地端的進度放在自己的 fork 上，防止進度衝突和保持 OSCVPass 專案庫的分支整潔。</p>
+</blockquote>
+<p>Pull requests 創建後，請待其他 OSCVPass 的成員分配分類標籤，並請等待至少 1 位成員 review 變更後再合併進去。</p>
+<p>若該 pull request 是為了關閉 issue 的話，請在說明主旨中寫出 <em>Fixes #[...]</em> ，方便後續合併之後能夠自動關閉 issue ，詳細用語(法)與關閉機制請參考<a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword">官方說明文檔</a>。</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="2024-intern-1"><a class="header" href="#2024-intern-1">2024 intern</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
