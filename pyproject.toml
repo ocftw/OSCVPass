@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "oscvpass"
+version = "0.1.0"
+description = ""
+authors = ["Toomore Chiang <toomore0929@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+arrow = "^1.2.3"
+boto3 = "^1.28.26"
+Jinja2 = "^3.1.2"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.2"
+mypy = "^1.5.0"
+pylint = "^2.17.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
