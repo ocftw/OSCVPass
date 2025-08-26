@@ -1,0 +1,18 @@
+[project]
+name = "mails"
+version = "0.1.0"
+description = "Send mail scripts"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "arrow>=1.3.0",
+    "boto3>=1.40.17",
+    "jinja2>=3.1.6",
+]
+
+[dependency-groups]
+dev = [
+    "autopep8>=2.3.2",
+    "mypy>=1.17.1",
+    "pylint>=3.3.8",
+]
