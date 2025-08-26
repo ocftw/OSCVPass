@@ -1,0 +1,45 @@
+name: Sites-Docs
+on:
+  push:
+    branches:
+      - main
+      - docs
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # To push a branch
+      pull-requests: write # To create a PR from that branch
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install latest mdbook
+        run: |
+          tag=$(curl 'https://api.github.com/repos/rust-lang/mdbook/releases/latest' | jq -r '.tag_name')
+          url="https://github.com/rust-lang/mdbook/releases/download/${tag}/mdbook-${tag}-x86_64-unknown-linux-gnu.tar.gz"
+          mkdir mdbook
+          curl -sSL $url | tar -xz --directory=./mdbook
+          echo `pwd`/mdbook >> $GITHUB_PATH
+      - name: Install Preprocessors
+        run: |
+          cargo install mdbook-toc
+      - name: Deploy GitHub Pages
+        run: |
+          # This assumes your book is in the root of your repository.
+          # Just add a `cd` here if you need to change to another directory.
+          cd ./src/docs
+          mdbook build
+          git worktree add sites
+          git config user.name "Deploy from CI"
+          git config user.email "oscvpass@ocf.tw"
+          cd sites
+          # Delete the ref to avoid keeping history.
+          git update-ref -d refs/heads/sites
+          rm -rf *
+          mkdir ./docs
+          mv ../book/* ./docs/
+          git add ./docs
+          git commit -m "Deploy $GITHUB_SHA to sites"
+          git push --force --set-upstream origin sites

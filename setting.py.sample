@@ -1,0 +1,6 @@
+''' Setting '''
+AWSID = ''
+AWSKEY = ''
+QUEUEURL = 'http://127.0.0.1:7700'
+TESTMAIL = ''
+BLOCK = ('', '')
