@@ -1,0 +1,7 @@
+[project]
+name = "ocf-oscvpass"
+version = "0.1"
+description = "開源貢獻者申請方案"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
