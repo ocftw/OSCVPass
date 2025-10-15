@@ -1,0 +1,92 @@
+---
+title: Pull Request
+---
+# Pull Request
+
+- [hexo-theme-icarus](https://github.com/ppoffice/hexo-theme-icarus/commits/master?author=sudoliyang), sudoliyang, _Hexo 的 Icarus 主題_
+- [opensbi](https://github.com/riscv/opensbi/commit/3cbb419def46e95b04d43f2d95f126f653e55589), Nylon Chen, _RISC-V Supervisor Binary Interface 的開源實現_
+- [uBlockOrigin](https://github.com/uBlockOrigin/uBlock-issues/issues/786#event-2812683588), mmis1000, _一個高效的廣告攔截器_
+- [commitizen](https://github.com/Woile/commitizen), clleew, _便捷的 commit 風格工具_
+- [clash](https://github.com/Dreamacro/clash/pull/337), BirkhoffLee, _規則型代理軟體_
+- [vetur](https://github.com/vuejs/vetur/pull/1326), yoyo930021, _Vue.js 的 VS Code 擴充套件_
+- [powershell](https://github.com/powershell/powershell/issues/11187/), holishing, _微軟的跨平台自動化工具_
+- [hexo-theme-even](https://github.com/ahonn/hexo-theme-even/commit/eb3b6b6adc87dbeeed0308f1e5052d7d5f031400), TMineCola, _Hexo 的 Even 主題_
+- [CCIP-iOS](https://github.com/CCIP-App/CCIP-iOS/issues/21), ji3g4kami, _iOS 替代教育行動應用程式_
+- [nsfw](https://github.com/Axosoft/nsfw/pull/74), Leo1003, _跨平台檔案系統監控工具_
+- [libmodulemd](https://github.com/fedora-modularity/libmodulemd/pull/425), chenliTW, _Fedora 模組化計畫專案_
+- [sway](https://github.com/swaywm/sway/pull/4740), Leo1003, _Wayland 的 i3 相容視窗管理器_
+- [android-samples](https://github.com/googlemaps/android-samples/pull/124), Kuan-Hsien, _Google Maps Android API 的範例應用程式_
+- [google-cloud-python](https://github.com/googleapis/google-cloud-python/issues/9985), sheiun, _Google Cloud 的 Python 客戶端庫_
+- [vscode-hackmd](https://github.com/hackmdio/vscode-hackmd/issues/5), yc5, _VS Code 中的 HackMD 整合_
+- [django-background-tasks](https://github.com/arteria/django-background-tasks/commit/5dcc2d83afed8cdc0541b7a9ac58542cc598e2b4), kaibaooo, _Django 後台任務工具_
+- [pycon.tw](https://github.com/pycontw/pycon.tw/pull/760), jp6ru8958958, _PyCon Taiwan 網站專案_
+- [proxybroker2](https://github.com/bluet/proxybroker2/pull/4), afunTW, _代理伺服器管理工具_
+- [qterminal](https://github.com/lxqt/qterminal/commits?author=yan12125), yan12125, _LXQt 桌面環境的終端機應用程式_
+- [hadoop-ozone](https://github.com/apache/hadoop-ozone/pulls?q=is%3Apr+author%3Acku328), cku328, _分散式存儲系統專案_
+- [Qemu Guest Agent](https://bugzilla.redhat.com/show_bug.cgi?id=1733165), Su, Jun-Ming, _QEMU 虛擬化軟體的用戶端代理_
+- [gitlab](https://gitlab.com/gitlab-org/gitlab/-/issues/222817), Buo-ren, Lin, _GitLab 平台的問題管理_
+- [partclone](https://github.com/Thomas-Tsai/partclone), Thomas-Tsai, _磁碟分割複製工具_
+- [ECG-acquisition-classification](https://github.com/manideep2510/ECG-acquisition-classification/pull/6), yanagiragi, _心電圖數據獲取和分類專案_
+- [amp-module](https://github.com/nuxt-community/amp-module/pull/85), hans00, _Nuxt.js 的 AMP 支持模組_
+- [fluentd](https://github.com/fluent/fluentd/pull/2640), achinchen, _資料收集和集中處理工具_
+- [intellij-postfix-templates](https://github.com/xylo/intellij-postfix-templates/commit/212452eb168dd33e642901902e80c6fa82462731), fnsne, _IntelliJ IDEA 的模板擴展_
+- [freedom-tools](https://github.com/sifive/freedom-tools/pulls?q=author%3Aissuehsu), issuehsu, _RISC-V 開發工具套件_
+- [hydra](https://github.com/ory/hydra/pull/1654), rickwang7712, _OAuth 2.0 和 OpenID Connect 提供商_
+- [android-maps-utils](https://github.com/googlemaps/android-maps-utils/pull/535), chrisnoodoe, _Google Maps Android 的工具庫_
+- [Linux Kernel](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/), macpaul.lin, _Linux 核心專案_
+- [heapify](https://github.com/luciopaiva/heapify/pull/3), oToToT, _優化 Python 的堆排序_
+- [homebrew-core](https://github.com/Homebrew/homebrew-core/pull/41557), lemonlatte, _macOS 的軟體管理器 Homebrew 核心套件_
+- [systemd-ngrok](https://github.com/vincenthsu/systemd-ngrok), vincenthsu, _NGROK 的 systemd 支持_
+- [Linux kernel](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/sound/pci/hda/patch_realtek.c?id=781c90c034d994c6a4e2badf189128a95ed864c2), jian-hong, _Linux 核心的 Realtek HDA 驅動程式修正_
+- [flink](https://github.com/apache/flink/pull/9824), tony810430, _Apache Flink 的流處理專案_
+- [reverse-interview-zh-tw](https://github.com/NeroCube/reverse-interview-zh-tw/pull/1), FlandreDaisuki, _逆向面試的中文指南_
+- [l10n-central](https://hg.mozilla.org/l10n-central/zh-TW/shortlog/tip), petercpg, _Mozilla 的台灣正體中文本地化專案_
+- [musl libc](https://git.musl-libc.org/cgit/musl/commit/?id=c0b4a7b25430e4495bb213a5c3ad43e26c6bff20), ruinland, _輕量級標準 C 函式庫_
+- [kubespray](https://github.com/kubernetes-sigs/kubespray/pull/5307), sufuf3, _Kubernetes 集群的部署工具_
+- [LimeSurvey](https://github.com/LimeSurvey/LimeSurvey/commit/1f34bf7fa5eac34ff080a679e8bae2bf56bcd54b), imacat, _線上問卷調查系統_
+- [tldr-pages](https://github.com/tldr-pages/tldr/pull/4066), shrimp509, _簡化的命令行指令說明_
+- [video-type](https://github.com/selective-php/video-type/pull/27), peter279k, _PHP 的視訊類型識別工具_
+- [express-useragent](https://github.com/biggora/express-useragent/pull/123), kewang, _Express.js 的使用者代理解析中介軟體_
+- [gmqtt](https://github.com/wialon/gmqtt/pull/101#issuecomment-599332747), wdv4758h, _Go 語言撰寫的 MQTT 客戶端_
+- [NflxMultiSubs](https://github.com/dannvix/NflxMultiSubs/pull/43), chucklin, _Netflix 的多字幕支援工具_
+- [line-bot-sdk-nodejs](https://github.com/line/line-bot-sdk-nodejs/pull/231), taichunmin, _Node.js 的 LINE Bot SDK_
+- [junest](https://github.com/fsquillace/junest/issues/235), jminh, _Linux 桌面上的 Arch Linux 便攜環境_
+- [dell-recovery](https://github.com/dell/dell-recovery/commit/25c29cfde546de58d32192e5de11e197d6857e50), Alex Tu, _戴爾電腦的系統恢復工具_
+- [jest](https://github.com/facebook/jest/pull/9257), WeiAnAn, _Facebook 的 JavaScript 測試框架_
+- [Debian](https://qa.debian.org/developer.php?login=paulliu@debian.org), paulliu, _Debian 軟體包管理專案_
+- [homebrew-cask](https://github.com/Homebrew/homebrew-cask/commits?author=RJHsiao), RJHsiao, _macOS Cask 軟體包管理工具_
+- [linux-test-project](https://github.com/linux-test-project), Eric, _Linux 測試專案_
+- [php7](https://galaxy.ansible.com/chusiang/php7), chusiang, _Ansible 的 PHP7 安裝腳本_
+- [flutter](https://github.com/flutter/flutter/pull/59317), yongjhih, _Google 的開源 UI 開發工具_
+- [bottender](https://github.com/Yoctol/bottender/commits?author=bobchao&since=2020-02-29&until=2020-03-31), bobchao, _用於構建聊天機器人的框架_
+- [Reactor-Developer-Console](https://github.com/mustafayaya/Reactor-Developer-Console/pull/12), edisonlee55, _開發者調試控制台工具_
+- [flutter](https://github.com/flutter/flutter/issues/55294), tico88612, _Google 的開源 UI 開發工具_
+- [alertmanager2hangoutschat](https://github.com/Pix4D/alertmanager2hangoutschat/pull/5), Downager, _將 Alertmanager 警報轉發至 Hangouts Chat 的工具_
+- [commitizen](https://github.com/commitizen-tools/commitizen/commits?author=Lee-W), Lee-W, _幫助保持一致的 commit 風格的工具_
+- [FastWordQuery](https://github.com/sth2018/FastWordQuery/pull/164), xr2439, _快速查詢單字工具_
+- [js-mythbusters](https://github.com/Kikobeats/js-mythbusters/pull/92), ms314006, _JavaScript 誤解消除指南_
+- [gridsome](https://github.com/gridsome/gridsome/pull/1293), Mini-ghost, _Vue.js 驅動的靜態網站生成框架_
+- [vetur](https://github.com/vuejs/vetur/pulls?q=is%3Apr+author%3Ayoyo930021+), yoyo930021, _Vue.js 的 VS Code 擴充套件_
+- [cockpit](https://github.com/cockpit-project/cockpit/pull/14182), tjjh89017, _管理伺服器的易用 web 界面_
+- [xterm.js](https://github.com/xtermjs/xterm.js/pull/3067), mmis1000, _基於網頁的終端模擬器_
+- [Hyara](https://github.com/hyuunnn/Hyara/pull/10), Still34, _基於 Yara 的惡意程式掃描器_
+- [EarlySpringCommitee](https://github.com/EarlySpringCommitee/HowHow-web/), t510599, _協助社群的網站項目_
+- [gsat](https://github.com/Sea-n/gsat/pull/16), chenliTW, _大學學科能力測驗相關資訊平台_
+- [Anime-List](https://github.com/ACGNTaiwan/Anime-List/pulls?q=is%3Apr+author%3At510599), t510599, _台灣動漫資料庫_
+- [Galaxy](https://github.com/OKTW-Network/Galaxy/pull/323), WoodManGitHub, _Minecraft 網路連接管理插件_
+- [kubernetes－website](https://github.com/kubernetes/website), ader, _Kubernetes 官方網站_
+- [sessions](https://github.com/gin-contrib/sessions/commit/d3f12ce7c1bd9bf079b57acd316d95f257e42be8), vincentinttsh, _Gin 框架的 session 管理擴展_
+- [rust-openssl](https://github.com/sfackler/rust-openssl/pull/1289), Leo1003, _Rust 的 OpenSSL 支援庫_
+- [pwntools](https://github.com/Gallopsled/pwntools/pull/1643), nella17, _CTF 比賽專用工具庫_
+- [WoeUSB](https://github.com/WoeUSB/WoeUSB/commit/868ab5ab), brlin-tw, _製作 Windows 可啟動 USB 的工具_
+- [iotaledger](https://github.com/iotaledger/documentation/pull/880), EasonC13, _IOTA 資料庫文件_
+- [sqlpp17](https://github.com/rbock/sqlpp17/issues/7), CHChang810716, _C++ 的 SQL 查詢庫_
+- [whois](https://github.com/likexian/whois/pull/15), steveyiyo, _查詢網域註冊資訊工具_
+- [rembg](https://github.com/danielgatis/rembg/pull/56), lekoOwO, _影像背景移除工具_
+- [eksctl](https://github.com/weaveworks/eksctl/pull/2813), ysam12345, _管理 AWS EKS 叢集的工具_
+- [docker-node](https://github.com/nodejs/docker-node/commits?author=PeterDaveHello&since=2020-01-01&until=2021-01-02), PeterDaveHello, _Node.js 的 Docker 官方映像_
+- [Teamplay_Yolov3](https://github.com/Tony363/Teamplay_Yolov3/graphs/contributors), pysolver33, _物體檢測神經網絡項目_
+- [CCIP-iOS](https://github.com/CCIP-App/CCIP-iOS/pull/41), secminhr, _iOS 的學科預備項目_
+- [lotify](https://github.com/louis70109/lotify/pull/9), MirrorShih, _LINE Notify 的簡化版本_
+- [DynamicExpresso](https://github.com/dynamicexpresso/DynamicExpresso/pull/142), tingwei628, _用於將 C# 代碼轉換為可執行表達式的工具_
+- [donkeycar](https://github.com/autorope/donkeycar/commits?author=x1001000), x1001000, _自動駕駛車輛平台_

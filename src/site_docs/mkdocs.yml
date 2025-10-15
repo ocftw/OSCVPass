@@ -12,6 +12,19 @@ nav:
       - index.md
       - apply.md
       - volunteer.md
+  - 已核准專案:
+      - approved/index.md
+      - approved/open-source.md
+      - approved/community.md
+      - approved/program.md
+      - approved/security-web3.md
+      - approved/language.md
+      - approved/l10n.md
+      - approved/image-sound.md
+      - approved/app.md
+      - approved/chatbot-api.md
+      - approved/linux-kernel.md
+      - approved/pull-request.md
 theme:
   name: material
   icon:
