@@ -1,0 +1,42 @@
+docs_dir: "zh-tw"
+site_name: "OSCVPass 開源貢獻者申請專案"
+site_url: "https://oscvpass.ocf.tw"
+site_description: 參與開源活動或貢獻活動證明
+site_author: 財團法人開放文化基金會 OCF
+repo_url: https://github.com/ocftw/OSCVPass
+repo_name: ocftw/OSCVPass
+copyright: "CC-BY 4.0 OCF-OSCVPass Project"
+
+nav:
+  - 專案說明:
+      - index.md
+      - apply.md
+      - volunteer.md
+theme:
+  name: material
+  icon:
+    logo: material/passport
+    repo: fontawesome/brands/github
+  favicon: assets/images/favicon.svg
+  palette:
+    primary: teal
+    accent: indigo
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - privacy
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
