@@ -1,0 +1,955 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="參與開源活動或貢獻活動證明">
+      
+      
+        <meta name="author" content="財團法人開放文化基金會 OCF">
+      
+      
+        <link rel="canonical" href="https://oscvpass.ocf.tw/approved/pull-request/">
+      
+      
+        <link rel="prev" href="../linux-kernel/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Pull Request - OSCVPass 開源貢獻者申請專案</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pull-request" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OSCVPass 開源貢獻者申請專案" class="md-header__button md-logo" aria-label="OSCVPass 開源貢獻者申請專案" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm6 3a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 1c-.41.62-.75 1.29-.96 2h1.92A7.2 7.2 0 0 0 12 6m-1.3.22C9.78 6.53 9 7.17 8.54 8H10c.18-.62.4-1.22.7-1.78m2.59 0c.3.56.53 1.16.71 1.78h1.46c-.46-.83-1.25-1.46-2.17-1.78M8.13 9c-.08.32-.13.65-.13 1s.05.68.13 1h1.69c-.04-.33-.07-.66-.07-1s.03-.67.07-1zm2.7 0c-.05.32-.08.66-.08 1s.03.67.08 1h2.34c.04-.33.08-.66.08-1s-.04-.68-.08-1zm3.35 0c.04.33.07.66.07 1s-.03.67-.07 1h1.69c.08-.32.13-.65.13-1s-.05-.68-.13-1zm-5.64 3c.46.83 1.24 1.46 2.16 1.78-.3-.56-.52-1.15-.7-1.78zm2.5 0c.21.72.55 1.38.96 2 .42-.62.75-1.28.96-2zM14 12c-.18.63-.41 1.22-.71 1.78.92-.32 1.71-.95 2.17-1.78zm-7 5h10v2H7z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OSCVPass 開源貢獻者申請專案
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pull Request
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ocftw/OSCVPass" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ocftw/OSCVPass
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  專案說明
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  已核准專案
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OSCVPass 開源貢獻者申請專案" class="md-nav__button md-logo" aria-label="OSCVPass 開源貢獻者申請專案" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm6 3a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 1c-.41.62-.75 1.29-.96 2h1.92A7.2 7.2 0 0 0 12 6m-1.3.22C9.78 6.53 9 7.17 8.54 8H10c.18-.62.4-1.22.7-1.78m2.59 0c.3.56.53 1.16.71 1.78h1.46c-.46-.83-1.25-1.46-2.17-1.78M8.13 9c-.08.32-.13.65-.13 1s.05.68.13 1h1.69c-.04-.33-.07-.66-.07-1s.03-.67.07-1zm2.7 0c-.05.32-.08.66-.08 1s.03.67.08 1h2.34c.04-.33.08-.66.08-1s-.04-.68-.08-1zm3.35 0c.04.33.07.66.07 1s-.03.67-.07 1h1.69c.08-.32.13-.65.13-1s-.05-.68-.13-1zm-5.64 3c.46.83 1.24 1.46 2.16 1.78-.3-.56-.52-1.15-.7-1.78zm2.5 0c.21.72.55 1.38.96 2 .42-.62.75-1.28.96-2zM14 12c-.18.63-.41 1.22-.71 1.78.92-.32 1.71-.95 2.17-1.78zm-7 5h10v2H7z"/></svg>
+
+    </a>
+    OSCVPass 開源貢獻者申請專案
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ocftw/OSCVPass" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ocftw/OSCVPass
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    專案說明
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            專案說明
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apply/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-1.9l10-10V8l-6-6zm7 1.5L18.5 9H13zm7.1 9.5c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-2 1.8L12 20.9V23h2.1l6.1-6.1z"/></svg>
+  
+  <span class="md-ellipsis">
+    如何申請
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../volunteer/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 17c0 3.31-2.69 6-6 6v-1.5c2.5 0 4.5-2 4.5-4.5zM1 7c0-3.31 2.69-6 6-6v1.5c-2.5 0-4.5 2-4.5 4.5zm7-2.68-4.59 4.6c-3.22 3.22-3.22 8.45 0 11.67s8.45 3.22 11.67 0l7.07-7.09c.49-.47.49-1.26 0-1.75a1.25 1.25 0 0 0-1.77 0l-4.42 4.42-.71-.71 6.54-6.54c.49-.49.49-1.28 0-1.77s-1.29-.49-1.79 0L14.19 13l-.69-.73 6.87-6.89c.49-.49.49-1.28 0-1.77s-1.28-.49-1.77 0l-6.89 6.89-.71-.7 5.5-5.48c.5-.49.5-1.28 0-1.77s-1.28-.49-1.77 0l-7.62 7.62a4 4 0 0 1-.33 5.28l-.71-.71a3 3 0 0 0 0-4.24l-.35-.35 4.07-4.07c.49-.49.49-1.28 0-1.77-.5-.48-1.29-.48-1.79.01"/></svg>
+  
+  <span class="md-ellipsis">
+    專案志工招募
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    已核准專案
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            已核准專案
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    開源專案
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    社群貢獻
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    程式設計與語言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-web3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    資安、區塊鏈
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    語言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../l10n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    翻譯
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image-sound/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    影像辨識 / 聲音辨識
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    App
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatbot-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chatbot、API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-kernel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Kernel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pull Request
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="pull-request">Pull Request</h1>
+<ul>
+<li><a href="https://github.com/ppoffice/hexo-theme-icarus/commits/master?author=sudoliyang">hexo-theme-icarus</a>, sudoliyang, <em>Hexo 的 Icarus 主題</em></li>
+<li><a href="https://github.com/riscv/opensbi/commit/3cbb419def46e95b04d43f2d95f126f653e55589">opensbi</a>, Nylon Chen, <em>RISC-V Supervisor Binary Interface 的開源實現</em></li>
+<li><a href="https://github.com/uBlockOrigin/uBlock-issues/issues/786#event-2812683588">uBlockOrigin</a>, mmis1000, <em>一個高效的廣告攔截器</em></li>
+<li><a href="https://github.com/Woile/commitizen">commitizen</a>, clleew, <em>便捷的 commit 風格工具</em></li>
+<li><a href="https://github.com/Dreamacro/clash/pull/337">clash</a>, BirkhoffLee, <em>規則型代理軟體</em></li>
+<li><a href="https://github.com/vuejs/vetur/pull/1326">vetur</a>, yoyo930021, <em>Vue.js 的 VS Code 擴充套件</em></li>
+<li><a href="https://github.com/powershell/powershell/issues/11187/">powershell</a>, holishing, <em>微軟的跨平台自動化工具</em></li>
+<li><a href="https://github.com/ahonn/hexo-theme-even/commit/eb3b6b6adc87dbeeed0308f1e5052d7d5f031400">hexo-theme-even</a>, TMineCola, <em>Hexo 的 Even 主題</em></li>
+<li><a href="https://github.com/CCIP-App/CCIP-iOS/issues/21">CCIP-iOS</a>, ji3g4kami, <em>iOS 替代教育行動應用程式</em></li>
+<li><a href="https://github.com/Axosoft/nsfw/pull/74">nsfw</a>, Leo1003, <em>跨平台檔案系統監控工具</em></li>
+<li><a href="https://github.com/fedora-modularity/libmodulemd/pull/425">libmodulemd</a>, chenliTW, <em>Fedora 模組化計畫專案</em></li>
+<li><a href="https://github.com/swaywm/sway/pull/4740">sway</a>, Leo1003, <em>Wayland 的 i3 相容視窗管理器</em></li>
+<li><a href="https://github.com/googlemaps/android-samples/pull/124">android-samples</a>, Kuan-Hsien, <em>Google Maps Android API 的範例應用程式</em></li>
+<li><a href="https://github.com/googleapis/google-cloud-python/issues/9985">google-cloud-python</a>, sheiun, <em>Google Cloud 的 Python 客戶端庫</em></li>
+<li><a href="https://github.com/hackmdio/vscode-hackmd/issues/5">vscode-hackmd</a>, yc5, <em>VS Code 中的 HackMD 整合</em></li>
+<li><a href="https://github.com/arteria/django-background-tasks/commit/5dcc2d83afed8cdc0541b7a9ac58542cc598e2b4">django-background-tasks</a>, kaibaooo, <em>Django 後台任務工具</em></li>
+<li><a href="https://github.com/pycontw/pycon.tw/pull/760">pycon.tw</a>, jp6ru8958958, <em>PyCon Taiwan 網站專案</em></li>
+<li><a href="https://github.com/bluet/proxybroker2/pull/4">proxybroker2</a>, afunTW, <em>代理伺服器管理工具</em></li>
+<li><a href="https://github.com/lxqt/qterminal/commits?author=yan12125">qterminal</a>, yan12125, <em>LXQt 桌面環境的終端機應用程式</em></li>
+<li><a href="https://github.com/apache/hadoop-ozone/pulls?q=is%3Apr+author%3Acku328">hadoop-ozone</a>, cku328, <em>分散式存儲系統專案</em></li>
+<li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1733165">Qemu Guest Agent</a>, Su, Jun-Ming, <em>QEMU 虛擬化軟體的用戶端代理</em></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/222817">gitlab</a>, Buo-ren, Lin, <em>GitLab 平台的問題管理</em></li>
+<li><a href="https://github.com/Thomas-Tsai/partclone">partclone</a>, Thomas-Tsai, <em>磁碟分割複製工具</em></li>
+<li><a href="https://github.com/manideep2510/ECG-acquisition-classification/pull/6">ECG-acquisition-classification</a>, yanagiragi, <em>心電圖數據獲取和分類專案</em></li>
+<li><a href="https://github.com/nuxt-community/amp-module/pull/85">amp-module</a>, hans00, <em>Nuxt.js 的 AMP 支持模組</em></li>
+<li><a href="https://github.com/fluent/fluentd/pull/2640">fluentd</a>, achinchen, <em>資料收集和集中處理工具</em></li>
+<li><a href="https://github.com/xylo/intellij-postfix-templates/commit/212452eb168dd33e642901902e80c6fa82462731">intellij-postfix-templates</a>, fnsne, <em>IntelliJ IDEA 的模板擴展</em></li>
+<li><a href="https://github.com/sifive/freedom-tools/pulls?q=author%3Aissuehsu">freedom-tools</a>, issuehsu, <em>RISC-V 開發工具套件</em></li>
+<li><a href="https://github.com/ory/hydra/pull/1654">hydra</a>, rickwang7712, <em>OAuth 2.0 和 OpenID Connect 提供商</em></li>
+<li><a href="https://github.com/googlemaps/android-maps-utils/pull/535">android-maps-utils</a>, chrisnoodoe, <em>Google Maps Android 的工具庫</em></li>
+<li><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/">Linux Kernel</a>, macpaul.lin, <em>Linux 核心專案</em></li>
+<li><a href="https://github.com/luciopaiva/heapify/pull/3">heapify</a>, oToToT, <em>優化 Python 的堆排序</em></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/41557">homebrew-core</a>, lemonlatte, <em>macOS 的軟體管理器 Homebrew 核心套件</em></li>
+<li><a href="https://github.com/vincenthsu/systemd-ngrok">systemd-ngrok</a>, vincenthsu, <em>NGROK 的 systemd 支持</em></li>
+<li><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/sound/pci/hda/patch_realtek.c?id=781c90c034d994c6a4e2badf189128a95ed864c2">Linux kernel</a>, jian-hong, <em>Linux 核心的 Realtek HDA 驅動程式修正</em></li>
+<li><a href="https://github.com/apache/flink/pull/9824">flink</a>, tony810430, <em>Apache Flink 的流處理專案</em></li>
+<li><a href="https://github.com/NeroCube/reverse-interview-zh-tw/pull/1">reverse-interview-zh-tw</a>, FlandreDaisuki, <em>逆向面試的中文指南</em></li>
+<li><a href="https://hg.mozilla.org/l10n-central/zh-TW/shortlog/tip">l10n-central</a>, petercpg, <em>Mozilla 的台灣正體中文本地化專案</em></li>
+<li><a href="https://git.musl-libc.org/cgit/musl/commit/?id=c0b4a7b25430e4495bb213a5c3ad43e26c6bff20">musl libc</a>, ruinland, <em>輕量級標準 C 函式庫</em></li>
+<li><a href="https://github.com/kubernetes-sigs/kubespray/pull/5307">kubespray</a>, sufuf3, <em>Kubernetes 集群的部署工具</em></li>
+<li><a href="https://github.com/LimeSurvey/LimeSurvey/commit/1f34bf7fa5eac34ff080a679e8bae2bf56bcd54b">LimeSurvey</a>, imacat, <em>線上問卷調查系統</em></li>
+<li><a href="https://github.com/tldr-pages/tldr/pull/4066">tldr-pages</a>, shrimp509, <em>簡化的命令行指令說明</em></li>
+<li><a href="https://github.com/selective-php/video-type/pull/27">video-type</a>, peter279k, <em>PHP 的視訊類型識別工具</em></li>
+<li><a href="https://github.com/biggora/express-useragent/pull/123">express-useragent</a>, kewang, <em>Express.js 的使用者代理解析中介軟體</em></li>
+<li><a href="https://github.com/wialon/gmqtt/pull/101#issuecomment-599332747">gmqtt</a>, wdv4758h, <em>Go 語言撰寫的 MQTT 客戶端</em></li>
+<li><a href="https://github.com/dannvix/NflxMultiSubs/pull/43">NflxMultiSubs</a>, chucklin, <em>Netflix 的多字幕支援工具</em></li>
+<li><a href="https://github.com/line/line-bot-sdk-nodejs/pull/231">line-bot-sdk-nodejs</a>, taichunmin, <em>Node.js 的 LINE Bot SDK</em></li>
+<li><a href="https://github.com/fsquillace/junest/issues/235">junest</a>, jminh, <em>Linux 桌面上的 Arch Linux 便攜環境</em></li>
+<li><a href="https://github.com/dell/dell-recovery/commit/25c29cfde546de58d32192e5de11e197d6857e50">dell-recovery</a>, Alex Tu, <em>戴爾電腦的系統恢復工具</em></li>
+<li><a href="https://github.com/facebook/jest/pull/9257">jest</a>, WeiAnAn, <em>Facebook 的 JavaScript 測試框架</em></li>
+<li><a href="https://qa.debian.org/developer.php?login=paulliu@debian.org">Debian</a>, paulliu, <em>Debian 軟體包管理專案</em></li>
+<li><a href="https://github.com/Homebrew/homebrew-cask/commits?author=RJHsiao">homebrew-cask</a>, RJHsiao, <em>macOS Cask 軟體包管理工具</em></li>
+<li><a href="https://github.com/linux-test-project">linux-test-project</a>, Eric, <em>Linux 測試專案</em></li>
+<li><a href="https://galaxy.ansible.com/chusiang/php7">php7</a>, chusiang, <em>Ansible 的 PHP7 安裝腳本</em></li>
+<li><a href="https://github.com/flutter/flutter/pull/59317">flutter</a>, yongjhih, <em>Google 的開源 UI 開發工具</em></li>
+<li><a href="https://github.com/Yoctol/bottender/commits?author=bobchao&amp;since=2020-02-29&amp;until=2020-03-31">bottender</a>, bobchao, <em>用於構建聊天機器人的框架</em></li>
+<li><a href="https://github.com/mustafayaya/Reactor-Developer-Console/pull/12">Reactor-Developer-Console</a>, edisonlee55, <em>開發者調試控制台工具</em></li>
+<li><a href="https://github.com/flutter/flutter/issues/55294">flutter</a>, tico88612, <em>Google 的開源 UI 開發工具</em></li>
+<li><a href="https://github.com/Pix4D/alertmanager2hangoutschat/pull/5">alertmanager2hangoutschat</a>, Downager, <em>將 Alertmanager 警報轉發至 Hangouts Chat 的工具</em></li>
+<li><a href="https://github.com/commitizen-tools/commitizen/commits?author=Lee-W">commitizen</a>, Lee-W, <em>幫助保持一致的 commit 風格的工具</em></li>
+<li><a href="https://github.com/sth2018/FastWordQuery/pull/164">FastWordQuery</a>, xr2439, <em>快速查詢單字工具</em></li>
+<li><a href="https://github.com/Kikobeats/js-mythbusters/pull/92">js-mythbusters</a>, ms314006, <em>JavaScript 誤解消除指南</em></li>
+<li><a href="https://github.com/gridsome/gridsome/pull/1293">gridsome</a>, Mini-ghost, <em>Vue.js 驅動的靜態網站生成框架</em></li>
+<li><a href="https://github.com/vuejs/vetur/pulls?q=is%3Apr+author%3Ayoyo930021+">vetur</a>, yoyo930021, <em>Vue.js 的 VS Code 擴充套件</em></li>
+<li><a href="https://github.com/cockpit-project/cockpit/pull/14182">cockpit</a>, tjjh89017, <em>管理伺服器的易用 web 界面</em></li>
+<li><a href="https://github.com/xtermjs/xterm.js/pull/3067">xterm.js</a>, mmis1000, <em>基於網頁的終端模擬器</em></li>
+<li><a href="https://github.com/hyuunnn/Hyara/pull/10">Hyara</a>, Still34, <em>基於 Yara 的惡意程式掃描器</em></li>
+<li><a href="https://github.com/EarlySpringCommitee/HowHow-web/">EarlySpringCommitee</a>, t510599, <em>協助社群的網站項目</em></li>
+<li><a href="https://github.com/Sea-n/gsat/pull/16">gsat</a>, chenliTW, <em>大學學科能力測驗相關資訊平台</em></li>
+<li><a href="https://github.com/ACGNTaiwan/Anime-List/pulls?q=is%3Apr+author%3At510599">Anime-List</a>, t510599, <em>台灣動漫資料庫</em></li>
+<li><a href="https://github.com/OKTW-Network/Galaxy/pull/323">Galaxy</a>, WoodManGitHub, <em>Minecraft 網路連接管理插件</em></li>
+<li><a href="https://github.com/kubernetes/website">kubernetes－website</a>, ader, <em>Kubernetes 官方網站</em></li>
+<li><a href="https://github.com/gin-contrib/sessions/commit/d3f12ce7c1bd9bf079b57acd316d95f257e42be8">sessions</a>, vincentinttsh, <em>Gin 框架的 session 管理擴展</em></li>
+<li><a href="https://github.com/sfackler/rust-openssl/pull/1289">rust-openssl</a>, Leo1003, <em>Rust 的 OpenSSL 支援庫</em></li>
+<li><a href="https://github.com/Gallopsled/pwntools/pull/1643">pwntools</a>, nella17, <em>CTF 比賽專用工具庫</em></li>
+<li><a href="https://github.com/WoeUSB/WoeUSB/commit/868ab5ab">WoeUSB</a>, brlin-tw, <em>製作 Windows 可啟動 USB 的工具</em></li>
+<li><a href="https://github.com/iotaledger/documentation/pull/880">iotaledger</a>, EasonC13, <em>IOTA 資料庫文件</em></li>
+<li><a href="https://github.com/rbock/sqlpp17/issues/7">sqlpp17</a>, CHChang810716, <em>C++ 的 SQL 查詢庫</em></li>
+<li><a href="https://github.com/likexian/whois/pull/15">whois</a>, steveyiyo, <em>查詢網域註冊資訊工具</em></li>
+<li><a href="https://github.com/danielgatis/rembg/pull/56">rembg</a>, lekoOwO, <em>影像背景移除工具</em></li>
+<li><a href="https://github.com/weaveworks/eksctl/pull/2813">eksctl</a>, ysam12345, <em>管理 AWS EKS 叢集的工具</em></li>
+<li><a href="https://github.com/nodejs/docker-node/commits?author=PeterDaveHello&amp;since=2020-01-01&amp;until=2021-01-02">docker-node</a>, PeterDaveHello, <em>Node.js 的 Docker 官方映像</em></li>
+<li><a href="https://github.com/Tony363/Teamplay_Yolov3/graphs/contributors">Teamplay_Yolov3</a>, pysolver33, <em>物體檢測神經網絡項目</em></li>
+<li><a href="https://github.com/CCIP-App/CCIP-iOS/pull/41">CCIP-iOS</a>, secminhr, <em>iOS 的學科預備項目</em></li>
+<li><a href="https://github.com/louis70109/lotify/pull/9">lotify</a>, MirrorShih, <em>LINE Notify 的簡化版本</em></li>
+<li><a href="https://github.com/dynamicexpresso/DynamicExpresso/pull/142">DynamicExpresso</a>, tingwei628, <em>用於將 C# 代碼轉換為可執行表達式的工具</em></li>
+<li><a href="https://github.com/autorope/donkeycar/commits?author=x1001000">donkeycar</a>, x1001000, <em>自動駕駛車輛平台</em></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC-BY 4.0 OCF-OSCVPass Project
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
