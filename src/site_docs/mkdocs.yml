@@ -47,6 +47,9 @@ theme:
     - content.action.view
     - content.action.edit
 extra:
+  analytics:
+    provider: google
+    property: G-CFKVL29PQR
   social:
     - icon: material/email-plus
       link: oscvpass@ocf.tw
