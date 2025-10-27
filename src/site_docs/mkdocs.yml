@@ -12,6 +12,8 @@ nav:
   - 專案說明:
       - index.md
       - apply.md
+      - open-source-definition.md
+      - license.md
       - volunteer.md
   - 已核准專案:
       - approved/index.md
@@ -77,3 +79,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
