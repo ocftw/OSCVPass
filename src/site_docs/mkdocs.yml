@@ -6,6 +6,7 @@ site_author: 財團法人開放文化基金會 OCF
 repo_url: https://github.com/ocftw/OSCVPass
 repo_name: ocftw/OSCVPass
 copyright: "CC-BY 4.0 OSCVPass Project, 財團法人開放文化基金會 OCF"
+edit_uri: https://github.com/ocftw/OSCVPass/tree/main/src/site_docs/zh-tw
 
 nav:
   - 專案說明:
@@ -43,6 +44,8 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - content.action.view
+    - content.action.edit
 extra:
   social:
     - icon: material/email-plus
