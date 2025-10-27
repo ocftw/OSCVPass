@@ -27,6 +27,7 @@ nav:
       - approved/pull-request.md
 theme:
   name: material
+  language: zh-Hant
   icon:
     logo: material/passport
     repo: fontawesome/brands/github
@@ -56,6 +57,15 @@ plugins:
         - zh
         - en
   - privacy
+  - git-revision-date-localized:
+      type: iso_datetime
+      locale: en
+      enable_creation_date: true
+      enable_parallel_processing: true
+  - git-authors:
+      show_contribution: true
+      show_email_address: false
+      show_line_count: true
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
