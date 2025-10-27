@@ -23,10 +23,11 @@ jobs:
             # ----- #0 By using worktree ----- #
             - name: Build Mkdocs
               run: |
-                  git worktree add ./docs mkdocs-sites
-                  rm -rf ./docs/*
-                  uv run mkdocs build -v -d ./docs
-                  cd ./docs
+                  git worktree add ./docs mkdoc-sites
+                  cd ./src/site_docs
+                  uv run mkdocs build -v -d ../../docs
+                  cd ../../docs
+                  touch ./.nojekyll
                   if [ -n "$(git status --porcelain)" ]; then
                     git add .
                     git commit -a -m 'Deploy on ${{ github.ref_name }} ${{ github.sha }}'
