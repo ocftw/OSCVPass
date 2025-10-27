@@ -27,7 +27,8 @@ jobs:
                   cd ./src/site_docs
                   uv run mkdocs build -v -d ../../docs
                   cd ../../docs
-                  touch ./.nojekyll
+                  touch .nojekyll
+                  echo 'oscvpass.ocf.tw' > CNAME
                   if [ -n "$(git status --porcelain)" ]; then
                     git add .
                     git commit -a -m 'Deploy on ${{ github.ref_name }} ${{ github.sha }}'
