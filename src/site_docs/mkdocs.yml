@@ -49,6 +49,7 @@ theme:
     - content.action.view
     - content.action.edit
     - content.tooltips
+    - toc.integrate
 extra:
   analytics:
     provider: google

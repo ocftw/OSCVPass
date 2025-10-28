@@ -64,17 +64,195 @@ AGPL（GNU Affero General Public License, GNU AGPL），強 Copyleft + 網路互
 
 * 誤以為僅發佈二進位才需釋出原始碼，但重點在 AGPL 網路服務互動也觸發。
 
+:material-file-sign:{style="color: purple;"} 合規清單：
+
+* 提供可得的完整源碼（含建置腳本）。
+* 清楚標示網路部署下的取得方式（例如頁尾連結）。
+
+:octicons-repo-forked-16:{style="color: brown;"} 著名專案：Mastodon、immich、Grafana
+
 ### GPL
+
+<small>SPDX：`GPL-3.0-or-later`、`GPL-2.0-only`</small>
+
+GNU General Public Licenses（GNU GPL 或 GPL），GPL 目前分為 v2 與 v3 版本並行，強 Copyleft。分發修改版或與其連結的組合作品時，需以 GPL 開放原始碼。
+
+:material-file-document-check-outline:{style="color: blue;"} 主要義務：
+
+* 分發時提供完整對應原始碼與建置方式。
+* 保留版權與授權聲明、修改標示。
+* v3 含專利授權、反規避（anti-tivoization）；v2 無明確專利授權。
+
+**:material-check-circle:{style="color: green;"} 適合用於：**希望衍生作品保持開源，促進社群回饋。
+
+**:material-close-circle:{style="color: red;"} 可能不適合：**與專有元件連結困難；部分企業有合規顧慮。
+
+:octicons-arrow-switch-16:{style="color: orange;"} 相容性：
+
+* GPLv3 與 Apache-2.0 相容；GPLv2-only 與 Apache-2.0 不相容
+* MIT、BSD、MPL 在條件下可併入 GPL 專案（由 GPL 最終決定）。
+
+:octicons-alert-16:{style="color: fuchsia;"} 常見誤解：
+
+* 「只要不商業就不用遵守」：錯！是否分發才是關鍵。
+* 「動態連結不算」：連結是否形成衍生作品需個案判斷。
+
+:material-file-sign:{style="color: purple;"} 合規清單：
+
+* 發佈二進位即需提供源碼或可得方式（連結、書面要約）。
+* 提供對應物件檔（若用 LGPL 例外或允許重連結的需求）。
+
+:octicons-repo-forked-16:{style="color: brown;"} 著名專案：Linux kernel（GPLv2-only）、Git（GPLv2）
 
 ### LGPL
 
+<small>SPDX：`LGPL-3.0-or-later`、`LGPL-2.1-or-later`</small>
+
+GNU Lesser General Public License（LGPL），LGPL 目前分為 2.1 與 3.0 並行、弱 Copyleft，針對「函式庫」。允許專有應用連結，但修改函式庫本身需開源，且須允許使用者可替換、重連結。
+
+:material-file-document-check-outline:{style="color: blue;"} 主要義務：
+
+* 修改函式庫需開源、連結的應用可專有。
+* 靜態連結時通常需提供可重連結的物件檔或其他機制。
+
+**:material-check-circle:{style="color: green;"} 適合用於：**希望函式庫本身維持開放，但不限制使用者應用的授權。
+
+**:material-close-circle:{style="color: red;"} 可能不適合：**對裝置鎖定或重新連結限制敏感的場域。
+
+:octicons-arrow-switch-16:{style="color: orange;"} 相容性：
+
+* 可被專有程式連結（遵守替換條件）。
+* 與 GPLv3 相容；2.1 與 3.0 細節不同。
+
+:octicons-alert-16:{style="color: fuchsia;"} 常見誤解：
+
+* 「用 LGPL 就等於能任意封閉」：函式庫可封閉連結，但函式庫修改不行（需開放）。
+
+:material-file-sign:{style="color: purple;"} 合規清單：
+
+* 附上 LGPL 文本與函式庫的變更說明。
+* 提供重連結途徑（物件檔、動態連結、插件機制）。
+
+:octicons-repo-forked-16:{style="color: brown;"} 著名專案：glibc、Qt（提供雙授權包含 LGPL）
+
 ### MPL
+
+<small>SPDX：`MPL-2.0`</small>
+
+Mozilla Public License（MPL），檔案層級 Copyleft。修改的 MPL 檔案需保留 MPL；可與專有碼並存於同一專案。
+
+:material-file-document-check-outline:{style="color: blue;"} 主要義務：
+
+* 修改過的 MPL 檔案需公開源碼與保留聲明。
+* 允許將 MPL 檔與其他授權檔組合進行混合，包括私有授權條款。
+* 含專利授權與終止條款。
+
+**:material-check-circle:{style="color: green;"} 適合用於：**希望改動能回饋，但又不想對整個專案施加強 Copyleft。
+
+**:material-close-circle:{style="color: red;"} 可能不適合：**要求整體衍生作品都必須 GPL 式釋出。
+
+:octicons-arrow-switch-16:{style="color: orange;"} 相容性：
+
+* 可與許多授權共存；可啟用「[Secondary License](https://zh.wikipedia.org/zh-tw/%E5%A4%9A%E9%87%8D%E8%A8%B1%E5%8F%AF){target="_blank"}」與 GPL 家族相容（除非標注不相容）。
+
+:octicons-alert-16:{style="color: fuchsia;"} 常見誤解：
+
+* 「用了 MPL 就不能商用」：可商用，僅對修改檔案有義務。
+
+:material-file-sign:{style="color: purple;"} 合規清單：
+
+* 修改檔案保留版頭與授權；提供修改檔案之源碼取得方式。
+
+:octicons-repo-forked-16:{style="color: brown;"} 著名專案：Firefox、Thunderbird、Rust（部分）
 
 ### Apache
 
+<small>SPDX：`Apache-2.0`</small>
+
+寬鬆式授權，附明確專利授權與 NOTICE 要求，對企業友好。
+
+:material-file-document-check-outline:{style="color: blue;"} 主要義務：
+
+* 保留版權與授權聲明。
+* 保留或合併上游 NOTICE 內容（若存在）。
+* 明確專利授權與專利訴訟終止條款；商標不授權。
+
+**:material-check-circle:{style="color: green;"} 適合用於：**最大化採用與商業友善，同時需要專利風險防護。
+
+**:material-close-circle:{style="color: red;"} 可能不適合：**需強制回饋修改的專案。
+
+:octicons-arrow-switch-16:{style="color: orange;"} 相容性：
+
+* 與 GPLv3 相容；與 GPLv2-only 不相容。
+* 可與 MIT、BSD、MPL 共存。
+
+:octicons-alert-16:{style="color: fuchsia;"} 常見誤解：
+
+* 「沒有 Copyleft 就不用保留聲明」：仍須保留版權與授權聲明、NOTICE。
+
+:material-file-sign:{style="color: purple;"} 合規清單：
+
+* 附 LICENSE 與 NOTICE（若有）。
+* 保留檔案內的版權、作者標示。
+
+:octicons-repo-forked-16:{style="color: brown;"} 著名專案：Kubernetes、Android（多數元件）
+
 ### BSD
 
+<small>SPDX：`BSD-2-Clause`、`BSD-3-Clause`</small>
+
+Berkeley Software Distribution（BSD），極簡寬鬆授權。2-Clause 最簡；3-Clause 多一條「不得暗示背書」條款。無明確專利授權。
+
+:material-file-document-check-outline:{style="color: blue;"} 主要義務：
+
+* 保留版權與免責聲明。
+* 3-Clause 多「不得使用作者、機構名義背書」。
+
+**:material-check-circle:{style="color: green;"} 適合用於：**最小限制、最大化採用；學術與基礎建設常見。
+
+**:material-close-circle:{style="color: red;"} 可能不適合：**需要專利授權明確性的企業環境（可考慮 Apache-2.0）。
+
+:octicons-arrow-switch-16:{style="color: orange;"} 相容性：
+
+* 可被 GPL、Apache、MIT 等納入。
+
+:octicons-alert-16:{style="color: fuchsia;"} 常見誤解：
+
+* 「BSD 不需要附授權檔」：需保留授權與免責聲明。
+
+:material-file-sign:{style="color: purple;"} 合規清單：
+
+* 保留 LICENSE 與檔案中版權標示。
+
+:octicons-repo-forked-16:{style="color: brown;"} 著名專案：FreeBSD、OpenBSD、Go（BSD-3-Clause）
+
 ### MIT
+
+<small>SPDX：`MIT`</small>
+
+最常見的寬鬆授權，要求保留版權與授權聲明。無明確專利授權。
+
+:material-file-document-check-outline:{style="color: blue;"} 主要義務：
+
+* 保留版權與授權全文；免責聲明。
+
+**:material-check-circle:{style="color: green;"} 適合用於：**最低摩擦、廣泛採用、前端與庫生態常見。
+
+**:material-close-circle:{style="color: red;"} 可能不適合：**需要專利授權明確性（考慮 Apache-2.0）。
+
+:octicons-arrow-switch-16:{style="color: orange;"} 相容性：
+
+* 幾乎與所有主流授權相容，可被 GPL 專案納入。
+
+:octicons-alert-16:{style="color: fuchsia;"} 常見誤解：
+
+* 「MIT 代表完全不需標示」：仍需保留版權與授權。
+
+:material-file-sign:{style="color: purple;"} 合規清單：
+
+* 在原始碼與二進位散布中保留 LICENSE 文本。
+
+:octicons-repo-forked-16:{style="color: brown;"} 著名專案：React、Rails、Node.js
 
 ## 其他延伸閱讀
 
