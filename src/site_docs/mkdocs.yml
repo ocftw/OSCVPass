@@ -49,7 +49,6 @@ theme:
     - content.action.view
     - content.action.edit
     - content.tooltips
-    - toc.integrate
 extra:
   analytics:
     provider: google
@@ -87,3 +86,5 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.snippets
+  - md_in_html
+  - pymdownx.blocks.caption

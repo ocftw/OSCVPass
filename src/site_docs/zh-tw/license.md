@@ -27,17 +27,74 @@ icon: material/license
 | 目標 | 促進自由軟體與內容的共享，確保開放資源在未來依然保持開放。                                                 | 旨在保護創作者的原創作品，並賦予他們專有控制權。                                                                       |
 | 限制 | 被授權者必須繼續遵循 Copyleft 協議的要求，這通常意味着任何基於原作品的改編版也必須在相同的自由條款下分發。 | 持有著作權的人可以限制他人對該作品的使用。未經許可使用的行為可能構成侵權。                                             |
 
+## 什麼是開源？
+
+請先參考 OSI 的「[開源定義（The Open Source Definition）](./open-source-definition.md){target="_blank"}」的定義，在「開源定義」的前三項是開源的主要核心：**開放原始碼、自由散佈、衍生著作**。
+
+### 開放原始碼（Open Source）
+
+<figure markdown="span">
+  ![圖片出至「開放源碼授權概觀（上）」](https://yurenju.blog/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8A/images/1.png){width="80%"}
+</figure>
+
+!!! quote ""
+
+    圖片出自「[開放源碼授權概觀（上）](https://yurenju.blog/zh/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8A){target="_blank"}」，圖片為 Firefox Logo 與一張用程式碼拼成的文字圖像，代表建構 Firefox 是看得到程式碼的專案。
+
+軟體的原始碼必須可被取得，且是開發者「最適合修改」的形式。不能只提供難以閱讀的機器產生碼，也不能故意混淆原始碼。
+
+* 必須提供原始碼，或提供清楚且不設門檻的取得方式（例如公開下載連結）。
+* 允許任何人依此原始碼自行建置（compile、build）軟體。
+* 原始碼不得刻意混淆，不能只給前處理器或轉換器輸出的中介形式。
+
+開放原始碼不等於「免費」。你可以為載體、通路或服務收費，但不能以授權費作為門檻阻擋取得原始碼。通常會在 GitHub 上公開程式碼與 LICENSE，發佈二進位檔時同時提供對應版本的原始碼或取得方式。
+
+### 自由散佈（Free Redistribution）
+
+<figure markdown="span">
+  ![圖片出至「開放源碼授權概觀（上）」](https://yurenju.blog/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8A/images/2.png){width="80%"}
+</figure>
+
+!!! quote ""
+
+    圖片出自「[開放源碼授權概觀（上）](https://yurenju.blog/zh/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8A){target="_blank"}」，圖片由左至右解釋，Firefox 原始碼透過 git 為作版本控制，再透過支援 git 的 Github、Gitlab 給予使用者拉取（Pull）原始碼修改。不只一個使用者可以透過 git 取得，任何人都可以在公開的網路上找到 Firefox 的原始碼。
+
+授權不得限制任何人重新散佈軟體（包含原版或與其他軟體打包），也不得要求額外的授權費或權利金。你可以賣光碟、放官網下載、跟其他程式一起打包販售或提供。
+
+* 允許轉售或免費分享，不需事先逐案徵得作者同意。
+* 不得強制收取版稅；可收取媒體、通路與服務費（例如下載流量、技術支援）。
+
+「自由」指的是使用與再散佈的自由度，不是指價格一定為零。例如：Linux 發行版收費販售實體安裝與企業售後技術支援，仍符合自由散佈。
+
+### 衍生著作（Derived Works）
+
+<figure markdown="span">
+  ![圖片出至「開放源碼授權概觀（上）」](https://yurenju.blog/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8A/images/3.png){width="80%"}
+</figure>
+
+!!! quote ""
+
+    圖片出自「[開放源碼授權概觀（上）](https://yurenju.blog/zh/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8A){target="_blank"}」，圖片由左至右解釋，Chrome 瀏覽器開源版本的 Chromium（BSD）、Electron（MIT）。Slack、VS Code 大多是把自家應用程式（JavaScript、TypeScript）跑在 Electron（內含 Chromium）上，並和 Electron 一起打包成安裝檔發佈。Slack：使用 Electron 但通常不修改 Electron/Chromium，因此屬於「集合發佈」。**Slack** 本體可閉源；但需附上 Electron/Chromium 與其他第三方套件的授權告示，並滿足可能的 LGPL 義務。**VS Code：**微軟官方發佈版包含商標與額外條款；而上游 Code - OSS 是 MIT 開源。社群的 [VSCodium](https://vscodium.com/){target="_blank"} 就是從 Code - OSS「衍生」並重新包裝散佈，完全符合衍生著作可再散佈的精神。
+
+授權必須允許修改原始碼、建立衍生作品（例如 fork、採用 patch、合併到其他程式），並允許把這些修改版散佈出去。
+
+* 寬鬆授權（MIT、BSD、Apache-2.0）：允許在保留告示前提下，將衍生品以開源或閉源方式散佈。
+* 互惠／強著作權傳染授權（GPL、AGPL、LGPL）：若散佈衍生品（或與之形成單一作品），必須以相同或相容的自由軟體授權開源。
+
+例如：在開源專案上加功能並發佈修改版；或將其 fork 成新專案，依原授權規範保留告示並釋出。
+
 ## 常見的開源授權條款
 
 !!! question ""
 
     :material-account-question: 我是開源貢獻者新手，我該怎麼挑選開源授權條款？
 
-請先參考 OSI 的「[開源定義（The Open Source Definition）](./open-source-definition.md){target="_blank"}」的定義，在「開源定義」的前三項是開源的主要核心：**自由再發佈、開放原始碼、自由修改的衍生作品**。
-
 以下將介紹幾個常用的開源授權條款，其差異在分發（distribution）的嚴謹程度。
 
-![Open Source](./assets/images/open-source-distribution.svg)
+<figure markdown="span">
+    ![Open Source](./assets/images/open-source-distribution.svg)
+    <figcaption>圖片：常見的開源授權條款其分發的嚴謹程度。</figcaption>
+</figure>
 
 ### AGPL
 
