@@ -41,6 +41,29 @@ icon: material/license
 
 ### AGPL
 
+<small>SPDX：`AGPL-3.0-or-later`</small>
+
+AGPL（GNU Affero General Public License, GNU AGPL），強 Copyleft + 網路互動條款。若他人提供你的服務（SaaS），也必須開源對應修改。
+
+:material-file-document-check-outline:{style="color: blue;"} 主要義務：
+
+* 向網路互動的使用者提供對應完整原始碼。
+* 保留版權與授權聲明、變更標示。
+* 授與專利許可、專利訴訟終止條款。
+
+**:material-check-circle:{style="color: green;"} 適合用於：**避免「雲端服務商挾持」、你希望雲端服務商回饋與修改。
+
+**:material-close-circle:{style="color: red;"} 可能不適合：**商業採用阻力較大；與封閉核心混用困難。
+
+:octicons-arrow-switch-16:{style="color: orange;"} 相容性：
+
+* 可與 GPLv3 程式碼相容，但 AGPL 通常決定最終的釋出。
+* 與 GPLv2-only 不相容。
+
+:octicons-alert-16:{style="color: fuchsia;"} 常見誤解：
+
+* 誤以為僅發佈二進位才需釋出原始碼，但重點在 AGPL 網路服務互動也觸發。
+
 ### GPL
 
 ### LGPL
@@ -61,7 +84,10 @@ icon: material/license
 2. [開放源碼授權概觀（上）](https://yurenju.blog/zh/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8A){target="_blank"}, Yuren's Blog
 3. [開放源碼授權概觀（下）](https://yurenju.blog/zh/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8B){target="_blank"}, Yuren's Blog
 4. [法律源地](https://web-archive-2025.openfoundry.org/law-and-licensing){target="_blank"} - OpenFoundry（web-archive-2025）
+5. [Choose an open source license](https://choosealicense.com/){target="_blank"}
 
 !!! info ""
 
     :material-account-star: 對於開源授權條款的使用或法律諮詢，可以寄信到開放文化基金會 <hi@ocf.tw> 詢問。
+
+*[SPDX]: 軟體包資料交換規範（Software Package Data Exchange）簡稱 SPDX，是軟體材料表（SBOM）的開源標準 。

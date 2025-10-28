@@ -48,6 +48,7 @@ theme:
     - search.share
     - content.action.view
     - content.action.edit
+    - content.tooltips
 extra:
   analytics:
     provider: google
@@ -75,6 +76,7 @@ plugins:
       show_email_address: false
       show_line_count: true
 markdown_extensions:
+  - abbr
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -83,3 +85,4 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.snippets
