@@ -1,9 +1,9 @@
 ---
-title: 常見的開源授權條款
+title: 如何挑選開源授權條款
 icon: material/license
 ---
 
-# 常見的開源授權條款
+# 如何挑選開源授權條款
 
 !!! question ""
 

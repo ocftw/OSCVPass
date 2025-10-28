@@ -1,7 +1,9 @@
 ---
-title: 開源定義（The Open Source Definition）
+title: 開源定義
 icon: simple/wikibooks
 ---
+
+# 開源定義（The Open Source Definition）
 
 !!! info ""
 
