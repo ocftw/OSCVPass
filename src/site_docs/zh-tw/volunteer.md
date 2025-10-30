@@ -32,9 +32,10 @@ GitHub 的部分已經大致上整治完成：
 且新增了 project 和 tracking issue 的機制： project 用於追蹤各 issue / pull request 的進度及影響範圍，讓團隊成員及社群可以更方便的檢閱感興趣的 issue / pull request 的進度 ； tracking issue 則用於整合各 issue 到一個大項目 (issue) 中，方便檢閱該大項目中的進度是否有其他問題。
 
 每個分支都有不同的作用：
+
 - main 主要用於主持 OSCVPass 的靜態網頁並固定同步至 GitHub Pages ， 包括[介紹頁](https://oscvpass.ocf.tw/)以及[文檔](https://oscvpass.ocf.tw/docs/)。
 - docs 要用來擺放暫存的靜態網頁和文檔，完善後透過 pull request 的機制合併至 main 分支中。
-（需要注意的是如果其他成員有暫存的進度在 docs 分支上，請另外開一個分支防止進度衝突，並在 pull request 被合併後自行刪除，[當然我會更建議這樣做](#Pull-request)。）
+（需要注意的是如果其他成員有暫存的進度在 docs 分支上，請另外開一個分支防止進度衝突，並在 pull request 被合併後自行刪除，[當然我會更建議這樣做](#pull-request)。）
 - pretalx 用於存放pretalx docker設定檔。
 
 關於 issue 和 pull requests 工作流程的機制，詳見[關於工作流程](#關於工作流程)。
