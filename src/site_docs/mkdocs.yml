@@ -89,3 +89,6 @@ markdown_extensions:
   - pymdownx.snippets
   - md_in_html
   - pymdownx.blocks.caption
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
