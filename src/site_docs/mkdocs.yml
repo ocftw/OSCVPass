@@ -37,8 +37,24 @@ theme:
     repo: fontawesome/brands/github
   favicon: assets/images/favicon.svg
   palette:
-    primary: teal
-    accent: indigo
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: brown
+      accent: lime
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
   features:
     - navigation.footer
     - navigation.indexes
