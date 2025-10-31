@@ -1,5 +1,6 @@
 ---
 title: 如何申請
+subtitle: 程式碼、文件撰寫、發送 ISSUE、籌備推廣活動、非程式碼類型的作品
 description: 如何申請與使用 OSCVPass
 icon: material/file-edit
 ---

@@ -1,6 +1,8 @@
 ---
 title: 開源定義
+subtitle: 瞭解 OSI 所發佈的開源定義
 icon: simple/wikibooks
+status: new
 ---
 
 # 開源定義（The Open Source Definition）

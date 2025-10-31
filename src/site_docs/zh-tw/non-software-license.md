@@ -1,6 +1,8 @@
 ---
 title: 非程式相關的開源授權
+subtitle: 文字、圖像、設計、概念、推廣文案 ... 類型的開源貢獻如何選擇授權
 icon: simple/opensourcehardware
+status: new
 ---
 
 # 非程式相關的開源授權

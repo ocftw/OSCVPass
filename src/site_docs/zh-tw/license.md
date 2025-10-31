@@ -1,6 +1,8 @@
 ---
 title: 如何挑選開源授權條款
+subtitle: 瞭解七種常見的開源授權條款與其限制、相容性、合規
 icon: material/license
+status: new
 ---
 
 # 如何挑選開源授權條款

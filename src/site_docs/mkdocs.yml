@@ -40,10 +40,11 @@ theme:
     primary: teal
     accent: indigo
   features:
-    - navigation.top
+    - navigation.footer
+    - navigation.indexes
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.indexes
+    - navigation.top
     - search.suggest
     - search.highlight
     - search.share
@@ -56,7 +57,7 @@ extra:
     property: G-CFKVL29PQR
   social:
     - icon: material/email-plus
-      link: oscvpass@ocf.tw
+      link: mailto:oscvpass@ocf.tw
     - icon: fontawesome/brands/github
       link: https://github.com/ocftw/OSCVPass
     - icon: material/home
