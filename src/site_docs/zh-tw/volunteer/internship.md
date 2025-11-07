@@ -1,18 +1,16 @@
 ---
-title: 專案志工招募
-subtitle: 參與專案規劃與開源推廣
-icon: material/hand-wave
+title: 實習紀錄
+subtitle: 過往實習項目紀錄
+icon: material/escalator-up
 ---
 
-# :material-hand-wave: 志工招募
+# :material-escalator-up: 實習紀錄
 
 目前 OSCVPass 專案在招募實習夥伴，請參考 OCF 的[實習公告](https://blog.ocf.tw/2023/06/intern-oscvpass.html){target="_blank"}。
 
 如果您對此專案有想法，也想參與貢獻成為志工，歡迎直接寄信到 <hi@ocf.tw> 標題開頭註明 **[OSCVPass]** 內文包含簡單的自我介紹與您的想法，我們會儘快回覆，感謝！
 
-## 實習紀錄
-
-## ChAoS-UnItY
+## :material-account: ChAoS-UnItY
 
 - [GitHub](https://github.com/ChAoSUnItY)
 - [OSCVPass 實習後記](https://hackmd.io/@chaos-unity/B1lVrbia2)
@@ -77,7 +75,7 @@ Pull requests 創建後，請待其他 OSCVPass 的成員分配分類標籤，�
 
 若該 pull request 是為了關閉 issue 的話，請在說明主旨中寫出 *Fixes #[...]* ，方便後續合併之後能夠自動關閉 issue ，詳細用語(法)與關閉機制請參考[官方說明文檔](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)。
 
-## Ayu_kevin
+## :material-account: Ayu_kevin
 
 - [GitHub](https://github.com/Ayukevin)
 - 實習時間：2024/07 ~ 2024/08

@@ -6,7 +6,7 @@ site_author: 財團法人開放文化基金會 OCF
 repo_url: https://github.com/ocftw/OSCVPass
 repo_name: ocftw/OSCVPass
 copyright: "CC-BY 4.0 OSCVPass Project"
-edit_uri: https://github.com/ocftw/OSCVPass/tree/main/src/site_docs/zh-tw
+edit_uri: https://github.com/ocftw/OSCVPass/edit/main/src/site_docs/zh-tw
 
 nav:
   - 專案說明:
@@ -15,7 +15,9 @@ nav:
       - open-source-definition.md
       - license.md
       - non-software-license.md
-      - volunteer.md
+      - 志工、實習:
+          - volunteer/index.md
+          - volunteer/internship.md
   - 已核准專案:
       - approved/index.md
       - approved/open-source.md
