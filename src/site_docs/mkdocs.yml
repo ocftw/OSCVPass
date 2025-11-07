@@ -5,7 +5,7 @@ site_description: 參與開源活動或貢獻活動證明
 site_author: 財團法人開放文化基金會 OCF
 repo_url: https://github.com/ocftw/OSCVPass
 repo_name: ocftw/OSCVPass
-copyright: "CC-BY 4.0 OSCVPass Project, 財團法人開放文化基金會 OCF"
+copyright: "CC-BY 4.0 OSCVPass Project"
 edit_uri: https://github.com/ocftw/OSCVPass/tree/main/src/site_docs/zh-tw
 
 nav:
@@ -67,6 +67,7 @@ theme:
     - content.action.view
     - content.action.edit
     - content.tooltips
+  custom_dir: zh-tw/overrides
 extra:
   analytics:
     provider: google
