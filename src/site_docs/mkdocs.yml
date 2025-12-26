@@ -31,6 +31,8 @@ nav:
       - approved/chatbot-api.md
       - approved/linux-kernel.md
       - approved/pull-request.md
+  - 1.0 -> 2.0:
+      - v2/index.md
 theme:
   name: material
   language: zh-Hant
