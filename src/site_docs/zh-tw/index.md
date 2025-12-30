@@ -3,6 +3,10 @@ title: 專案說明
 ---
 # :material-passport: 專案說明
 
+!!! info ""
+
+    OSCVPass 目前正在轉型調整為 2.0 方案，有興趣瞭解更多可以參考 [2.0 說明](./v2/index.md)。
+
 ![OSCVPass Banner](./assets/images/oscvpass_1920x960.png){ style="border-radius: 10px;" }
 
 為孜孜不倦的開源貢獻好夥伴們設計！在台灣，開源與開放社群十分活躍，一年會有超過十場的中大型會議、活動舉辦，也往往會有許多針對開源貢獻者的補助票券釋出。
