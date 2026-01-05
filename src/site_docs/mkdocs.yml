@@ -92,6 +92,11 @@ plugins:
       lang:
         - zh
         - en
+  - social:
+      cards_layout_options:
+        font_family: Noto Sans TC
+        color: "#ffffff"
+        background_color: "#009485"
   - privacy
   - git-revision-date-localized:
       type: iso_datetime

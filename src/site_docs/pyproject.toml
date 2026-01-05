@@ -7,6 +7,6 @@ requires-python = ">=3.13"
 dependencies = [
     "mkdocs-git-authors-plugin>=0.10.0",
     "mkdocs-git-revision-date-localized-plugin>=1.4.7",
-    "mkdocs-material>=9.6.21",
+    "mkdocs-material[imaging]>=9.6.21",
     "mkdocs-rss-plugin>=1.17.7",
 ]
