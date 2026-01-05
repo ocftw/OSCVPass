@@ -73,6 +73,7 @@ theme:
     - content.action.view
     - content.action.edit
     - content.tooltips
+    - content.footnote.tooltips
   custom_dir: zh-tw/overrides
 extra:
   analytics:
@@ -122,3 +123,4 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+  - footnotes
