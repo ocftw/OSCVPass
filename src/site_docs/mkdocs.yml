@@ -33,6 +33,8 @@ nav:
       - approved/pull-request.md
   - 1.0 -> 2.0:
       - v2/index.md
+  - 最新資訊:
+      - blog/index.md
 theme:
   name: material
   language: zh-Hant
@@ -98,6 +100,12 @@ plugins:
       show_contribution: true
       show_email_address: false
       show_line_count: true
+  - blog:
+      post_url_date_format: yyyy/MM
+      post_url_format: "{date}/{slug}"
+      archive: true
+      categories: true
+      categories_name: "文章類型"
 markdown_extensions:
   - abbr
   - attr_list
