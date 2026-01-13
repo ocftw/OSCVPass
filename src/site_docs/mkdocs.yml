@@ -31,6 +31,8 @@ nav:
       - approved/chatbot-api.md
       - approved/linux-kernel.md
       - approved/pull-request.md
+  - 合作夥伴:
+      - partner/index.md
   - 1.0 -> 2.0:
       - v2/index.md
   - 最新資訊:
@@ -61,7 +63,6 @@ theme:
         icon: material/lightbulb-outline
         name: Switch to light mode
   language: "zh-TW"
-  custom_dir: "overrides"
   features:
     - navigation.footer
     - navigation.indexes
