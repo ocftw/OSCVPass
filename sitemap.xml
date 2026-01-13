@@ -2,98 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://oscvpass.ocf.tw/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/apply/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/license/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/non-software-license/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/open-source-definition/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/app/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/chatbot-api/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/community/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/image-sound/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/l10n/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/language/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/linux-kernel/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/open-source/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/program/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/pull-request/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/approved/security-web3/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/blog/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/blog/2026/01/ato-2025/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
+    </url>
+    <url>
+         <loc>https://oscvpass.ocf.tw/partner/</loc>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/v2/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/volunteer/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/volunteer/internship/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/blog/archive/2026/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
     <url>
          <loc>https://oscvpass.ocf.tw/blog/category/%E6%96%B0%E8%81%9E/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-13</lastmod>
     </url>
 </urlset>
