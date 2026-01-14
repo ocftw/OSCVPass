@@ -5,7 +5,7 @@ authors:
 categories:
     - 新聞
     - 志工
-slug: ato-2025
+slug: call-for-volunteer
 summary: "OSI 在 All Things Open 大會中主辦了「State of the Source」專題議程"
 description: "OSI 在 All Things Open 大會中主辦了「State of the Source」專題議程"
 ---
