@@ -6,8 +6,8 @@ categories:
     - 新聞
     - 志工
 slug: call-for-volunteer
-summary: "OSI 在 All Things Open 大會中主辦了「State of the Source」專題議程"
-description: "OSI 在 All Things Open 大會中主辦了「State of the Source」專題議程"
+summary: "想幫忙但不知道從哪開始？"
+description: "想幫忙但不知道從哪開始？"
 ---
 
 # 【志工招募中】一起推動 OSCVPass 2.0，打造台灣可持續的開源參與路徑
