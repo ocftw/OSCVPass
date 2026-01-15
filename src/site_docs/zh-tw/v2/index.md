@@ -1,6 +1,7 @@
 ---
 title: 專案升級 2.0
 subtitle: 開源貢獻者的長期支持計畫
+icon: material/directions-fork
 ---
 
 # OSCVPass 2.0 開源貢獻者的長期支持計畫

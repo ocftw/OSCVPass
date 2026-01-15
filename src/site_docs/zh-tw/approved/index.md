@@ -1,5 +1,6 @@
 ---
 title: 已核准專案
+icon: material/check-decagram
 ---
 
 # 已核准專案
