@@ -15,9 +15,6 @@ nav:
       - open-source-definition.md
       - license.md
       - non-software-license.md
-      - 志工、實習:
-          - volunteer/index.md
-          - volunteer/internship.md
   - 已核准專案:
       - approved/index.md
       - approved/open-source.md
@@ -37,6 +34,9 @@ nav:
       - v2/index.md
   - 最新資訊:
       - blog/index.md
+  - 志工、實習:
+      - volunteer/index.md
+      - volunteer/internship.md
 theme:
   name: material
   icon:
