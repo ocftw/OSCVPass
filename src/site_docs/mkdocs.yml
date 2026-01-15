@@ -15,6 +15,12 @@ nav:
       - open-source-definition.md
       - license.md
       - non-software-license.md
+      - 1.0 -> 2.0:
+          - v2/index.md
+      - 合作夥伴:
+          - partner/index.md
+  - 最新資訊:
+      - blog/index.md
   - 已核准專案:
       - approved/index.md
       - approved/open-source.md
@@ -28,12 +34,6 @@ nav:
       - approved/chatbot-api.md
       - approved/linux-kernel.md
       - approved/pull-request.md
-  - 合作夥伴:
-      - partner/index.md
-  - 1.0 -> 2.0:
-      - v2/index.md
-  - 最新資訊:
-      - blog/index.md
   - 志工、實習:
       - volunteer/index.md
       - volunteer/internship.md
