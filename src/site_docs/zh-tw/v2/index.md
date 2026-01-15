@@ -8,7 +8,7 @@ icon: material/directions-fork
 
 !!! info "參與討論"
 
-    目前專案正在蒐集新的想法與概念，可以[到這裡](https://github.com/ocftw/OSCVPass/discussions/41){target="_blank"}加入討論。
+    目前專案正在蒐集新的想法與概念，可以[到這裡](https://github.com/ocftw/OSCVPass/discussions/42){target="_blank"}加入討論。
 
 OSCVPass 是一個從台灣出發、已累積超過十年經驗的開源貢獻支持計畫。過去，OSCVPass 以「**研討會門票回饋**」作為主要誘因，陪伴許多貢獻者踏出開源的第一步；然而，隨著環境改變，我們也觀察到這樣的模式，已不足以支撐貢獻者的長期投入與社群的持續成長。
 
