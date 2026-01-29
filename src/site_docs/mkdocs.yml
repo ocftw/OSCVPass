@@ -36,6 +36,7 @@ nav:
       - approved/pull-request.md
   - 志工、實習:
       - volunteer/index.md
+      - volunteer/onboarding.md
       - volunteer/internship.md
 theme:
   name: material
