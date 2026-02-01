@@ -5,7 +5,7 @@ title: 程式設計與語言
 
 - [py-libp2p](https://github.com/libp2p/py-libp2p), libp2p, _專案的 Python 版本實現_
 - [performance](https://github.com/javalin/performance), javalin, _Javalin 的性能測試專案_
-- [cncjs](https://github.com/cncjs/cncjs), cncjs, _數控機床控制的命令行介面_
+- [cncjs](https://github.com/cncjs/cncjs), cncjs, _數控工具機控制的命令列介面_
 - [GCC](https://github.com/gcc-mirror/gcc), gcc-mirror, _GNU Compiler Collection 的鏡像專案_
 - [vrac](https://github.com/green-coder/vrac), green-coder, _視頻流應用程式控件_
 - [flatten-dict](https://github.com/ianlini/flatten-dict), ianlini, _將字典扁平化的工具_

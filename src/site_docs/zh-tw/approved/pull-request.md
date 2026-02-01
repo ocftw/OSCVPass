@@ -22,7 +22,7 @@ title: Pull Request
 - [pycon.tw](https://github.com/pycontw/pycon.tw/pull/760), jp6ru8958958, _PyCon Taiwan 網站專案_
 - [proxybroker2](https://github.com/bluet/proxybroker2/pull/4), afunTW, _代理伺服器管理工具_
 - [qterminal](https://github.com/lxqt/qterminal/commits?author=yan12125), yan12125, _LXQt 桌面環境的終端機應用程式_
-- [hadoop-ozone](https://github.com/apache/hadoop-ozone/pulls?q=is%3Apr+author%3Acku328), cku328, _分散式存儲系統專案_
+- [hadoop-ozone](https://github.com/apache/hadoop-ozone/pulls?q=is%3Apr+author%3Acku328), cku328, _分散式儲存系統專案_
 - [Qemu Guest Agent](https://bugzilla.redhat.com/show_bug.cgi?id=1733165), Su, Jun-Ming, _QEMU 虛擬化軟體的用戶端代理_
 - [gitlab](https://gitlab.com/gitlab-org/gitlab/-/issues/222817), Buo-ren, Lin, _GitLab 平台的問題管理_
 - [partclone](https://github.com/Thomas-Tsai/partclone), Thomas-Tsai, _磁碟分割複製工具_
@@ -67,7 +67,7 @@ title: Pull Request
 - [js-mythbusters](https://github.com/Kikobeats/js-mythbusters/pull/92), ms314006, _JavaScript 誤解消除指南_
 - [gridsome](https://github.com/gridsome/gridsome/pull/1293), Mini-ghost, _Vue.js 驅動的靜態網站生成框架_
 - [vetur](https://github.com/vuejs/vetur/pulls?q=is%3Apr+author%3Ayoyo930021+), yoyo930021, _Vue.js 的 VS Code 擴充套件_
-- [cockpit](https://github.com/cockpit-project/cockpit/pull/14182), tjjh89017, _管理伺服器的易用 web 界面_
+- [cockpit](https://github.com/cockpit-project/cockpit/pull/14182), tjjh89017, _管理伺服器的易用 web 介面_
 - [xterm.js](https://github.com/xtermjs/xterm.js/pull/3067), mmis1000, _基於網頁的終端模擬器_
 - [Hyara](https://github.com/hyuunnn/Hyara/pull/10), Still34, _基於 Yara 的惡意程式掃描器_
 - [EarlySpringCommitee](https://github.com/EarlySpringCommitee/HowHow-web/), t510599, _協助社群的網站項目_
@@ -88,5 +88,5 @@ title: Pull Request
 - [Teamplay_Yolov3](https://github.com/Tony363/Teamplay_Yolov3/graphs/contributors), pysolver33, _物體檢測神經網絡項目_
 - [CCIP-iOS](https://github.com/CCIP-App/CCIP-iOS/pull/41), secminhr, _iOS 的學科預備項目_
 - [lotify](https://github.com/louis70109/lotify/pull/9), MirrorShih, _LINE Notify 的簡化版本_
-- [DynamicExpresso](https://github.com/dynamicexpresso/DynamicExpresso/pull/142), tingwei628, _用於將 C# 代碼轉換為可執行表達式的工具_
+- [DynamicExpresso](https://github.com/dynamicexpresso/DynamicExpresso/pull/142), tingwei628, _用於將 C# 程式碼轉換為可執行表達式的工具_
 - [donkeycar](https://github.com/autorope/donkeycar/commits?author=x1001000), x1001000, _自動駕駛車輛平台_

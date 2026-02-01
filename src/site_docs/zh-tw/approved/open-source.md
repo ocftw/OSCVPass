@@ -13,7 +13,7 @@ title: 開源專案
 - LibreOffice, FRANKLIN WENG
 - [Fission](https://github.com/fission/fission), fission
 - [Official Docker Image for Node.js](https://github.com/nodejs/docker-node), PeterDaveHello
-- [OpenStack](https://github.com/openstack/heat), heat項目專案負責人
+- [OpenStack](https://github.com/openstack/heat), heat 專案負責人
 - [Python tutorial](https://github.com/macs1207/python-tutorial), macs1207
 - [GDIndex](https://github.com/maple3142/GDIndex), maple3142
 - [BerryNet](https://github.com/DT42/BerryNet), DT42
