@@ -7,7 +7,7 @@ title: 社群貢獻
 - PyCon Taiwan 2019, Robert, _PyCon Taiwan 2019 為台灣全國性的 Python 社群活動在這次的議程中我作為贊助組長參與整個 PyCon TW 的籌備過程。_
 - [LibreOffice](https://cgit.freedesktop.org/libreoffice), Kuan-Ting Lin, _我2019年主要參與的開源專案是 LibreOffice，我曾經參加五月的 LibreOffice Asia 研討會並撰寫報導介紹此專案，並在九月 LibreOffice 研討會擔任講者，報告台灣原住民語文書平台在地話的計畫_
 - [GCC](https://raw.githubusercontent.com/gcc-mirror/gcc/master/gcc/ChangeLog), Kito, _RISC-V toolchain 主要開發者之一_
-- [pycontw-postevent-report-generator](https://github.com/pycontw/pycontw-postevent-report-generator/commits?author=tai271828), tai271828, _PyCon TW 相關的 open source projects，主要活躍於官網開發維護與結案報告產生器_
+- [pycontw-postevent-report-generator](https://github.com/pycontw/pycontw-postevent-report-generator/commits?author=tai271828), tai271828, _Generate post-event report of PyCon Taiwan_ (:star: 2, :octicons-repo-forked-24: 5, :date: 2022-06-29, :material-license: BSD-3-Clause)
 - [openstreetmap](https://www.openstreetmap.org/user/jiazheng/history#map=9/24.4749/121.1966), jiazheng, _OpenStreetMap 是自由而且開源的全球地圖，我在這個地理資料庫裡貢獻了許多我自己調查的資料。_
 - [mopcon 2019](https://mopcon.org/2019/), Hash, _於這個專案中主要擔任管理者與營運維護者_
 - [debian](https://salsa.debian.org/szlin), szlin, _擔任 Debian 開發者, 並參與 pkg-security team, 負責協助維護數十個 open source projects_
@@ -16,28 +16,28 @@ title: 社群貢獻
 - [維基百科 / Wikipedia](https://zh.wikipedia.org/wiki/User:Htchien), Htchien, _在維基百科中協助編輯內容、頁面管理、社群參與與討論_
 - [Linux 讀書會](https://hackmd.io/@combo-tw/Linux-%E8%AE%80%E6%9B%B8%E6%9C%83/%2F%40combo-tw%2FHyJXuuy8H), 小春, _教學文章及章節練習在 Hackmd 和 GitHub 完成._
 - [Debian](https://qa.debian.org/developer.php?login=czchen), czchen, _Debian is an operating system and a distribution of Free Software._
-- [pycon.tw](https://github.com/pycontw/pycon.tw/pull/538), josix, _PyCon Taiwan 是台灣內最大的 Python Conference，我在 19 年協助開發網站頁面。_
-- [openmaptiles](https://github.com/openmaptiles/openmaptiles/releases/tag/v3.10), pham, _開源的向量圖磚產製方案，主要用於 OpenStreetMap 資料的加值使用。_
+- [pycon.tw](https://github.com/pycontw/pycon.tw/pull/538), josix, _PyCon TW Proposal System & Backend Server_ (:star: 99, :octicons-repo-forked-24: 112, :date: **2026-01-21**, :material-license: MIT)
+- [openmaptiles](https://github.com/openmaptiles/openmaptiles/releases/tag/v3.10), pham, _OpenMapTiles Vector Tile Schema Implementation_ (:star: 2977, :octicons-repo-forked-24: 653, :date: **2026-01-05**)
 - [Android-x86 Open Source Project](https://git.osdn.net/view?a=project_list;o=age;pf=android-x86), _詳情請見 https://en.wikipedia.org/wiki/Android-x86_
-- [Cofacts](https://github.com/cofacts/), MrOrz/比鄰, _「Cofacts 真的假的」是一套連結網路訊息與事實查核的協作型系統。_
-- [tech-talks-note](https://github.com/EddieChoCho/tech-talks-note/blob/master/2019/ChoChosBizarreAdventureOfEventSourcing.md), Eddie, _針對 Event-sourcing pattern 做研究彙整與分享。_
+- [Cofacts](https://github.com/cofacts/), MrOrz/比鄰, _An experimental platform that puts collaborative fact-checking to test. In the real world, in Taiwan._ (:material-account-group: 88, :octicons-repo-24: 30, :date: **2026-01-24**)
+- [tech-talks-note](https://github.com/EddieChoCho/tech-talks-note/blob/master/2019/ChoChosBizarreAdventureOfEventSourcing.md), Eddie, _針對 Event-sourcing pattern 做研究彙整與分享。_ (:star: 4, :octicons-repo-forked-24: 0, :date: 2021-12-31, :material-license: MIT)
 - [pycon 2020](https://tw.pycon.org/2020/zh-hant/), rock, _PyCon Taiwan 是全台最大的 Python 開源程式語言年會，我在 organizers 中擔任協調各組、財務的工作。_
-- [pycon.tw](https://github.com/pycontw/pycon.tw), james, _主要負責開發網站_
+- [pycon.tw](https://github.com/pycontw/pycon.tw), james, _PyCon TW Proposal System & Backend Server_ (:star: 99, :octicons-repo-forked-24: 112, :date: **2026-01-21**, :material-license: MIT)
 - [sciwork](https://sciwork.dev/), yyc, _Sciwork 是一個社群，旨在通過開源推動計算科學的軟體開發。_
 - [Swift taipei meetup](https://www.meetup.com/Swift-Taipei-User-Group/), John, _主辦開源程式語言 Swift 的使用者聚會_
-- [COSCUP 2019 文件大全](https://github.com/catcatcatcat/COSCUP_program_templates/tree/master/COSCUP19), 四貓, _這個專案整理了 COSCUP 議程組 2019 寄送的信件範本。_
-- [Gophercon TW 2020 官網](https://github.com/golangtw/gophercon2020), Yun Chen, _協助 Golang Taiwan 建置年會官網_
-- [g0v summit 2020 主網站 + 徵件網站](https://github.com/g0v/summit2020/), ddio, _參與網站的製作，負責撿沒人作的事情來作_
-- [Django 緩慢排錯心法經驗談](https://github.com/hiimdoublej/djangoDebugExample), Johnny, _增進初階開發者對於 Django ORM 內部運作的認識的文章。_
+- [COSCUP 2019 文件大全](https://github.com/catcatcatcat/COSCUP_program_templates/tree/master/COSCUP19), 四貓, _For COSCUP program staff as reference_ (:star: 3, :octicons-repo-forked-24: 6, :date: 2023-11-04)
+- [Gophercon TW 2020 官網](https://github.com/golangtw/gophercon2020), Yun Chen, _Website for Gopher Conference 2020_ (:star: 19, :octicons-repo-forked-24: 18, :date: 2022-12-12, :material-license: MIT)
+- [g0v summit 2020 主網站 + 徵件網站](https://github.com/g0v/summit2020/), ddio, _g0v Summit 2020 Website_ (:star: 5, :octicons-repo-forked-24: 6, :date: **2025-10-10**, :material-license: MIT)
+- [Django 緩慢排錯心法經驗談](https://github.com/hiimdoublej/djangoDebugExample), Johnny, _增進初階開發者對於 Django ORM 內部運作的認識的文章。_ (:star: 0, :octicons-repo-forked-24: 0, :date: 2021-09-22, :material-license: GPL-3.0)
 - [CC台灣社群討論室](https://github.com/ocftw/tw.creativecommons.org), Lucien, _鼓勵臺灣使用者正確使用 CC 和 Open Access 資料_
 - [riscv: Add KASAN support](https://lkml.org/lkml/2019/10/27/814), Nick Hu, _Porting KASAN to riscv_
-- [ArticleParser](https://github.com/disinfoRG/ArticleParser/commits?author=pm5), pm5, _參與 ZeroScrapper 與 ArticleParser 的程式開發_
+- [ArticleParser](https://github.com/disinfoRG/ArticleParser/commits?author=pm5), pm5, _參與 ZeroScrapper 與 ArticleParser 的程式開發_ (:star: 2, :octicons-repo-forked-24: 3, :date: 2022-12-08, :material-license: MIT)
 - [openstreetmap](https://www.openstreetmap.org/user/yellowsoar), yellowsoar, _參與完成專案宗旨：建立自由的地理資訊資料庫_
-- [MOPCON 2020](https://github.com/MOPCON/MOPCON/pull/438), Chita, _參與 MOPCON 資訊志工組別，寫前端_
-- [MOPCON](https://github.com/MOPCON/MOPCON), Eric, _MOPCON 官網建置 主要負責規劃及協助開發後端 API_
+- [MOPCON 2020](https://github.com/MOPCON/MOPCON/pull/438), Chita, _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2025-11-09**, :material-license: MIT)
+- [MOPCON](https://github.com/MOPCON/MOPCON), Eric, _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2025-11-09**, :material-license: MIT)
 - [軟體自由日派對影像紀錄](https://www.flickr.com/photos/daisuke1230/albums/72157716100373362), 大助, _負責軟體自由日的平面影像紀錄_
-- [PyCon Taiwan 2020](https://github.com/pycontw/pycon.tw/pulls?q=is%3Apr+author%3ASirius207+is%3Aclosed), pochun, _擔任議程組志工，負責更新官網內容等工作。_
-- [cofacts](https://github.com/cofacts), Zoe, _open source fact-checking collaboration platform的新人貢獻者_
-- [rumors-line-bot](https://github.com/cofacts/rumors-line-bot/pulls?q=+is%3Apr+author%3Anonumpa+), nonumpa, _協助開發 LINEBot_
-- [MOPCON 2020](https://github.com/MOPCON/MOPCON/pull/479), _Lead the preparation for MOPCON 2019, 2020_
-- [etcdadm](https://github.com/kubernetes-sigs/etcdadm/pull/238), genekuo, _Kubernetes 是目前最常見的容器管理平台 Code 貢獻/雲原生台灣使用者小組協同組織者_
+- [PyCon Taiwan 2020](https://github.com/pycontw/pycon.tw/pulls?q=is%3Apr+author%3ASirius207+is%3Aclosed), pochun, _PyCon TW Proposal System & Backend Server_ (:star: 99, :octicons-repo-forked-24: 112, :date: **2026-01-21**, :material-license: MIT)
+- [cofacts](https://github.com/cofacts), Zoe, _An experimental platform that puts collaborative fact-checking to test. In the real world, in Taiwan._ (:material-account-group: 88, :octicons-repo-24: 30, :date: **2026-01-24**)
+- [rumors-line-bot](https://github.com/cofacts/rumors-line-bot/pulls?q=+is%3Apr+author%3Anonumpa+), nonumpa, _Line bot that checks if a message contains internet rumor._ (:star: 81, :octicons-repo-forked-24: 18, :date: **2025-08-16**, :material-license: MIT)
+- [MOPCON 2020](https://github.com/MOPCON/MOPCON/pull/479), _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2025-11-09**, :material-license: MIT)
+- [etcdadm](https://github.com/kubernetes-sigs/etcdadm/pull/238), genekuo, _[EOL] etcdadm is a command-line tool for operating an etcd cluster_ (:star: 750, :octicons-repo-forked-24: 129, :date: 2024-04-29, :material-license: Apache-2.0)

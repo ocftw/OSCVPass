@@ -5,48 +5,48 @@ title: 開源專案
 # 開源專案
 
 - [學測五選四](https://git.io/gsat), sean
-- [EZIO](https://github.com/tjjh89017/ezio), tjjh89017
-- [Galaxy Project](https://github.com/OKTW-Network/Galaxy), OKTW-Network
-- [Facebook Don't Track Me](https://github.com/FlandreDaisuki/Facebook-Dont-Track-Me), FlandreDaisuki
-- [台灣地震報告系統 (TERS)](https://github.com/MizuyoruTW/TERS), MizuyoruTW
-- [hugo-lamp](https://github.com/huyb1991/hugo-lamp), huyb1991
+- [EZIO](https://github.com/tjjh89017/ezio), tjjh89017, _BT-based Disk Deployment tool_ (:star: 188, :octicons-repo-forked-24: 22, :date: **2025-12-27**, :material-license: GPL-2.0)
+- [Galaxy Project](https://github.com/OKTW-Network/Galaxy), OKTW-Network, _OKTW 星系計畫插件_ (:star: 14, :octicons-repo-forked-24: 13, :date: **2026-01-09**, :material-license: AGPL-3.0)
+- [Facebook Don't Track Me](https://github.com/FlandreDaisuki/Facebook-Dont-Track-Me), FlandreDaisuki, _Remove tracking parameters of Facebook as many as possible_ (:star: 12, :octicons-repo-forked-24: 3, :date: 2022-06-21, :material-license: MIT)
+- [台灣地震報告系統 (TERS)](https://github.com/MizuyoruTW/TERS), MizuyoruTW, _Taiwan Earthquake Report System_ (:star: 0, :octicons-repo-forked-24: 0, :date: 2020-04-18, :material-license: GPL-3.0)
+- [hugo-lamp](https://github.com/huyb1991/hugo-lamp), huyb1991, _A light Hugo AMP responsive theme for blogger ⚡._ (:star: 53, :octicons-repo-forked-24: 28, :date: 2023-10-03, :material-license: MIT)
 - LibreOffice, FRANKLIN WENG
-- [Fission](https://github.com/fission/fission), fission
-- [Official Docker Image for Node.js](https://github.com/nodejs/docker-node), PeterDaveHello
-- [OpenStack](https://github.com/openstack/heat), heat 專案負責人
-- [Python tutorial](https://github.com/macs1207/python-tutorial), macs1207
-- [GDIndex](https://github.com/maple3142/GDIndex), maple3142
-- [BerryNet](https://github.com/DT42/BerryNet), DT42
-- [WasmVM](https://github.com/WasmVM/WasmVM), LuisHsu
-- [Telegram_link_Line](https://github.com/we684123/Telegram_link_Line), we684123
-- [tfhe-demo-ais3-2019](https://github.com/s3131212/tfhe-demo-ais3-2019), s3131212
-- [MuPDF](https://github.com/ArtifexSoftware/mupdf), ArtifexSoftware
-- [oxool-community](https://github.com/OSSII/oxool-community), OSSII
-- [Search Sketch](https://github.com/candy02058912/search-sketch), candy02058912
-- [MozTW 網站](https://github.com/moztw/www.moztw.org/commits?author=irvin), irvin
-- [bio-partitioner](https://github.com/david30907d/bio-partitioner), david30907d
+- [Fission](https://github.com/fission/fission), fission, _Fast and Simple Serverless Functions for Kubernetes_ (:star: 8824, :octicons-repo-forked-24: 793, :date: **2026-01-28**, :material-license: Apache-2.0)
+- [Official Docker Image for Node.js](https://github.com/nodejs/docker-node), PeterDaveHello, _Official Docker Image for Node.js :whale: :turtle: :rocket:_ (:star: 8513, :octicons-repo-forked-24: 1989, :date: **2026-01-31**, :material-license: MIT)
+- [OpenStack](https://github.com/openstack/heat), heat 專案負責人, _OpenStack Orchestration (Heat). Mirror of code maintained at opendev.org._ (:star: 407, :octicons-repo-forked-24: 342, :date: **2026-01-24**, :material-license: Apache-2.0)
+- [Python tutorial](https://github.com/macs1207/python-tutorial), macs1207, _一份Python入門教材，由109級高科大資訊研習社開發。_ (:star: 0, :octicons-repo-forked-24: 2, :date: 2021-02-09, :material-license: MIT)
+- [GDIndex](https://github.com/maple3142/GDIndex), maple3142, _A Google Drive Index built with Vue Running on CloudFlare Workers_ (:star: 1881, :octicons-repo-forked-24: 1108, :date: 2023-07-10, :material-license: MIT)
+- [BerryNet](https://github.com/DT42/BerryNet), DT42, _Deep learning gateway on Raspberry Pi and other edge devices_ (:star: 1619, :octicons-repo-forked-24: 227, :date: 2023-02-16, :material-license: GPL-3.0)
+- [WasmVM](https://github.com/WasmVM/WasmVM), LuisHsu, _A standalone WebAssembly process virtual machine_ (:star: 226, :octicons-repo-forked-24: 38, :date: **2026-01-26**, :material-license: BSD-3-Clause)
+- [Telegram_link_Line](https://github.com/we684123/Telegram_link_Line), we684123, _用Telegram來收發Line的訊息，use telegram to Send and receive messages(from Line)。 或者把它當作Line的訊息備份也是可啦 😛_ (:star: 286, :octicons-repo-forked-24: 42, :date: 2024-04-07, :material-license: AGPL-3.0)
+- [tfhe-demo-ais3-2019](https://github.com/s3131212/tfhe-demo-ais3-2019), s3131212, _Demo of TFHE, a fully homomorphic encryption library. Made by AIS3 Crypto group 4._ (:star: 2, :octicons-repo-forked-24: 0, :date: 2020-06-11, :material-license: MIT)
+- [MuPDF](https://github.com/ArtifexSoftware/mupdf), ArtifexSoftware, _mupdf mirror_ (:star: 2575, :octicons-repo-forked-24: 433, :date: **2026-01-28**, :material-license: AGPL-3.0)
+- [oxool-community](https://github.com/OSSII/oxool-community), OSSII, _OxOffice Online Community_ (:star: 20, :octicons-repo-forked-24: 7, :date: **2025-12-19**)
+- [Search Sketch](https://github.com/candy02058912/search-sketch), candy02058912, _Search Sketch Searches Text in Any Language_ (:star: 13, :octicons-repo-forked-24: 1, :date: 2021-05-12, :material-license: MIT)
+- [MozTW 網站](https://github.com/moztw/www.moztw.org/commits?author=irvin), irvin, _Repository of moztw.org_ (:star: 58, :octicons-repo-forked-24: 58, :date: **2025-12-24**, :material-license: MPL-2.0)
+- [bio-partitioner](https://github.com/david30907d/bio-partitioner), david30907d, _A bioinformatics dataset partitioner_ (:star: 0, :octicons-repo-forked-24: 0, :date: 2022-12-07, :material-license: Apache-2.0)
 - [JNovelDownloader](https://github.com/pupuliao/JNovelDownloader), pupuliao
-- [Disfactory](https://github.com/Disfactory/Disfactory), Disfactory
-- [Key Frequency Logger](https://github.com/ErgoKB/key_frequency_logger), ErgoKB
-- [Download Youtube Video in Golang](https://github.com/kkdai/youtube), kkdai
-- [simple-channel-notify](https://github.com/timfanda35/simple-channel-notify), timfanda35
-- [CodiMD](https://github.com/hackmdio/codimd), hackmdio
-- [書蟲小幫手](https://github.com/chihchun/library-helper), chihchun
-- [open-huninn-font](https://github.com/justfont/open-huninn-font), justfont
+- [Disfactory](https://github.com/Disfactory/Disfactory), Disfactory, _違章工廠舉報系統_ (:star: 73, :octicons-repo-forked-24: 33, :date: **2026-01-21**, :material-license: MIT)
+- [Key Frequency Logger](https://github.com/ErgoKB/key_frequency_logger), ErgoKB, _log out every keystroke to csv file from your TMK, QMK keyboard for further analysis._ (:star: 10, :octicons-repo-forked-24: 0, :date: 2021-05-04, :material-license: GPL-3.0)
+- [Download Youtube Video in Golang](https://github.com/kkdai/youtube), kkdai, _Download Youtube Video in Golang_ (:star: 3807, :octicons-repo-forked-24: 481, :date: **2025-12-17**, :material-license: MIT)
+- [simple-channel-notify](https://github.com/timfanda35/simple-channel-notify), timfanda35, _A tool to send simple notify to different channels_ (:star: 3, :octicons-repo-forked-24: 0, :date: **2025-10-24**, :material-license: MIT)
+- [CodiMD](https://github.com/hackmdio/codimd), hackmdio, _CodiMD - Realtime collaborative markdown notes on all platforms._ (:star: 9952, :octicons-repo-forked-24: 1117, :date: **2025-10-02**, :material-license: AGPL-3.0)
+- [書蟲小幫手](https://github.com/chihchun/library-helper), chihchun, _A userscript that display links between different libraries and book stores_ (:star: 30, :octicons-repo-forked-24: 0, :date: 2023-06-24, :material-license: MIT)
+- [open-huninn-font](https://github.com/justfont/open-huninn-font), justfont, _“jf open-huninn” (jf open 粉圓) is an Open-Source Traditional Chinese Rounded Typeface specially designed for better use in Taiwan. The font includes commonly used characters in Taiwan, Bopomofo, and even Taigi and Hokkien phonetic symbols and characters to meet local requirements._ (:star: 1259, :octicons-repo-forked-24: 51, :date: **2025-06-17**)
 - [vim-agda-async](https://github.com/ray851107/vim-agda-async), ray851107
-- [ACGN股票交易市場](https://github.com/ACGN-stock/acgn-stock), ACGN-stock
-- [CapTube](https://github.com/dannvix/CapTube), dannvix
-- [avsi4comp](https://github.com/fieliapm/avsi4comp), fieliapm
+- [ACGN股票交易市場](https://github.com/ACGN-stock/acgn-stock), ACGN-stock, _PTT ACGN股票交易市場_ (:star: 265, :octicons-repo-forked-24: 37, :date: 2023-07-07, :material-license: MIT)
+- [CapTube](https://github.com/dannvix/CapTube), dannvix, _Chrome Extension – Dual subtitls for YouTube with AI-enabled Translations_ (:star: 52, :octicons-repo-forked-24: 8, :date: 2023-01-07)
+- [avsi4comp](https://github.com/fieliapm/avsi4comp), fieliapm, _a set of AviSynth functions to help video compositing and editing_ (:star: 7, :octicons-repo-forked-24: 1, :date: 2023-06-08, :material-license: GPL-3.0)
 - [ThectBlog](https://github.com/cheetosysst/ThectBlog), cheetosysst
-- [github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards), vn7n24fzkq
-- [smore](https://github.com/cnclabs/smore), cnclabs
-- [SOLL](https://github.com/second-state/SOLL), second-state
-- [xNCTU](https://github.com/Sea-n/xNCTU), Sea-n
+- [github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards), vn7n24fzkq, _A tool to generate your GitHub summary card for profile README_ (:star: 3311, :octicons-repo-forked-24: 423, :date: **2026-01-22**, :material-license: MIT)
+- [smore](https://github.com/cnclabs/smore), cnclabs, _SMORe: Modularize Graph Embedding for Recommendation_ (:star: 379, :octicons-repo-forked-24: 84, :date: 2022-10-07, :material-license: MIT)
+- [SOLL](https://github.com/second-state/SOLL), second-state, _SOLL is a new compiler for generate Ewasm from solidity and yul. See a demo here: https://asciinema.org/a/ezJqNLicn5fya02zwu4VXIo8a_ (:star: 376, :octicons-repo-forked-24: 24, :date: 2021-12-23)
+- [xNCTU](https://github.com/Sea-n/xNCTU), Sea-n, _靠北交大 2.0 - 新版靠北交大讓全校師生都有了審核的權限，每天穩定發出投稿文章_ (:star: 46, :octicons-repo-forked-24: 2, :date: 2024-06-13, :material-license: MIT)
 - [Init Engineer](https://github.com/init-engineer), init-engineer
 - [旅遊規劃王](https://github.com/t106362512/King-of-the-tourism-planning), t106362512
-- [frrouting-lg](https://github.com/steveyiyo/frrouting-lg), steveyiyo
-- [cdp-cache](https://github.com/sillygod/cdp-cache), sillygod
+- [frrouting-lg](https://github.com/steveyiyo/frrouting-lg), steveyiyo, _FRRouting looking glass, written in Golang_ (:star: 12, :octicons-repo-forked-24: 0, :date: 2021-08-25, :material-license: MIT)
+- [cdp-cache](https://github.com/sillygod/cdp-cache), sillygod, _a caddy 2 proxy cache plugin_ (:star: 123, :octicons-repo-forked-24: 16, :date: 2023-06-12, :material-license: MIT)
 - [github-dark-theme](https://github.com/poychang/github-dark-theme), poychang
-- [drogon](https://github.com/an-tao/drogon), an-tao
-- [cf.composer](https://github.com/nclab/cf.composer), nclab
-- [UnblockNeteaseMusic](https://github.com/UnblockNeteaseMusic/server), UnblockNeteaseMusic
+- [drogon](https://github.com/an-tao/drogon), an-tao, _Drogon: A C++14/17/20 based HTTP web application framework running on Linux/macOS/Unix/Windows_ (:star: 13467, :octicons-repo-forked-24: 1301, :date: **2026-01-26**, :material-license: MIT)
+- [cf.composer](https://github.com/nclab/cf.composer), nclab, _Supplemental data and obtained results for "AntsOMG: A Framework Aiming to Automate Creativity and Intelligent Behavior with A Showcase on Cantus Firmus Composition and Style Development"_ (:star: 0, :octicons-repo-forked-24: 0, :date: 2021-11-19, :material-license: Apache-2.0)
+- [UnblockNeteaseMusic](https://github.com/UnblockNeteaseMusic/server), UnblockNeteaseMusic, _Revive unavailable songs for Netease Cloud Music (Refactored & Enhanced version)_ (:star: 7644, :octicons-repo-forked-24: 754, :date: **2025-12-15**, :material-license: LGPL-3.0)
