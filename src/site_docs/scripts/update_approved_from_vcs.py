@@ -32,6 +32,7 @@ GITHUB_API_BASE = "https://api.github.com"
 GITLAB_API_BASE = "https://gitlab.com/api/v4"
 
 
+LIST_ITEM_RE = re.compile(r"^(?P<indent>\s*)-\s+(?P<body>.*)$")
 MD_LINK_LINE_RE = re.compile(
     r"^(?P<indent>\s*)-\s+\[(?P<label>[^\]]+)\]\((?P<url>[^)]+)\)(?P<rest>.*)$"
 )
@@ -39,6 +40,10 @@ MD_LINK_LINE_RE = re.compile(
 # Find the description segment at end-of-line-ish: `, _desc_ ...tail...`
 # Allow escaped underscores (e.g. `\_`) inside `_..._`.
 DESC_SEGMENT_RE = re.compile(r",\s*_(?P<desc>(?:\\_|[^_])*)_(?P<tail>.*)$")
+
+DATE_TOKEN_RE = re.compile(r":date:\s+(?:\*\*)?(?P<d>\d{4}-\d{2}-\d{2})(?:\*\*)?")
+LEGACY_UPDATED_RE = re.compile(r"\bupdated\s+(?P<d>\d{4}-\d{2}-\d{2})\b")
+STAR_TOKEN_RE = re.compile(r":star:\s+(?P<n>\d+)|★(?P<n2>\d+)")
 
 
 @dataclass(frozen=True)
@@ -84,6 +89,56 @@ def _fmt_date_maybe_bold(yyyy_mm_dd: str) -> str:
     if d >= (today - timedelta(days=365)):
         return f"**{yyyy_mm_dd}**"
     return yyyy_mm_dd
+
+
+def _extract_sort_date_ordinal(line: str) -> int | None:
+    """
+    Extract date from a list item line.
+    Supports:
+    - `:date: 2026-01-24` or `:date: **2026-01-24**`
+    - legacy `updated 2026-01-24`
+    """
+    m = DATE_TOKEN_RE.search(line)
+    if not m:
+        m = LEGACY_UPDATED_RE.search(line)
+    if not m:
+        return None
+    d = m.group("d")
+    try:
+        return datetime.fromisoformat(d).date().toordinal()
+    except ValueError:
+        return None
+
+
+def _extract_sort_stars(line: str) -> int:
+    m = STAR_TOKEN_RE.search(line)
+    if not m:
+        return 0
+    n = m.group("n") or m.group("n2") or "0"
+    try:
+        return int(n)
+    except ValueError:
+        return 0
+
+
+def _sort_list_block(lines: list[str]) -> list[str]:
+    """
+    Stable sort within a list block:
+    - items with a date first (date desc)
+    - same date: stars desc
+    - items without a date last, keep original order (stability)
+    """
+    decorated: list[tuple[tuple[int, int, int], int, str]] = []
+    for idx, line in enumerate(lines):
+        ord_ = _extract_sort_date_ordinal(line)
+        stars = _extract_sort_stars(line)
+        if ord_ is None:
+            key = (1, 0, 0)
+        else:
+            key = (0, -ord_, -stars)
+        decorated.append((key, idx, line))
+    decorated.sort(key=lambda t: (t[0], t[1]))  # stable for same key via original index
+    return [t[2] for t in decorated]
 
 
 def _collapse_ws(s: str) -> str:
@@ -460,6 +515,8 @@ def process_file(
     progress: bool,
     file_idx: int,
     file_total: int,
+    sort_enabled: bool,
+    sort_only: bool,
 ) -> tuple[list[str], int, int]:
     """
     Returns (new_lines, changed_count, updated_entries_count)
@@ -467,6 +524,7 @@ def process_file(
     - updated_entries_count: number of list items that we successfully updated
     """
     lines = md_path.read_text(encoding="utf-8").splitlines(keepends=True)
+    original_lines = list(lines)
     out: list[str] = []
     changed = 0
     updated_entries = 0
@@ -479,12 +537,28 @@ def process_file(
     cache_hits = 0
     fetched = 0
     fetch_failed = 0
+    reorder_blocks = 0
 
     if progress:
         print(
             f"[{file_idx}/{file_total}] processing {md_path} ({total_lines} lines)",
             file=sys.stderr,
         )
+
+    block: list[str] = []
+
+    def flush_block() -> None:
+        nonlocal block, reorder_blocks
+        if not block:
+            return
+        if sort_enabled and len(block) > 1:
+            sorted_block = _sort_list_block(block)
+            if sorted_block != block:
+                reorder_blocks += 1
+            out.extend(sorted_block)
+        else:
+            out.extend(block)
+        block = []
 
     for line in lines:
         processed_lines += 1
@@ -495,28 +569,48 @@ def process_file(
             )
         elif progress and processed_lines % 500 == 0:
             print(
-                f"  ... {processed_lines}/{total_lines} lines (updated {updated_entries}, fetched {fetched}, cache {cache_hits}, memo {memo_hits}, failed {fetch_failed})",
+                f"  ... {processed_lines}/{total_lines} lines (updated {updated_entries}, fetched {fetched}, cache {cache_hits}, memo {memo_hits}, failed {fetch_failed}, reordered_blocks {reorder_blocks})",
                 file=sys.stderr,
             )
 
         stripped = line.strip()
         if stripped.startswith("```"):
+            flush_block()
             in_fence = not in_fence
             out.append(line)
             continue
         if in_fence:
+            flush_block()
             out.append(line)
+            continue
+
+        # Sorting is performed on *top-level* list item blocks.
+        li = LIST_ITEM_RE.match(line[:-1] if line.endswith("\n") else line)
+        if not li or (li.group("indent") or "") != "":
+            flush_block()
+            out.append(line)
+            continue
+        if li.group("body").startswith("[ ]") or li.group("body").startswith("[x]") or li.group("body").startswith("[X]"):
+            # Avoid reordering markdown task lists if any appear here.
+            flush_block()
+            out.append(line)
+            continue
+
+        # It's a top-level bullet list item; update it (unless sort-only), then add to block for optional sorting.
+        new_line = line
+        if sort_only:
+            block.append(new_line)
             continue
 
         m = MD_LINK_LINE_RE.match(line[:-1] if line.endswith("\n") else line)
         if not m:
-            out.append(line)
+            block.append(new_line)
             continue
 
         url = m.group("url")
         target = infer_target_from_url(url)
         if not target:
-            out.append(line)
+            block.append(new_line)
             continue
 
         # Only process GitHub/GitLab inferred targets; non-matching hosts are already None.
@@ -550,26 +644,33 @@ def process_file(
                 memo[target.key] = meta
 
         if not isinstance(meta, dict):
-            out.append(line)
+            block.append(new_line)
             continue
 
         new_desc, suffix = build_desc_and_suffix(target, meta, old_desc)
         if not new_desc:
-            out.append(line)
+            block.append(new_line)
             continue
 
         new_line = rewrite_line(line, new_desc=new_desc, stats_suffix=suffix)
         if new_line != line:
             changed += 1
             updated_entries += 1
-        out.append(new_line)
+        block.append(new_line)
+
+    flush_block()
+
+    # Compute changed lines based on final output (sorting may reorder without changing line content).
+    changed_lines = sum(1 for a, b in zip(original_lines, out) if a != b)
+    if len(original_lines) != len(out):
+        changed_lines += abs(len(original_lines) - len(out))
 
     if progress:
         print(
-            f"[{file_idx}/{file_total}] done {md_path} (updated {updated_entries}, changed_lines {changed}, fetched {fetched}, cache {cache_hits}, memo {memo_hits}, failed {fetch_failed})",
+            f"[{file_idx}/{file_total}] done {md_path} (updated {updated_entries}, changed_lines {changed_lines}, fetched {fetched}, cache {cache_hits}, memo {memo_hits}, failed {fetch_failed}, reordered_blocks {reorder_blocks})",
             file=sys.stderr,
         )
-    return out, changed, updated_entries
+    return out, changed_lines, updated_entries
 
 
 def main() -> int:
@@ -594,6 +695,21 @@ def main() -> int:
         "--no-progress",
         action="store_true",
         help="Disable progress output.",
+    )
+    ap.add_argument(
+        "--sort",
+        action="store_true",
+        help="Enable sorting of list items (default: enabled).",
+    )
+    ap.add_argument(
+        "--no-sort",
+        action="store_true",
+        help="Disable sorting of list items.",
+    )
+    ap.add_argument(
+        "--sort-only",
+        action="store_true",
+        help="Only sort list items based on existing suffix; do not fetch/update metadata.",
     )
     ap.add_argument(
         "--cache",
@@ -627,6 +743,14 @@ def main() -> int:
     cache_path = Path(args.cache)
     ttl_hours = int(args.cache_ttl_hours)
     progress = bool(args.progress or (not args.no_progress and sys.stderr.isatty()))
+    sort_only = bool(args.sort_only)
+    sort_enabled = True
+    if args.no_sort:
+        sort_enabled = False
+    if args.sort:
+        sort_enabled = True
+    if sort_only:
+        sort_enabled = True
 
     if not approved_dir.exists() or not approved_dir.is_dir():
         print(f"approved dir not found: {approved_dir}", file=sys.stderr)
@@ -656,6 +780,8 @@ def main() -> int:
             progress=progress,
             file_idx=i,
             file_total=len(md_files),
+            sort_enabled=sort_enabled,
+            sort_only=sort_only,
         )
         if changed:
             changed_files.append(md)
