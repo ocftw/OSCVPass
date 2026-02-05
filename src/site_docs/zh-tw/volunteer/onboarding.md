@@ -33,12 +33,14 @@ icon: octicons/checklist-16
 ## 第四步：了解工作內容與工具
 
 - 查看 GitHub [Projects](https://github.com/orgs/ocftw/projects/3){target="_blank"} 看板，了解目前正在進行的工作
-- 閱讀`志工手冊`，了解協作流程與使用工具
+- 閱讀[志工手冊](handbook.md)，了解協作流程與使用工具
 - 熟悉 [GitHub Issues](https://github.com/ocftw/OSCVPass/issues){target="_blank"}、[Pull Requests](https://github.com/ocftw/OSCVPass/pulls){target="_blank"} 等基本操作
+- 查看[資源清單](resources.md)，了解常用連結與學習資源
 
 ## 第五步：選擇第一個任務
 
-- 瀏覽標記為 `good first issue` 的任務
+- 閱讀[任務指南](tasks.md)，了解如何選擇適合的任務
+- 瀏覽標記為 `good first issue` 的[任務列表](https://github.com/ocftw/OSCVPass/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22){target="_blank"}
 - 選擇符合你時間與專業的工作項目
 - 在 [Issue](https://github.com/ocftw/OSCVPass/issues){target="_blank"} 中留言表示認領任務
 

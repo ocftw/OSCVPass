@@ -37,6 +37,9 @@ nav:
   - 志工、實習:
       - volunteer/index.md
       - volunteer/onboarding.md
+      - volunteer/handbook.md
+      - volunteer/tasks.md
+      - volunteer/resources.md
       - volunteer/internship.md
 theme:
   name: material
