@@ -1,0 +1,13 @@
+''' Setting
+
+複製此檔為 mails/setting.py 後填入實際值（setting.py 已被 .gitignore 忽略，請勿提交）。
+'''
+# AWS SES 憑證（region 固定為 us-east-1，見 awssestools.py）
+AWSID = ''
+AWSKEY = ''
+
+# dry-run 時所有測試信會改寄到這個信箱
+TESTMAIL = ''
+
+# 永遠不寄送的封鎖名單（小寫 email）
+BLOCK = ('', '')

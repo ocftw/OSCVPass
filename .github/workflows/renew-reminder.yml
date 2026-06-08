@@ -1,0 +1,64 @@
+name: Renew reminder
+
+# 讓「年度續約提醒」不會被忘記（issue #23）：
+# 每年 COSCUP 前自動開一張提醒 issue，附上寄送 renew 信的操作清單。
+# 只開 issue、不寄信也不碰申請者資料，因此不需要任何密鑰。
+on:
+  schedule:
+    # 每年 6/1 00:00 UTC（＝台灣 08:00），約在 COSCUP（通常 8 月）前兩個月
+    - cron: "0 0 1 6 *"
+  workflow_dispatch: {}
+
+permissions:
+  issues: write
+
+concurrency:
+  group: renew-reminder
+  cancel-in-progress: false
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open renew reminder issue (skip if it already exists)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const year = new Date().getUTCFullYear();
+            const title = `[OSCVPass] ${year} 年度續約提醒信寄送（COSCUP 前）`;
+
+            // 用既有 issue 標題去重，避免重複建立
+            const existing = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'all',
+              per_page: 100,
+            });
+            if (existing.some((i) => !i.pull_request && i.title === title)) {
+              core.info(`提醒 issue 已存在，略過：${title}`);
+              return;
+            }
+
+            const body = [
+              '自動提醒：COSCUP 將至，請寄送今年度的續約（Renew）提醒信，',
+              '通知即將／已到期的貢獻者回來更新資格。',
+              '',
+              '操作步驟（詳見 `mails/README.md` 的「年度續約提醒」）：',
+              '',
+              '- [ ] 從核准名單匯出最新 CSV（含 `start_date` / `nickname` / `mail`）',
+              '- [ ] `uv run python send_renew.py --source approved.csv --out renew.csv` 並檢查名單',
+              '- [ ] `--send`（dry-run）寄一封測試信確認版面',
+              '- [ ] `--send --no-dry-run` 正式寄出',
+              '- [ ] 完成後關閉本 issue',
+              '',
+              '> 本 issue 由 `.github/workflows/renew-reminder.yml` 自動建立。',
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              labels: ['mails'],
+              body,
+            });
+            core.info(`已建立提醒 issue：${title}`);
