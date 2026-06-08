@@ -95,6 +95,9 @@ plugins:
         - zh
         - en
   - social:
+      # 卡圖只在 CI 產生（GitHub Actions 會設 CI=true）；本機 build 跳過，
+      # 避免本機缺 Cairo 時噴大量警告、也讓本機建置更快。
+      enabled: !ENV [CI, false]
       cards_layout_options:
         font_family: Noto Sans TC
         color: "#ffffff"
