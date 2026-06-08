@@ -4,15 +4,17 @@
 
 OSCVPass (Open Source Contributor VIP Pass) 開源貢獻者快速通關計畫，是讓貢獻者提出近一年在開源領域貢獻的證明申請，申請核准後取得一年的 OSCVPass 資格後，可在合作的研討會活動參與取得回饋。
 
+> 計畫正從 1.0（研討會門票回饋）轉型為 2.0（一年期開源貢獻者資格認證），詳見 [2.0 說明](https://oscvpass.ocf.tw/v2/)。
+
 每年約有 150 - 230 位有效資格，其貢獻類型不僅止於程式碼的貢獻，也有來自開源推廣的努力。
 
 此 Github Repo 主要為「[已申請者專案列表](https://oscvpass.ocf.tw/)」，但也包含專案未來計畫與工作任務討論的地方。或是 OCF.tw 的 [slack](https://ocftw.slack.com/) **#oscvpass** 頻道。
 
-## 實習招募與志工夥伴
+## 志工招募
 
-目前 OSCVPass 專案在招募實習夥伴，請參考 OCF 的[實習佈告](https://blog.ocf.tw/2023/06/intern-oscvpass.html)。
+OSCVPass 2.0 正在招募志工，一起讓計畫在無預算的前提下穩定運作、逐步成長，職缺與參與方式詳見[志工招募頁](https://oscvpass.ocf.tw/volunteer/)。
 
-如果您對此專案有想法，也想參與貢獻成為志工，歡迎直接寄信到 [hi@ocf.tw](mailto:hi@ocf.tw) 標題開頭註明 **[OSCVPass]** 內文包含簡單的自我介紹與您的想法，我們會儘快回覆，感謝！
+如果您對此專案有想法，也想參與貢獻成為志工，歡迎直接寄信到 [oscvpass@ocf.tw](mailto:oscvpass@ocf.tw) 標題開頭註明 **[OSCVPass]** 內文包含簡單的自我介紹與您的想法，我們會儘快回覆，感謝！
 
 ## 工作流程
 

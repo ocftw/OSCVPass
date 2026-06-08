@@ -35,7 +35,7 @@ icon: material/license
 ### 開放原始碼（Open Source）
 
 <figure markdown="span">
-  ![圖片出至「開放源碼授權概觀（上）」](https://yurenju.blog/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8A/images/1.png){width="80%"}
+  ![圖片出至「開放源碼授權概觀（上）」](./assets/images/license/open-source-license-overview-1.png){width="80%"}
 </figure>
 
 !!! quote ""
@@ -53,7 +53,7 @@ icon: material/license
 ### 自由散佈（Free Redistribution）
 
 <figure markdown="span">
-  ![圖片出至「開放源碼授權概觀（上）」](https://yurenju.blog/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8A/images/2.png){width="80%"}
+  ![圖片出至「開放源碼授權概觀（上）」](./assets/images/license/open-source-license-overview-2.png){width="80%"}
 </figure>
 
 !!! quote ""
@@ -70,7 +70,7 @@ icon: material/license
 ### 衍生著作（Derived Works）
 
 <figure markdown="span">
-  ![圖片出至「開放源碼授權概觀（上）」](https://yurenju.blog/posts/2018-07-03_%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80%E4%B8%8A/images/3.png){width="80%"}
+  ![圖片出至「開放源碼授權概觀（上）」](./assets/images/license/open-source-license-overview-3.png){width="80%"}
 </figure>
 
 !!! quote ""
