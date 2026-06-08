@@ -1,0 +1,44 @@
+name: Docs build check
+
+# 在 PR 階段就擋下會壞掉的內容，避免無聲部署：
+# 1) mkdocs build 失敗（例如外部資源 404 導致 privacy 外掛崩潰）→ 直接 fail
+# 2) 指向不存在頁面的內部連結（mkdocs 只會 warn）→ 由 grep build log 升級為 fail
+#
+# 不使用 --strict：此站的 social（卡圖 / Cairo）與 git-authors（自動產生的 blog
+# 封存與分類頁）會固定產生警告，--strict 會把它們也當成錯誤而誤擋。
+on:
+  pull_request:
+    paths:
+      - "src/site_docs/**"
+      - ".github/workflows/ci-build.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # git-revision-date-localized / git-authors 外掛需要完整 git 歷史
+          fetch-depth: 0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Build docs
+        working-directory: src/site_docs
+        run: |
+          set -o pipefail
+          uv run mkdocs build 2>&1 | tee /tmp/build.log
+
+      - name: Fail on broken internal links
+        run: |
+          if grep -n "is not found among documentation files" /tmp/build.log; then
+            echo "::error::發現指向不存在頁面的內部連結（見上方 build log）。"
+            exit 1
+          fi
+          echo "內部連結檢查通過。"
