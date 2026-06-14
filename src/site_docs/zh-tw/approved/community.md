@@ -3,24 +3,25 @@ title: 社群貢獻
 ---
 # 社群貢獻
 
-- [Cofacts](https://github.com/cofacts/), MrOrz/比鄰, _An experimental platform that puts collaborative fact-checking to test. In the real world, in Taiwan._ (:material-account-group: 88, :octicons-repo-24: 30, :date: **2026-01-24**)
-- [cofacts](https://github.com/cofacts), Zoe, _An experimental platform that puts collaborative fact-checking to test. In the real world, in Taiwan._ (:material-account-group: 88, :octicons-repo-24: 30, :date: **2026-01-24**)
-- [pycon.tw](https://github.com/pycontw/pycon.tw/pull/538), josix, _PyCon TW Proposal System & Backend Server_ (:star: 99, :octicons-repo-forked-24: 112, :date: **2026-01-21**, :material-license: MIT)
-- [pycon.tw](https://github.com/pycontw/pycon.tw), james, _PyCon TW Proposal System & Backend Server_ (:star: 99, :octicons-repo-forked-24: 112, :date: **2026-01-21**, :material-license: MIT)
-- [PyCon Taiwan 2020](https://github.com/pycontw/pycon.tw/pulls?q=is%3Apr+author%3ASirius207+is%3Aclosed), pochun, _PyCon TW Proposal System & Backend Server_ (:star: 99, :octicons-repo-forked-24: 112, :date: **2026-01-21**, :material-license: MIT)
-- [openmaptiles](https://github.com/openmaptiles/openmaptiles/releases/tag/v3.10), pham, _OpenMapTiles Vector Tile Schema Implementation_ (:star: 2977, :octicons-repo-forked-24: 653, :date: **2026-01-05**)
-- [MOPCON 2020](https://github.com/MOPCON/MOPCON/pull/438), Chita, _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2025-11-09**, :material-license: MIT)
-- [MOPCON](https://github.com/MOPCON/MOPCON), Eric, _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2025-11-09**, :material-license: MIT)
-- [MOPCON 2020](https://github.com/MOPCON/MOPCON/pull/479), _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2025-11-09**, :material-license: MIT)
+- [rumors-line-bot](https://github.com/cofacts/rumors-line-bot/pulls?q=+is%3Apr+author%3Anonumpa+), nonumpa, _Line bot that checks if a message contains internet rumor._ (:star: 81, :octicons-repo-forked-24: 20, :date: **2026-06-03**, :material-license: MIT)
+- [Cofacts](https://github.com/cofacts/), MrOrz/比鄰, _An experimental platform that puts collaborative fact-checking to test. In the real world, in Taiwan._ (:material-account-group: 95, :octicons-repo-24: 32, :date: **2026-05-24**)
+- [cofacts](https://github.com/cofacts), Zoe, _An experimental platform that puts collaborative fact-checking to test. In the real world, in Taiwan._ (:material-account-group: 95, :octicons-repo-24: 32, :date: **2026-05-24**)
+- [MOPCON 2020](https://github.com/MOPCON/MOPCON/pull/438), Chita, _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2026-05-07**, :material-license: MIT)
+- [MOPCON](https://github.com/MOPCON/MOPCON), Eric, _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2026-05-07**, :material-license: MIT)
+- [MOPCON 2020](https://github.com/MOPCON/MOPCON/pull/479), _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2026-05-07**, :material-license: MIT)
+- [pycon.tw](https://github.com/pycontw/pycon.tw/pull/538), josix, _PyCon TW Proposal System & Backend Server_ (:star: 99, :octicons-repo-forked-24: 113, :date: **2026-03-27**, :material-license: MIT)
+- [pycon.tw](https://github.com/pycontw/pycon.tw), james, _PyCon TW Proposal System & Backend Server_ (:star: 99, :octicons-repo-forked-24: 113, :date: **2026-03-27**, :material-license: MIT)
+- [PyCon Taiwan 2020](https://github.com/pycontw/pycon.tw/pulls?q=is%3Apr+author%3ASirius207+is%3Aclosed), pochun, _PyCon TW Proposal System & Backend Server_ (:star: 99, :octicons-repo-forked-24: 113, :date: **2026-03-27**, :material-license: MIT)
+- [openmaptiles](https://github.com/openmaptiles/openmaptiles/releases/tag/v3.10), pham, _OpenMapTiles Vector Tile Schema Implementation_ (:star: 3097, :octicons-repo-forked-24: 667, :date: **2026-03-18**)
 - [g0v summit 2020 主網站 + 徵件網站](https://github.com/g0v/summit2020/), ddio, _g0v Summit 2020 Website_ (:star: 5, :octicons-repo-forked-24: 6, :date: **2025-10-10**, :material-license: MIT)
-- [rumors-line-bot](https://github.com/cofacts/rumors-line-bot/pulls?q=+is%3Apr+author%3Anonumpa+), nonumpa, _Line bot that checks if a message contains internet rumor._ (:star: 81, :octicons-repo-forked-24: 18, :date: **2025-08-16**, :material-license: MIT)
-- [etcdadm](https://github.com/kubernetes-sigs/etcdadm/pull/238), genekuo, _[EOL] etcdadm is a command-line tool for operating an etcd cluster_ (:star: 750, :octicons-repo-forked-24: 129, :date: 2024-04-29, :material-license: Apache-2.0)
+- [etcdadm](https://github.com/kubernetes-sigs/etcdadm/pull/238), genekuo, _[EOL] etcdadm is a command-line tool for operating an etcd cluster_ (:star: 747, :octicons-repo-forked-24: 130, :date: 2024-04-29, :material-license: Apache-2.0)
 - [COSCUP 2019 文件大全](https://github.com/catcatcatcat/COSCUP_program_templates/tree/master/COSCUP19), 四貓, _For COSCUP program staff as reference_ (:star: 3, :octicons-repo-forked-24: 6, :date: 2023-11-04)
 - [Gophercon TW 2020 官網](https://github.com/golangtw/gophercon2020), Yun Chen, _Website for Gopher Conference 2020_ (:star: 19, :octicons-repo-forked-24: 18, :date: 2022-12-12, :material-license: MIT)
 - [ArticleParser](https://github.com/disinfoRG/ArticleParser/commits?author=pm5), pm5, _參與 ZeroScrapper 與 ArticleParser 的程式開發_ (:star: 2, :octicons-repo-forked-24: 3, :date: 2022-12-08, :material-license: MIT)
-- [pycontw-postevent-report-generator](https://github.com/pycontw/pycontw-postevent-report-generator/commits?author=tai271828), tai271828, _Generate post-event report of PyCon Taiwan_ (:star: 2, :octicons-repo-forked-24: 5, :date: 2022-06-29, :material-license: BSD-3-Clause)
+- [pycontw-postevent-report-generator](https://github.com/pycontw/pycontw-postevent-report-generator/commits?author=tai271828), tai271828, _Generate post-event report of PyCon Taiwan_ (:star: 2, :octicons-repo-forked-24: 6, :date: 2022-06-29, :material-license: BSD-3-Clause)
 - [tech-talks-note](https://github.com/EddieChoCho/tech-talks-note/blob/master/2019/ChoChosBizarreAdventureOfEventSourcing.md), Eddie, _針對 Event-sourcing pattern 做研究彙整與分享。_ (:star: 4, :octicons-repo-forked-24: 0, :date: 2021-12-31, :material-license: MIT)
 - [Django 緩慢排錯心法經驗談](https://github.com/hiimdoublej/djangoDebugExample), Johnny, _增進初階開發者對於 Django ORM 內部運作的認識的文章。_ (:star: 0, :octicons-repo-forked-24: 0, :date: 2021-09-22, :material-license: GPL-3.0)
+- [CC台灣社群討論室](https://github.com/ocftw/tw.creativecommons.org), Lucien, _for tw.creativecommons.org landing page_ (:star: 0, :octicons-repo-forked-24: 3, :date: 2018-05-02)
 - [維基百科等維基媒體計畫](https://zh.wikipedia.org/wiki/Special:%E7%94%A8%E6%88%B7%E8%B4%A1%E7%8C%AE/Taiwania_Justo), Taiwania_Justo, _維基百科共計 30000 多次編輯、維基共享資源則共 20000 多次；Wikidata 則協助建立資料庫項目以及臺灣相關資料的規範_
 - PyCon Taiwan 2019, Robert, _PyCon Taiwan 2019 為台灣全國性的 Python 社群活動在這次的議程中我作為贊助組長參與整個 PyCon TW 的籌備過程。_
 - [LibreOffice](https://cgit.freedesktop.org/libreoffice), Kuan-Ting Lin, _我2019年主要參與的開源專案是 LibreOffice，我曾經參加五月的 LibreOffice Asia 研討會並撰寫報導介紹此專案，並在九月 LibreOffice 研討會擔任講者，報告台灣原住民語文書平台在地話的計畫_
@@ -37,7 +38,6 @@ title: 社群貢獻
 - [pycon 2020](https://tw.pycon.org/2020/zh-hant/), rock, _PyCon Taiwan 是全台最大的 Python 開源程式語言年會，我在 organizers 中擔任協調各組、財務的工作。_
 - [sciwork](https://sciwork.dev/), yyc, _Sciwork 是一個社群，旨在通過開源推動計算科學的軟體開發。_
 - [Swift taipei meetup](https://www.meetup.com/Swift-Taipei-User-Group/), John, _主辦開源程式語言 Swift 的使用者聚會_
-- [CC台灣社群討論室](https://github.com/ocftw/tw.creativecommons.org), Lucien, _鼓勵臺灣使用者正確使用 CC 和 Open Access 資料_
 - [riscv: Add KASAN support](https://lkml.org/lkml/2019/10/27/814), Nick Hu, _Porting KASAN to riscv_
 - [openstreetmap](https://www.openstreetmap.org/user/yellowsoar), yellowsoar, _參與完成專案宗旨：建立自由的地理資訊資料庫_
 - [軟體自由日派對影像紀錄](https://www.flickr.com/photos/daisuke1230/albums/72157716100373362), 大助, _負責軟體自由日的平面影像紀錄_
