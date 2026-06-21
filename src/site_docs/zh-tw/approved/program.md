@@ -3,10 +3,10 @@ title: 程式設計與語言
 ---
 # 程式設計與語言
 
-- [GCC](https://github.com/gcc-mirror/gcc), gcc-mirror, _GNU Compiler Collection 的鏡像專案_ (:star: 11003, :octicons-repo-forked-24: 4767, :date: **2026-06-14**, :material-license: GPL-2.0)
-- [www.jsdelivr.com](https://github.com/jsdelivr/www.jsdelivr.com/), jsdelivr, _The official jsDelivr website_ (:star: 159, :octicons-repo-forked-24: 81, :date: **2026-06-10**, :material-license: OSL-3.0)
-- [py-libp2p](https://github.com/libp2p/py-libp2p), libp2p, _The Python implementation of the libp2p networking stack 🐍 [under development]_ (:star: 613, :octicons-repo-forked-24: 238, :date: **2026-06-05**)
-- [cncjs](https://github.com/cncjs/cncjs), cncjs, _A web-based interface for CNC milling controller running Grbl, Marlin, Smoothieware, or TinyG._ (:star: 2609, :octicons-repo-forked-24: 617, :date: **2026-05-15**, :material-license: MIT)
+- [GCC](https://github.com/gcc-mirror/gcc), gcc-mirror, _GNU Compiler Collection 的鏡像專案_ (:star: 11017, :octicons-repo-forked-24: 4769, :date: **2026-06-21**, :material-license: GPL-2.0)
+- [py-libp2p](https://github.com/libp2p/py-libp2p), libp2p, _The Python implementation of the libp2p networking stack 🐍 [under development]_ (:star: 614, :octicons-repo-forked-24: 239, :date: **2026-06-18**)
+- [www.jsdelivr.com](https://github.com/jsdelivr/www.jsdelivr.com/), jsdelivr, _The official jsDelivr website_ (:star: 158, :octicons-repo-forked-24: 81, :date: **2026-06-10**, :material-license: OSL-3.0)
+- [cncjs](https://github.com/cncjs/cncjs), cncjs, _A web-based interface for CNC milling controller running Grbl, Marlin, Smoothieware, or TinyG._ (:star: 2613, :octicons-repo-forked-24: 616, :date: **2026-05-15**, :material-license: MIT)
 - [flatten-dict](https://github.com/ianlini/flatten-dict), ianlini, _A flexible utility for flattening and unflattening dict-like objects in Python._ (:star: 185, :octicons-repo-forked-24: 36, :date: **2026-04-28**, :material-license: MIT)
 - [Chuon](https://github.com/Jimmy01240397/Chuon), Jimmy01240397, _Chummy Object Notation is a data interchange format and a serialization format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays (or other serializable values). Or it can use the most suitable serialization format to serialize data objects consisting of attribute–value pairs and arrays (or other serializable values)._ (:star: 6, :octicons-repo-forked-24: 4, :date: **2025-12-18**, :material-license: MIT)
 - [vrac](https://github.com/green-coder/vrac), green-coder, _A frontend rendering library in Clojure, for Clojurists_ (:star: 51, :octicons-repo-forked-24: 0, :date: **2025-10-13**, :material-license: EPL-2.0)
