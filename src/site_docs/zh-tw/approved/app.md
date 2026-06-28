@@ -4,7 +4,7 @@ title: App
 
 # App
 
-- [android-maps-utils](https://github.com/googlemaps/android-maps-utils), chrisnoodoe, _Maps SDK for Android Utility Library_ (:star: 3608, :octicons-repo-forked-24: 1545, :date: **2026-06-19**, :material-license: Apache-2.0)
+- [android-maps-utils](https://github.com/googlemaps/android-maps-utils), chrisnoodoe, _Maps SDK for Android Utility Library_ (:star: 3611, :octicons-repo-forked-24: 1544, :date: **2026-06-24**, :material-license: Apache-2.0)
 - [高科校務通](https://github.com/NKUST-ITC/NKUST-AP-Flutter), NKUST-ITC/Takidog, _高科校務通 made by Flutter_ (:star: 55, :octicons-repo-forked-24: 26, :date: **2026-06-11**, :material-license: MIT)
 - [DiscreteSlider](https://github.com/hearsilent/DiscreteSlider), hearsilent, _A slider (SeekBar) with amazing value label._ (:star: 352, :octicons-repo-forked-24: 21, :date: **2025-12-27**, :material-license: MIT)
 - [TimelineTableViewCell](https://github.com/kf99916/TimelineTableViewCell), kf99916, _Simple timeline view implemented by UITableViewCell_ (:star: 1328, :octicons-repo-forked-24: 121, :date: **2025-11-12**, :material-license: MIT)
