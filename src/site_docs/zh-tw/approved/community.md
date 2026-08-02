@@ -3,12 +3,12 @@ title: 社群貢獻
 ---
 # 社群貢獻
 
-- [pycon.tw](https://github.com/pycontw/pycon.tw/pull/538), josix, _PyCon TW Proposal System & Backend Server_ (:star: 100, :octicons-repo-forked-24: 114, :date: **2026-07-24**, :material-license: MIT)
-- [pycon.tw](https://github.com/pycontw/pycon.tw), james, _PyCon TW Proposal System & Backend Server_ (:star: 100, :octicons-repo-forked-24: 114, :date: **2026-07-24**, :material-license: MIT)
-- [PyCon Taiwan 2020](https://github.com/pycontw/pycon.tw/pulls?q=is%3Apr+author%3ASirius207+is%3Aclosed), pochun, _PyCon TW Proposal System & Backend Server_ (:star: 100, :octicons-repo-forked-24: 114, :date: **2026-07-24**, :material-license: MIT)
+- [openmaptiles](https://github.com/openmaptiles/openmaptiles/releases/tag/v3.10), pham, _OpenMapTiles Vector Tile Schema Implementation_ (:star: 3128, :octicons-repo-forked-24: 671, :date: **2026-07-29**)
+- [pycon.tw](https://github.com/pycontw/pycon.tw/pull/538), josix, _PyCon TW Proposal System & Backend Server_ (:star: 100, :octicons-repo-forked-24: 115, :date: **2026-07-27**, :material-license: MIT)
+- [pycon.tw](https://github.com/pycontw/pycon.tw), james, _PyCon TW Proposal System & Backend Server_ (:star: 100, :octicons-repo-forked-24: 115, :date: **2026-07-27**, :material-license: MIT)
+- [PyCon Taiwan 2020](https://github.com/pycontw/pycon.tw/pulls?q=is%3Apr+author%3ASirius207+is%3Aclosed), pochun, _PyCon TW Proposal System & Backend Server_ (:star: 100, :octicons-repo-forked-24: 115, :date: **2026-07-27**, :material-license: MIT)
 - [Cofacts](https://github.com/cofacts/), MrOrz/比鄰, _An experimental platform that puts collaborative fact-checking to test. In the real world, in Taiwan._ (:material-account-group: 95, :octicons-repo-24: 33, :date: **2026-07-24**)
 - [cofacts](https://github.com/cofacts), Zoe, _An experimental platform that puts collaborative fact-checking to test. In the real world, in Taiwan._ (:material-account-group: 95, :octicons-repo-24: 33, :date: **2026-07-24**)
-- [openmaptiles](https://github.com/openmaptiles/openmaptiles/releases/tag/v3.10), pham, _OpenMapTiles Vector Tile Schema Implementation_ (:star: 3124, :octicons-repo-forked-24: 672, :date: **2026-07-23**)
 - [rumors-line-bot](https://github.com/cofacts/rumors-line-bot/pulls?q=+is%3Apr+author%3Anonumpa+), nonumpa, _Line bot that checks if a message contains internet rumor._ (:star: 80, :octicons-repo-forked-24: 20, :date: **2026-06-03**, :material-license: MIT)
 - [MOPCON 2020](https://github.com/MOPCON/MOPCON/pull/438), Chita, _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2026-05-07**, :material-license: MIT)
 - [MOPCON](https://github.com/MOPCON/MOPCON), Eric, _official website_ (:star: 28, :octicons-repo-forked-24: 25, :date: **2026-05-07**, :material-license: MIT)
