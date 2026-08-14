@@ -5,6 +5,6 @@ description = "開源貢獻者申請方案"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "mkdocs-material[imaging]>=9.7.6",
+    "mkdocs-material[imaging]>=9.7.7",
     "mkdocs-rss-plugin>=1.19.0",
 ]
