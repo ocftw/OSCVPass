@@ -1,7 +1,7 @@
 ---
 date: 2026-01-14
 authors:
-    - toomore
+    - ocf
 categories:
     - 新聞
     - 志工
