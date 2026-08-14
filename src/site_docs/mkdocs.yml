@@ -103,15 +103,6 @@ plugins:
         color: "#ffffff"
         background_color: "#009485"
   - privacy
-  - git-revision-date-localized:
-      type: iso_datetime
-      locale: en
-      enable_creation_date: true
-      enable_parallel_processing: true
-  - git-authors:
-      show_contribution: true
-      show_email_address: false
-      show_line_count: true
   - blog:
       post_url_date_format: yyyy/MM
       post_url_format: "{date}/{slug}"
