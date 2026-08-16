@@ -3,10 +3,10 @@ title: Linux Kernel
 ---
 # Linux Kernel
 
-- [Sched-ext](https://github.com/sched-ext/scx/pulls?q=is%3Apr+is%3Amerged+author%3AEricccTaiwan+), EricccTaiwan, _sched\_ext schedulers and tools_ (:star: 2110, :octicons-repo-forked-24: 286, :date: **2026-08-07**, :material-license: GPL-2.0)
-- [opensbi](https://github.com/riscv/opensbi), nylon7717, _RISC-V Open Source Supervisor Binary Interface_ (:star: 1519, :octicons-repo-forked-24: 703, :date: **2026-08-02**)
-- [QubesOS](https://github.com/QubesOS/), WillyPillow, _高安全性的作業系統_ (:material-account-group: 1223, :octicons-repo-24: 211, :date: **2025-12-31**)
-- [Zephyr RTOS](https://github.com/zephyrproject-rtos), explora26, _用於物聯網的即時作業系統_ (:material-account-group: 2596, :octicons-repo-24: 181, :date: 2025-07-16)
+- [Sched-ext](https://github.com/sched-ext/scx/pulls?q=is%3Apr+is%3Amerged+author%3AEricccTaiwan+), EricccTaiwan, _sched\_ext schedulers and tools_ (:star: 2118, :octicons-repo-forked-24: 286, :date: **2026-08-13**, :material-license: GPL-2.0)
+- [opensbi](https://github.com/riscv/opensbi), nylon7717, _RISC-V Open Source Supervisor Binary Interface_ (:star: 1524, :octicons-repo-forked-24: 707, :date: **2026-08-02**)
+- [QubesOS](https://github.com/QubesOS/), WillyPillow, _高安全性的作業系統_ (:material-account-group: 1231, :octicons-repo-24: 212, :date: **2025-12-31**)
+- [Zephyr RTOS](https://github.com/zephyrproject-rtos), explora26, _用於物聯網的即時作業系統_ (:material-account-group: 2611, :octicons-repo-24: 181, :date: 2025-07-16)
 - [Linux Firmware Debug Kit (lfdk) v2](https://github.com/denir-li/lfdk2), denir-li, _Linux Firmware Debug Kit v2_ (:star: 4, :octicons-repo-forked-24: 11, :date: 2024-07-04, :material-license: GPL-2.0)
 - [Chromium OS](https://chromium.googlesource.com/), zuan, _Google 的開源操作系統_
 - [Linux Kernel Allwinner](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=wens%40csie.org), wens, _專注於 Allwinner 晶片的 Linux 核心開發_
