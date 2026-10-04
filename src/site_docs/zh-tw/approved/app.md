@@ -4,8 +4,8 @@ title: App
 
 # App
 
-- [高科校務通](https://github.com/NKUST-ITC/NKUST-AP-Flutter), NKUST-ITC/Takidog, _高科校務通 made by Flutter_ (:star: 55, :octicons-repo-forked-24: 26, :date: **2026-09-25**, :material-license: MIT)
-- [android-maps-utils](https://github.com/googlemaps/android-maps-utils), chrisnoodoe, _Maps SDK for Android Utility Library_ (:star: 3622, :octicons-repo-forked-24: 1553, :date: **2026-09-24**, :material-license: Apache-2.0)
+- [android-maps-utils](https://github.com/googlemaps/android-maps-utils), chrisnoodoe, _Maps SDK for Android Utility Library_ (:star: 3619, :octicons-repo-forked-24: 1552, :date: **2026-10-02**, :material-license: Apache-2.0)
+- [高科校務通](https://github.com/NKUST-ITC/NKUST-AP-Flutter), NKUST-ITC/Takidog, _高科校務通 made by Flutter_ (:star: 55, :octicons-repo-forked-24: 25, :date: **2026-09-25**, :material-license: MIT)
 - [DiscreteSlider](https://github.com/hearsilent/DiscreteSlider), hearsilent, _A slider (SeekBar) with amazing value label._ (:star: 352, :octicons-repo-forked-24: 21, :date: **2025-12-27**, :material-license: MIT)
 - [TimelineTableViewCell](https://github.com/kf99916/TimelineTableViewCell), kf99916, _Simple timeline view implemented by UITableViewCell_ (:star: 1326, :octicons-repo-forked-24: 121, :date: **2025-11-12**, :material-license: MIT)
 - [板橋高中午餐系統](https://github.com/dinnersystem/dinnersys-ios), seanpai96, _The iOS App of DinnerSystem._ (:star: 1, :octicons-repo-forked-24: 0, :date: 2023-12-06, :material-license: MIT)
