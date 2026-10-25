@@ -3,7 +3,7 @@ title: Chatbot、API
 ---
 # Chatbot、API
 
-- [line-bot-sdk-python](https://github.com/line/line-bot-sdk-python), CA-Lee, _LINE Messaging API SDK for Python_ (:star: 2140, :octicons-repo-forked-24: 1054, :date: **2026-10-18**, :material-license: Apache-2.0)
+- [line-bot-sdk-python](https://github.com/line/line-bot-sdk-python), CA-Lee, _LINE Messaging API SDK for Python_ (:star: 2144, :octicons-repo-forked-24: 1054, :date: **2026-10-25**, :material-license: Apache-2.0)
 - [star_yuuki_bot](https://github.com/star-inc/star_yuuki_bot), supersonictw, _The perfectest bot for protecting group of LINE._ (:star: 50, :octicons-repo-forked-24: 28, :date: **2026-10-01**, :material-license: MPL-2.0)
 - [kamigo](https://github.com/etrex/kamigo), etrex, _a chatbot framework based on rails_ (:star: 80, :octicons-repo-forked-24: 11, :date: **2026-09-17**, :material-license: MIT)
 - [radosgw-admin4j](https://github.com/twonote/radosgw-admin4j/commits/master), hrchu, _A Ceph Object Storage Admin SDK / Client Library for Java ✨🍰✨_ (:star: 66, :octicons-repo-forked-24: 30, :date: **2026-02-07**, :material-license: Apache-2.0)
