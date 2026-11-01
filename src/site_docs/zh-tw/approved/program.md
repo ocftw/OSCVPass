@@ -3,11 +3,11 @@ title: 程式設計與語言
 ---
 # 程式設計與語言
 
-- [GCC](https://github.com/gcc-mirror/gcc), gcc-mirror, _GNU Compiler Collection 的鏡像專案_ (:star: 11314, :octicons-repo-forked-24: 4852, :date: **2026-10-25**, :material-license: GPL-2.0)
-- [py-libp2p](https://github.com/libp2p/py-libp2p), libp2p, _The Python implementation of the libp2p networking stack 🐍 [under development]_ (:star: 626, :octicons-repo-forked-24: 257, :date: **2026-10-23**)
-- [www.jsdelivr.com](https://github.com/jsdelivr/www.jsdelivr.com/), jsdelivr, _The official jsDelivr website_ (:star: 163, :octicons-repo-forked-24: 84, :date: **2026-10-05**, :material-license: OSL-3.0)
-- [cncjs](https://github.com/cncjs/cncjs), cncjs, _A web-based interface for CNC milling controller running Grbl, Marlin, Smoothieware, or TinyG._ (:star: 2657, :octicons-repo-forked-24: 632, :date: **2026-09-21**, :material-license: MIT)
-- [flatten-dict](https://github.com/ianlini/flatten-dict), ianlini, _A flexible utility for flattening and unflattening dict-like objects in Python._ (:star: 185, :octicons-repo-forked-24: 37, :date: **2026-08-06**, :material-license: MIT)
+- [GCC](https://github.com/gcc-mirror/gcc), gcc-mirror, _GNU Compiler Collection 的鏡像專案_ (:star: 11330, :octicons-repo-forked-24: 4865, :date: **2026-11-01**, :material-license: GPL-2.0)
+- [cncjs](https://github.com/cncjs/cncjs), cncjs, _A web-based interface for CNC milling controller running Grbl, Marlin, Smoothieware, or TinyG._ (:star: 2664, :octicons-repo-forked-24: 634, :date: **2026-10-31**, :material-license: MIT)
+- [flatten-dict](https://github.com/ianlini/flatten-dict), ianlini, _A flexible utility for flattening and unflattening dict-like objects in Python._ (:star: 185, :octicons-repo-forked-24: 38, :date: **2026-10-30**, :material-license: MIT)
+- [www.jsdelivr.com](https://github.com/jsdelivr/www.jsdelivr.com/), jsdelivr, _The official jsDelivr website_ (:star: 163, :octicons-repo-forked-24: 84, :date: **2026-10-29**, :material-license: OSL-3.0)
+- [py-libp2p](https://github.com/libp2p/py-libp2p), libp2p, _The Python implementation of the libp2p networking stack 🐍 [under development]_ (:star: 626, :octicons-repo-forked-24: 257, :date: **2026-10-28**)
 - [Chuon](https://github.com/Jimmy01240397/Chuon), Jimmy01240397, _Chummy Object Notation is a data interchange format and a serialization format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays (or other serializable values). Or it can use the most suitable serialization format to serialize data objects consisting of attribute–value pairs and arrays (or other serializable values)._ (:star: 6, :octicons-repo-forked-24: 4, :date: **2025-12-18**, :material-license: MIT)
 - [vrac](https://github.com/green-coder/vrac), green-coder, _A frontend rendering library in Clojure, for Clojurists_ (:star: 51, :octicons-repo-forked-24: 0, :date: 2025-10-13, :material-license: EPL-2.0)
 - [react-form-maker](https://github.com/ronny1020/react-form-maker), ronny1020, _NPM React tool to make a React form by object_ (:star: 2, :octicons-repo-forked-24: 0, :date: 2024-04-23, :material-license: MIT)
