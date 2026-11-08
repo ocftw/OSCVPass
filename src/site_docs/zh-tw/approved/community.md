@@ -12,7 +12,7 @@ title: 社群貢獻
 - [pycon.tw](https://github.com/pycontw/pycon.tw/pull/538), josix, _PyCon TW Proposal System & Backend Server_ (:star: 101, :octicons-repo-forked-24: 116, :date: **2026-08-25**, :material-license: MIT)
 - [pycon.tw](https://github.com/pycontw/pycon.tw), james, _PyCon TW Proposal System & Backend Server_ (:star: 101, :octicons-repo-forked-24: 116, :date: **2026-08-25**, :material-license: MIT)
 - [PyCon Taiwan 2020](https://github.com/pycontw/pycon.tw/pulls?q=is%3Apr+author%3ASirius207+is%3Aclosed), pochun, _PyCon TW Proposal System & Backend Server_ (:star: 101, :octicons-repo-forked-24: 116, :date: **2026-08-25**, :material-license: MIT)
-- [openmaptiles](https://github.com/openmaptiles/openmaptiles/releases/tag/v3.10), pham, _OpenMapTiles Vector Tile Schema Implementation_ (:star: 3214, :octicons-repo-forked-24: 679, :date: **2026-07-29**)
+- [openmaptiles](https://github.com/openmaptiles/openmaptiles/releases/tag/v3.10), pham, _OpenMapTiles Vector Tile Schema Implementation_ (:star: 3223, :octicons-repo-forked-24: 681, :date: **2026-07-29**)
 - [g0v summit 2020 主網站 + 徵件網站](https://github.com/g0v/summit2020/), ddio, _g0v Summit 2020 Website_ (:star: 5, :octicons-repo-forked-24: 6, :date: 2025-10-10, :material-license: MIT)
 - [etcdadm](https://github.com/kubernetes-sigs/etcdadm/pull/238), genekuo, _[EOL] etcdadm is a command-line tool for operating an etcd cluster_ (:star: 743, :octicons-repo-forked-24: 128, :date: 2024-04-29, :material-license: Apache-2.0)
 - [COSCUP 2019 文件大全](https://github.com/catcatcatcat/COSCUP_program_templates/tree/master/COSCUP19), 四貓, _For COSCUP program staff as reference_ (:star: 3, :octicons-repo-forked-24: 6, :date: 2023-11-04)
